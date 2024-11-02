@@ -8,23 +8,6 @@
 
 body { overflow: visible ;}
 
-/* ----header section---- */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 30px;
-    z-index: 1000;
-    background-color: transparent; 
-    transition: background-color 0.5s ease;
-}
-
-header.scrolled{
-  background-color: black;
-}
 
 .logo {
     display: flex;
@@ -96,7 +79,7 @@ nav a:hover {
     width:100%;
     height:100vh;
     /* z-index: 1; */
-    background: url(images/image4.jpg);
+    background: url(../images/image4.jpg);
     background-size: cover;
     background-position: center;
 } 

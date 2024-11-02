@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 header {
     position: fixed;
     top: 0;
@@ -13,3 +18,59 @@ header {
 header.scrolled{
     background-color: black;
   }
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    color:  #eeece0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eeece0;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+nav a:nth-child(1)::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #dbd5c7; 
+    bottom: 0;
+    left: 0;
+}
+nav a:not(:nth-child(1))::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #dbd5c7; 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+nav a:hover:not(:nth-child(1))::after {
+    width: 100%;
+}
+nav a:hover {
+    color: #dbd5c7;
+}

@@ -9,6 +9,7 @@ function toggle(){
 };
 
 //change of background-color of nav
+
 window.addEventListener("scroll",function(){
     const navbar=document.querySelector('header');
     if(this.window.scrollY>50){
@@ -18,7 +19,7 @@ window.addEventListener("scroll",function(){
     }
 });
 
-//effect on meals button
+//effect on meals button 
 const button = document.querySelector('.meal-btn');
 
 button.addEventListener('click', function () {

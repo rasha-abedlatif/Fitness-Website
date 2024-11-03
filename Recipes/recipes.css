@@ -29,6 +29,7 @@ nav a:hover:not(:nth-child(2))::after {
 /* ---Recipes Styling--- */ 
 .recipes{
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 .image-container {
     display: grid;
@@ -97,5 +98,31 @@ nav a:hover:not(:nth-child(2))::after {
 .recipes .box #meals:nth-child(4) { transition-delay: 0.2s; }
 .recipes .box #meals:nth-child(5) { transition-delay: 0.4s; }
 .recipes .box #meals:nth-child(6) { transition-delay: 0.6s; }
+
+/* --Styling the Middle Sentence--*/ 
+
+.menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.line{
+    height: 3px;
+    background-color: #dbd5c7;
+    width: 200px;   
+}
+.menu h1{
+    font-size: 3rem; 
+    font-weight: 200;
+    letter-spacing: 2px;
+    font-family: "GFS Didot", serif;
+    text-align: center;
+    color: #dbd5c7;
+    width: 50%;
+}
+
 
 

@@ -30,8 +30,9 @@ header.scrolled {
     width: 100px;
 }
 
-.logo span {
+.logo a {
     font-family: 'Playfair Display', serif;
+    text-decoration: none;
     font-size: 24px;
     font-weight: bold;
     margin-left: 10px;

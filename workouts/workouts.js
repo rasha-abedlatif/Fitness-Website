@@ -1,6 +1,6 @@
-window.addEventListener("scroll",function(){
-    const navbar=document.querySelector('header');
-    if(this.window.scrollY>50){
+window.addEventListener("scroll", function () {
+    let navbar = document.querySelector('header');
+    if (this.window.scrollY > 50) {
         header.classList.add("scrolled");
     } else {
         header.classList.remove("scrolled");
@@ -14,38 +14,37 @@ document.querySelectorAll('.container').forEach(container => {
         container.classList.add('active');
     });
 });
-const carouselTrack = document.querySelector('.carousel-track');
-const items = Array.from(document.querySelectorAll('.carousel-item'));
-let visibleItems = 5;
-let currentindex = 0;
+let carouselTrack = document.querySelector('.carousel-track');
+let items = Array.from(document.querySelectorAll('.carousel-item'));
+let prevButton = document.getElementById('prev');
+let nextButton = document.getElementById('next');
+let currentIndex = 0;
 
 function updateActiveItem() {
     items.forEach((item, index) => {
         item.classList.remove('active');
-        if (index === currentindex) {
+        if (index === currentIndex) {
             item.classList.add('active');
         }
     });
-
-    // Center the active item
-    const offset = currentindex * (items[0].offsetWidth + 20); // 20 is the margin
+    let offset = currentIndex * (items[0].offsetWidth + 10); // Adjust 10 for margin
     carouselTrack.style.transform = `translateX(-${offset}px)`;
 }
 
-function scrollLeft() {
-    currentindex = (currentindex === 0) ? items.length - 1 : currentindex - 1;
+function previous() {
+    currentIndex = (currentIndex === 0) ? items.length - 1 : currentIndex - 1;
     updateActiveItem();
 }
 
-function scrollRight() {
-    currentindex = (currentindex === items.length - 1) ? 0 : currentindex + 1;
+function next() {
+    currentIndex = (currentIndex === items.length - 1) ? 0 : currentIndex + 1;
     updateActiveItem();
 }
-
 function moveToCenter(item) {
-    currentindex = items.indexOf(item);
+    currentIndex = items.indexOf(item);
     updateActiveItem();
 }
+updateActiveItem();  
+prevButton.addEventListener('click', previous);
+nextButton.addEventListener('click', next);
 
-// Initialize the first item as active
-updateActiveItem();

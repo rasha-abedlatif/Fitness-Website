@@ -94,7 +94,6 @@ h2{
     opacity: 1;
     bottom: 0;
 }
- HEAD
 .section2{
     display: flex;
     flex-direction: column;
@@ -106,17 +105,16 @@ h2{
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 50px;
+    padding: 20px;
     
 }
 
 .carousel-track-container {
     overflow: hidden;
-    padding: 0 0;
+    padding: 0 ;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .carousel-track {
@@ -127,8 +125,8 @@ h2{
    
 
 .carousel-item {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     margin: 0 5px;
     flex-wrap: nowrap;
     border-radius: 50%;
@@ -137,15 +135,9 @@ h2{
     cursor: pointer;
 
 }
-.carousel-item img{
-    width: 300px;
-    height: 100px;
-    
-}
-
 .carousel-item.active {
-    width: 600px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     transform: scale(1.2); /* Enlarge the active item */
 }
 
@@ -155,4 +147,5 @@ h2{
     font-size: 1.5em;
     cursor: pointer;
     padding: 10px;
+    color: beige;
 }

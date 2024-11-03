@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 header {
     position: fixed;
     top: 0;
@@ -12,26 +13,31 @@ header {
     align-items: center;
     padding: 12px 30px;
     z-index: 1000;
-    background-color: transparent; 
+    background-color: transparent;
     transition: background-color 0.5s ease;
 }
-header.scrolled{
+
+header.scrolled {
     background-color: black;
-  }
+}
+
 .logo {
     display: flex;
     align-items: center;
 }
+
 .logo img {
     width: 100px;
 }
 
-.logo span {
+.logo a{
     font-family: 'Playfair Display', serif;
+    text-decoration: none;
     font-size: 24px;
+    text-decoration: none;
     font-weight: bold;
     margin-left: 10px;
-    color:  #eeece0;
+    color: #eeece0;
 }
 
 nav {

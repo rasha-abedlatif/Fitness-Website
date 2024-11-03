@@ -28,7 +28,10 @@ nav a:hover:not(:nth-child(3))::after {
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+
     padding-bottom: 0%;
+
 }
 h2{
     color: #6d8967;
@@ -91,6 +94,7 @@ h2{
     opacity: 1;
     bottom: 0;
 }
+ HEAD
 .section2{
     display: flex;
     flex-direction: column;

@@ -50,3 +50,12 @@ window.addEventListener("scroll", function() {
       header.classList.remove("scrolled");
     }
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const workoutsSection = document.querySelector('.workout');
+    if (workoutsSection) {
+        console.log('Workouts section is loaded and exists on the page.');
+    } else {
+        console.warn('Workouts section not found. Check if HTML is correct.');
+    }
+});

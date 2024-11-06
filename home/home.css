@@ -24,18 +24,10 @@ nav a:not(:nth-child(1))::after {
 nav a:hover:not(:nth-child(1))::after {
   width: 100%;
 }
- /* ----main section---- */
-.main{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-    /* z-index: 1; */
-    background: url(../images/image4.jpg);
-    background-size: cover;
-    background-position: center;
-} 
+ .header-image  {
+  width: 100%;
+  height: 700px; 
+}
 .recipes{
     position:absolute;
     top:100%;

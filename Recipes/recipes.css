@@ -1,5 +1,7 @@
 body{
     background-color: #6d8967;
+    font-family: "GFS Didot", serif;
+
 }
 /* ---Nav styling--- */ 
 
@@ -73,7 +75,7 @@ nav a:hover:not(:nth-child(2))::after {
     background: rgba(0, 0, 0, 0.8);
   }
 
-  .recipes .top h1,
+ .recipes .top h1,
 .recipes .top .meal-btn,
 .recipes .box #meals {
     opacity: 0;
@@ -122,6 +124,94 @@ nav a:hover:not(:nth-child(2))::after {
     text-align: center;
     color: #dbd5c7;
     width: 50%;
+    margin-bottom: 50px;
+}
+
+
+/* -- Styling Recipes Section--*/ 
+
+.eachsection{
+  display:flex;
+  /*flex-wrap: wrap;
+  gap: 20px;*/
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 30%;
+  padding: 10px 50px 50px 50px;
+  margin-left: 150px;
+}
+
+.lines{
+   height: 4px;
+   width: 55px;
+   background-color: #dbd5c7;
+   margin-bottom: 30px;
+}
+
+.headings{
+  color: #dbd5c7;
+  /*margin: 20px;*/
+  font-weight: 100px;
+  font-size: 50px;
+  margin-bottom: 40px;
+
+}
+
+.show{
+  background-color: #dbd5c7;
+  padding: 5px;
+  border-radius: 7px;
+  border: none;
+}
+.meal-divs{
+  margin: 0 30px;
+}
+
+.recipe-sec1{
+  display: flex;
+  gap: 20px;
+}
+
+
+.recipe{
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 300px;
+}
+#img1{
+background-image: url(images-recipes/Breakfast1.jpeg);
+}
+#img2{
+  background-image: url(images-recipes/Breakfast2.jpeg);
+}
+#img3{
+  background-image: url(images-recipes/Breakfast3.jpeg);
+}
+
+.imgs{
+background-position: center;
+background-repeat: no-repeat;
+background-size: 400px;
+height: 70%;
+border-radius: 20px 20px 0 0;
+}
+
+.names-div{
+  height: 30%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 

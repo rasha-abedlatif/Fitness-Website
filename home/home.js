@@ -1,17 +1,17 @@
 // FIXED SCROLL NAVIGATION:
 window.addEventListener('scroll',function(){
-    var header=document.querySelector('header');
+    let header=document.querySelector('header');
     header.classList.toggle('sticky',window.scrollY>0);   
 }); 
 function toggle(){
-    var header=document.getElementById('header');
+    let header=document.getElementById('header');
     header.classList.toggle('active');
 };
 
 //change of background-color of nav
 
 window.addEventListener("scroll",function(){
-    const navbar=document.querySelector('header');
+    let navbar=document.querySelector('header');
     if(this.window.scrollY>50){
         header.classList.add("scrolled");
     } else {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     function animateOnScroll() {
         elementsToAnimate.forEach(element => {
-            const rect = element.getBoundingClientRect();
+            let rect = element.getBoundingClientRect();
             if (rect.top < window.innerHeight && rect.bottom > 0) {
                 element.classList.add("appear");
             }
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("scroll", function() {
-    const header = document.querySelector(".work-btn");
+    let header = document.querySelector(".work-btn");
     if (window.scrollY > 50) { // Adjust scroll value as needed
       header.classList.add("scrolled");
     } else {
@@ -53,10 +53,38 @@ window.addEventListener("scroll", function() {
   });
 
   document.addEventListener("DOMContentLoaded", () => {
-    const workoutsSection = document.querySelector('.workout');
+    let workoutsSection = document.querySelector('.workout');
     if (workoutsSection) {
         console.log('Workouts section is loaded and exists on the page.');
     } else {
         console.warn('Workouts section not found. Check if HTML is correct.');
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    let cards = document.querySelectorAll('.card');
+    let options = {
+      root: null,
+      threshold: 0.2
+    };
+  
+    let observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 150); 
+          
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+  
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  });
+  
+//effect on brand slider:
+let copy = document.querySelector('.brand-slide').cloneNode(true);
+document.querySelector('.brands').appendChild(copy);

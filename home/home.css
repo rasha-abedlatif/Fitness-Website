@@ -25,27 +25,33 @@ nav a:hover:not(:nth-child(1))::after {
   width: 100%;
 }
  /* ----main section---- */
-.main{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-    /* z-index: 1; */
-    background: url(../images/image4.jpg);
-    background-size: cover;
-    background-position: center;
+ .main{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background: url(../images/image4.jpg);
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  transition: transform 5s ease-in-out;
+  animation:zoomIn 15s infinite alternate;
 } 
+
+.sections{
+position:absolute;
+  top:100%;
+  left:0;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+}
 .recipes{
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    height: 200vh;
-    /* z-index: 2; */
-    background-color: beige;
-    background-size: cover;
-    background-position: center;
+  height: 150vh;
+  background-color: beige;
+  background-size: cover;
+  background-position: center;
 }
 ::-webkit-scrollbar{
     width:10px;
@@ -81,6 +87,14 @@ nav a:hover:not(:nth-child(1))::after {
   }
 }
 
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
   .content {
     text-align: center;
     color: #c7c7ba;
@@ -298,11 +312,242 @@ nav a:hover:not(:nth-child(1))::after {
   
 /* ----recipes section---- */
 
+/* ----workout section---- */
 .workout {
-   position: relative;
-   width: 100%;
-    margin-top: 2000px;
-    padding: 300px;
-    background-color: blue; 
-    overflow: hidden;
-} 
+  padding: 50px;
+  background-color: #e1daca;
+  overflow: hidden;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr; 
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+      "card1 card2"
+      "card1 card3-4";
+  gap: 20px;
+  padding: 20px;
+}
+
+.card1 {
+  grid-area: card1;
+}
+
+.card2 {
+  grid-area: card2;
+  width: 700px;
+}
+
+.card3-4-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; 
+  grid-area: card3-4; 
+}
+
+.card3, .card4 {
+  flex: 1;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px) scale(0.9); 
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.card.visible{
+  animation: cardEnter 1s forwards; 
+}
+@keyframes cardEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(-10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.card:hover {
+  border: 2px solid #7e867c; 
+}
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card:hover .card-content {
+  opacity: 1;
+}
+.card.visible .card-content {
+  opacity: 1;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  /* margin-bottom: 80px; */
+  color: white;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+  color: white;
+}
+
+.card1 .card-subtitle{
+  margin-bottom: 20px;
+  margin-left: 124px;
+  letter-spacing: 13px;
+    text-transform: uppercase;
+}
+
+.card1 .card-title{
+  font-family: 'Montserrat', sans-serif; 
+    font-size: 48px; 
+    font-weight: 700;
+    color: white;
+    letter-spacing: normal; 
+    margin-left: 120px;
+    line-height: 1; 
+    margin-bottom: 80px;
+}
+
+.card2 .card-subtitle{
+  font-family: 'Roboto', sans-serif;
+    font-size: 13px; 
+    font-weight: 400; 
+    color: #7e867c; 
+    letter-spacing: 13px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-left: 25px;
+}
+
+.card2 .card-title{
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px; 
+  font-weight: 800; 
+  color: #7e867c; 
+  letter-spacing: normal;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.card2 button{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 600; 
+  font-style: italic;
+  color: white;
+  background-color: #303d2f; 
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 25px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 140px;
+  margin-left: 60px;
+}
+
+.card2 button:hover{
+  background-color: #8B8D87;
+}
+.card3 .card-subtitle, .card4 .card-subtitle{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px; 
+  font-weight: 300; 
+  color: white; 
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-left: 8px;
+}
+.card3 .card-title, .card4 .card-title{
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px; 
+  font-weight: 700; 
+  color: white; 
+  letter-spacing: normal;
+  line-height: 1.2;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+
+ /*---BRANDS I HAVE WORKED WITH--- */ 
+ @keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.brands {
+  position: relative;
+  background-color: beige;
+  overflow: hidden;
+  padding: 60px 0;
+  white-space: nowrap;
+}
+.brands h1{
+  font-family: "Playwrite GB S", serif;
+  font-optical-sizing: auto;
+  font-size: 40px;
+  margin-left: 570px;
+  margin-bottom: 20px;
+}
+.brands::before,
+.brands::after {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 250px;
+  height: 100%;
+  content: "";
+}
+.brands:before{
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+.brands:after{
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+.brands:hover .brand-slide{
+  animation-play-state: paused;
+}
+.brands .brand-slide {
+  display: inline-block;
+  animation: slide 16s infinite linear;
+}
+
+.brand-slide img {
+  height: 120px;
+  margin: 0 40px;
+}
+ 

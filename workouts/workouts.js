@@ -16,70 +16,47 @@ window.addEventListener("scroll",function(){
         header.classList.remove("scrolled");
     }
 });
-
-const carouselTrack = document.querySelector('.carousel-track');
-const items = Array.from(document.querySelectorAll('.carousel-item'));
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
-let visibleItems = calculateVisibleItems(); // Dynamically set the initial visible items based on screen width
-let currentIndex = 0;
-
-function calculateVisibleItems() {
-    const screenWidth = window.innerWidth;
+document.addEventListener("DOMContentLoaded", () => {
+    const exercises = document.querySelectorAll('.container');
+    const randomButton = document.getElementById('randomButton');
     
-    return 1; // Default to 2 items on smaller screens
-}
+    randomButton.addEventListener('click', () => {
+        // Remove highlight from any previously selected exercise
+        exercises.forEach(exercise => exercise.classList.remove('highlight'));
 
-function updateActiveItems() {
-    items.forEach((item, index) => {
-        item.classList.remove('active');
-        if (index >= currentIndex && index < currentIndex + visibleItems) {
-            item.classList.add('active');
+        // Select a random exercise
+        const randomIndex = Math.floor(Math.random() * exercises.length);
+        const selectedExercise = exercises[randomIndex];
+        
+        // Add highlight class to the selected exercise
+        selectedExercise.classList.add('highlight');
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    let currentIndex = 0;
+    const carouselTrack = document.querySelector('.carousel-track');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const leftButton = document.querySelector('#prev');
+    const rightButton = document.querySelector('#next');
+
+    function moveSlide(direction) {
+        currentIndex += direction;
+
+        if (currentIndex < 0) {
+            currentIndex = carouselItems.length - 1; 
+        } else if (currentIndex >= carouselItems.length) {
+            currentIndex = 0; 
         }
-    });
 
-    const offset = currentIndex * (items[0].offsetWidth + 20); // Adjust for margin
-    carouselTrack.style.transform = `translateX(-${offset}px)`;
-}
+        // Only use the width of each item
+        let itemWidth = carouselItems[0].offsetWidth+20;
+        let offset = -currentIndex * itemWidth;
 
-function scrollLeft() {
-    if (currentIndex > 0) {
-        currentIndex -= visibleItems;
-        if (currentIndex < 0) currentIndex = 0;
-    } else {
-        currentIndex = Math.max(items.length - visibleItems, 0);
+        carouselTrack.style.transform = `translateX(${offset}px)`;
     }
-    updateActiveItems();
-}
 
-function scrollRight() {
-    if (currentIndex < items.length - visibleItems) {
-        currentIndex += visibleItems;
-        if (currentIndex >= items.length) currentIndex = items.length - visibleItems;
-    } else {
-        currentIndex = 0;
-    }
-    updateActiveItems();
-}
-
-function handleResize() {
-    visibleItems = calculateVisibleItems();
-    updateActiveItems();
-}
-
-// Initialize the first set of visible items and handle resize
-updateActiveItems();
-window.addEventListener('resize', handleResize);
-
-// Add event listeners for the buttons
-prevButton.addEventListener('click', scrollLeft);
-nextButton.addEventListener('click', scrollRight);
-
-document.querySelectorAll('.container').forEach(container => {
-    container.addEventListener('click', () => {
-        document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
-        container.classList.add('active');
-    });
+    leftButton.addEventListener('click', () => moveSlide(-1));
+    rightButton.addEventListener('click', () => moveSlide(1));
 });
 document.addEventListener("DOMContentLoaded", () => {
     let apps = document.querySelectorAll(".app");

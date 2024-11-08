@@ -35,5 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/*--Show button coding--*/
+let showbtn = document.getElementById('show1');
+let sec2 = document.getElementById('sec2');
 
+showbtn.addEventListener('click', function(){
+    if( sec2.style.display === 'none' ){
+        sec2.style.display = 'grid';
+        showbtn.innerHTML = 'Show Less ↑'; 
+    }
+    else{
+        sec2.style.display = 'none';
+        showbtn.innerHTML= 'Show More ↓';
+    }
+})
 

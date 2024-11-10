@@ -35,18 +35,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/*--Show button coding--*/
-let showbtn = document.getElementById('show1');
-let sec2 = document.getElementById('sec2');
+/*--Breakfast Show button coding--*/
+let showbtn1 = document.getElementById('show1');
+let bsec2 = document.getElementById('breakfast-sec2');
 
-showbtn.addEventListener('click', function(){
-    if( sec2.style.display === 'none' ){
-        sec2.style.display = 'grid';
-        showbtn.innerHTML = 'Show Less ↑'; 
+showbtn1.addEventListener('click', function(){
+    if( bsec2.style.display === 'none' ){
+        bsec2.style.display = 'grid';
+        showbtn1.innerHTML = 'Show Less ↑'; 
     }
     else{
-        sec2.style.display = 'none';
-        showbtn.innerHTML= 'Show More ↓';
+        bsec2.style.display = 'none';
+        showbtn1.innerHTML= 'Show More ↓';
     }
 })
 
+/*--Main Meal Show button coding--*/
+
+let showbtn2 = document.getElementById('show2');
+let mainsec2 = document.getElementById('mainmeal-sec2');
+
+showbtn2.addEventListener('click', function(){
+    if( mainsec2.style.display === 'none' ){
+        mainsec2.style.display = 'grid';
+        showbtn2.innerHTML = 'Show Less ↑'; 
+    }
+    else{
+        mainsec2.style.display = 'none';
+        showbtn2.innerHTML= 'Show More ↓';
+    }
+})

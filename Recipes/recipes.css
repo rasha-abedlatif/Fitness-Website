@@ -236,6 +236,7 @@ border: 2px solid black;
   column-gap: 50px;
 }
 
+/*-- Images of the Main Meal--*/ 
 #img7{
   background-image: url(images-recipes/MainMeal1.jpeg);
 }
@@ -254,6 +255,7 @@ border: 2px solid black;
 #img12{
   background-image: url(images-recipes/MainMeal6.jpeg);
 }
+/*-- Images of the Desserts--*/ 
 
 #img13{
   background-image: url(images-recipes/Dessert4.jpeg);
@@ -275,3 +277,52 @@ border: 2px solid black;
 #img18{
   background-image: url(images-recipes/Dessert2.jpeg);
 }
+
+
+/*-- Images of the Side Dished --*/ 
+
+
+#img19{
+  background-image: url(images-recipes/Side\ Dishes1.jpeg);
+}
+
+#img20{
+  background-image: url(images-recipes/Side\ Dishes2.jpeg);
+}
+#img21{
+  background-image: url(images-recipes/Side\ Dishes3.jpeg);
+}
+#img22{
+  background-image: url(images-recipes/Side\ Dishes4.jpeg);
+}
+#img23{
+  background-image: url(images-recipes/Side\ Dishes5.jpeg);
+}
+#img24{
+  background-image: url(images-recipes/Side\ Dishes6.jpeg);
+}
+
+/*-- Images of the Drinks --*/ 
+
+
+#img25{
+  background-image: url(images-recipes/Drinks1.jpeg);
+}
+
+#img26{
+  background-image: url(images-recipes/Drinks2.jpeg);
+}
+#img27{
+  background-image: url(images-recipes/Drinks3.jpeg);
+}
+#img28{
+  background-image: url(images-recipes/Drinks4.jpeg);
+}
+#img29{
+  background-image: url(images-recipes/Drinks5.jpeg);
+}
+#img30{
+  background-image: url(images-recipes/Drinks6.jpeg);
+}
+
+

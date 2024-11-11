@@ -65,3 +65,51 @@ showbtn2.addEventListener('click', function(){
         showbtn2.innerHTML= 'Show More ↓';
     }
 })
+
+/*--Desserts Show button coding--*/
+
+let showbtn3 = document.getElementById('show3');
+let dessertsec2 = document.getElementById('desserts-sec2');
+
+showbtn3.addEventListener('click', function(){
+    if(dessertsec2.style.display === 'none' ){
+        dessertsec2.style.display = 'grid';
+        showbtn3.innerHTML = 'Show Less ↑'; 
+    }
+    else{
+        dessertsec2.style.display = 'none';
+        showbtn3.innerHTML= 'Show More ↓';
+    }
+})
+
+/*--Side Dishes Show button coding--*/
+
+let showbtn4 = document.getElementById('show4');
+let sidesec2 = document.getElementById('sidedishes-sec2');
+
+showbtn4.addEventListener('click', function(){
+    if( sidesec2.style.display === 'none' ){
+        sidesec2.style.display = 'grid';
+        showbtn4.innerHTML = 'Show Less ↑'; 
+    }
+    else{
+        sidesec2.style.display = 'none';
+        showbtn4.innerHTML= 'Show More ↓';
+    }
+})
+
+/*--Drinks Show button coding--*/
+
+let showbtn5 = document.getElementById('show4');
+let drinkssec2 = document.getElementById('drinks-sec2');
+
+showbtn5.addEventListener('click', function(){
+    if( drinkssec2.style.display === 'none' ){
+        drinkssec2.style.display = 'grid';
+        showbtn5.innerHTML = 'Show Less ↑'; 
+    }
+    else{
+        drinkssec2.style.display = 'none';
+        showbtn5.innerHTML= 'Show More ↓';
+    }
+})

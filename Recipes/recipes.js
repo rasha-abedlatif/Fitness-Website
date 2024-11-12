@@ -34,31 +34,101 @@ document.addEventListener("DOMContentLoaded", () => {
     animateOnScroll(); // Run once in case elements are already in view
 });
 
-
-/*--Breakfast Show button coding--*/
+/*-- Decleration of buttons and sections--*/ 
 let showbtn1 = document.getElementById('show1');
 let bsec2 = document.getElementById('breakfast-sec2');
+
+let showbtn2 = document.getElementById('show2');
+let mainsec2 = document.getElementById('mainmeal-sec2');
+
+let showbtn3 = document.getElementById('show3');
+let dessertsec2 = document.getElementById('desserts-sec2');
+
+let showbtn4 = document.getElementById('show4');
+let sidesec2 = document.getElementById('sidedishes-sec2');
+
+let showbtn5 = document.getElementById('show5');
+let drinkssec2 = document.getElementById('drinks-sec2');
+
+let showbtn6 = document.getElementById('show6');
+let snackssec2 = document.getElementById('snacks-sec2');
+/*--Breakfast Show button coding--*/
+
 
 showbtn1.addEventListener('click', function(){
     if( bsec2.style.display === 'none' ){
         bsec2.style.display = 'grid';
         showbtn1.innerHTML = 'Show Less ↑'; 
+
+        if(mainsec2.style.display === 'grid'){
+            mainsec2.style.display = 'none';
+            showbtn2.innerHTML= 'Show More ↓';
+        }
+
+        if(dessertsec2.style.display === 'grid'){
+            dessertsec2.style.display = 'none';
+            showbtn3.innerHTML= 'Show More ↓';
+        }
+
+
+        if(sidesec2.style.display === 'grid'){
+            sidesec2.style.display = 'none';
+            showbtn4.innerHTML= 'Show More ↓';
+        }
+
+        if(drinkssec2.style.display === 'grid'){
+            drinkssec2.style.display = 'none';
+            showbtn5.innerHTML= 'Show More ↓';
+        }
+
+        if(snackssec2.style.display === 'grid'){
+            snackssec2.style.display = 'none';
+            showbtn6.innerHTML= 'Show More ↓';
+        }
+
     }
     else{
         bsec2.style.display = 'none';
         showbtn1.innerHTML= 'Show More ↓';
     }
+   
 })
 
 /*--Main Meal Show button coding--*/
 
-let showbtn2 = document.getElementById('show2');
-let mainsec2 = document.getElementById('mainmeal-sec2');
+
 
 showbtn2.addEventListener('click', function(){
     if( mainsec2.style.display === 'none' ){
         mainsec2.style.display = 'grid';
         showbtn2.innerHTML = 'Show Less ↑'; 
+
+        if(bsec2.style.display === 'grid'){
+           bsec2.style.display = 'none';
+            showbtn1.innerHTML= 'Show More ↓';
+        }
+
+        if(dessertsec2.style.display === 'grid'){
+            dessertsec2.style.display = 'none';
+            showbtn3.innerHTML= 'Show More ↓';
+        }
+
+
+        if(sidesec2.style.display === 'grid'){
+            sidesec2.style.display = 'none';
+            showbtn4.innerHTML= 'Show More ↓';
+        }
+
+        if(drinkssec2.style.display === 'grid'){
+            drinkssec2.style.display = 'none';
+            showbtn5.innerHTML= 'Show More ↓';
+        }
+
+        if(snackssec2.style.display === 'grid'){
+            snackssec2.style.display = 'none';
+            showbtn6.innerHTML= 'Show More ↓';
+        }
+
     }
     else{
         mainsec2.style.display = 'none';
@@ -68,13 +138,39 @@ showbtn2.addEventListener('click', function(){
 
 /*--Desserts Show button coding--*/
 
-let showbtn3 = document.getElementById('show3');
-let dessertsec2 = document.getElementById('desserts-sec2');
+
 
 showbtn3.addEventListener('click', function(){
     if(dessertsec2.style.display === 'none' ){
         dessertsec2.style.display = 'grid';
-        showbtn3.innerHTML = 'Show Less ↑'; 
+        showbtn3.innerHTML = 'Show Less ↑';
+        
+        if(mainsec2.style.display === 'grid'){
+            mainsec2.style.display = 'none';
+            showbtn2.innerHTML= 'Show More ↓';
+        }
+
+        if(bsec2.style.display === 'grid'){
+            bsec2.style.display = 'none';
+            showbtn1.innerHTML= 'Show More ↓';
+        }
+
+
+        if(sidesec2.style.display === 'grid'){
+            sidesec2.style.display = 'none';
+            showbtn4.innerHTML= 'Show More ↓';
+        }
+
+        if(drinkssec2.style.display === 'grid'){
+            drinkssec2.style.display = 'none';
+            showbtn5.innerHTML= 'Show More ↓';
+        }
+
+        if(snackssec2.style.display === 'grid'){
+            snackssec2.style.display = 'none';
+            showbtn6.innerHTML= 'Show More ↓';
+        }
+
     }
     else{
         dessertsec2.style.display = 'none';
@@ -84,13 +180,39 @@ showbtn3.addEventListener('click', function(){
 
 /*--Side Dishes Show button coding--*/
 
-let showbtn4 = document.getElementById('show4');
-let sidesec2 = document.getElementById('sidedishes-sec2');
+
 
 showbtn4.addEventListener('click', function(){
     if( sidesec2.style.display === 'none' ){
         sidesec2.style.display = 'grid';
         showbtn4.innerHTML = 'Show Less ↑'; 
+
+        if(mainsec2.style.display === 'grid'){
+            mainsec2.style.display = 'none';
+            showbtn2.innerHTML= 'Show More ↓';
+        }
+
+        if(dessertsec2.style.display === 'grid'){
+            dessertsec2.style.display = 'none';
+            showbtn3.innerHTML= 'Show More ↓';
+        }
+
+
+        if(bsec2.style.display === 'grid'){
+            bsec2.style.display = 'none';
+            showbtn1.innerHTML= 'Show More ↓';
+        }
+
+        if(drinkssec2.style.display === 'grid'){
+            drinkssec2.style.display = 'none';
+            showbtn5.innerHTML= 'Show More ↓';
+        }
+
+        if(snackssec2.style.display === 'grid'){
+            snackssec2.style.display = 'none';
+            showbtn6.innerHTML= 'Show More ↓';
+        }
+
     }
     else{
         sidesec2.style.display = 'none';
@@ -100,16 +222,84 @@ showbtn4.addEventListener('click', function(){
 
 /*--Drinks Show button coding--*/
 
-let showbtn5 = document.getElementById('show4');
-let drinkssec2 = document.getElementById('drinks-sec2');
+
 
 showbtn5.addEventListener('click', function(){
     if( drinkssec2.style.display === 'none' ){
         drinkssec2.style.display = 'grid';
         showbtn5.innerHTML = 'Show Less ↑'; 
+
+        if(mainsec2.style.display === 'grid'){
+            mainsec2.style.display = 'none';
+            showbtn2.innerHTML= 'Show More ↓';
+        }
+
+        if(dessertsec2.style.display === 'grid'){
+            dessertsec2.style.display = 'none';
+            showbtn3.innerHTML= 'Show More ↓';
+        }
+
+
+        if(sidesec2.style.display === 'grid'){
+            sidesec2.style.display = 'none';
+            showbtn4.innerHTML= 'Show More ↓';
+        }
+
+        if(bsec2.style.display === 'grid'){
+            bsec2.style.display = 'none';
+            showbtn1.innerHTML= 'Show More ↓';
+        }
+
+        if(snackssec2.style.display === 'grid'){
+            snackssec2.style.display = 'none';
+            showbtn6.innerHTML= 'Show More ↓';
+        }
+
     }
     else{
         drinkssec2.style.display = 'none';
         showbtn5.innerHTML= 'Show More ↓';
+    }
+})
+
+/*--Snacks Show button coding--*/
+
+
+
+showbtn6.addEventListener('click', function(){
+    if( snackssec2.style.display === 'none' ){
+        snackssec2.style.display = 'grid';
+        showbtn6.innerHTML = 'Show Less ↑'; 
+
+        if(mainsec2.style.display === 'grid'){
+            mainsec2.style.display = 'none';
+            showbtn2.innerHTML= 'Show More ↓';
+        }
+
+        if(dessertsec2.style.display === 'grid'){
+            dessertsec2.style.display = 'none';
+            showbtn3.innerHTML= 'Show More ↓';
+        }
+
+
+        if(sidesec2.style.display === 'grid'){
+            sidesec2.style.display = 'none';
+            showbtn4.innerHTML= 'Show More ↓';
+        }
+
+        if(drinkssec2.style.display === 'grid'){
+            drinkssec2.style.display = 'none';
+            showbtn5.innerHTML= 'Show More ↓';
+        }
+
+        if(bsec2.style.display === 'grid'){
+           bsec2.style.display = 'none';
+            showbtn1.innerHTML= 'Show More ↓';
+        }
+
+    }
+    else{
+        snackssec2.style.display = 'none';
+        showbtn6.innerHTML= 'Show More ↓';
     }
 })

@@ -24,6 +24,7 @@ nav a:not(:nth-child(1))::after {
 nav a:hover:not(:nth-child(1))::after {
   width: 100%;
 }
+
  /* ----main section---- */
  .main{
   position:fixed;
@@ -735,7 +736,6 @@ section.left .contactInfo {
 
 .iconGroup .icon i {
   font-size: 20px;
-  color: #282315;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -744,6 +744,7 @@ section.left .contactInfo {
 
 .iconGroup .details span {
   display: block;
+  display: flex;
   color: #5F563D;
   font-size: 18px;
 }
@@ -784,18 +785,19 @@ section.left .socialMedia {
 .messageForm input,
 .messageForm textarea {
   width: 100%;
-  font-size: 18px;
-  padding: 2px 0px;
+  font-size: 30px;
+  padding: 6px 9px;
   background-color: #998f71;
   color: #E8D4B9;
   border: none;
   border-bottom: 2px solid #998F71;
   outline: none;
+  border-radius: 20px;
 }
 
 .messageForm textarea {
   resize: none;
-  height: 220px;
+  height: 230px;
   display: block;
 }
 
@@ -816,7 +818,8 @@ textarea::-webkit-scrollbar-thumb {
 .inputGroup label {
   position: absolute;
   left: 0;
-  bottom: 4px;
+  bottom: 8px;
+  margin-left: 13px;
   color: #5F563D;
   font-size: 18px;
   transition: 0.4s;
@@ -831,7 +834,7 @@ textarea::-webkit-scrollbar-thumb {
 .inputGroup textarea:focus ~ label,
 .inputGroup input:valid ~ label,
 .inputGroup textarea:valid ~ label {
-  transform: translateY(-30px);
+  transform: translateY(-42px);
   font-size: 16px;
 }
 

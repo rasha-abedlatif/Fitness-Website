@@ -54,13 +54,17 @@ let showbtn6 = document.getElementById('show6');
 let snackssec2 = document.getElementById('snacks-sec2');
 /*--Breakfast Show button coding--*/
 
-
 showbtn1.addEventListener('click', function(){
-    if( bsec2.style.display === 'none' ){
+
+        if( bsec2.style.display === 'none' ){
+            bsec2.style.display = 'grid';
+            showbtn1.innerHTML = 'Show Less ↑'; 
+
+        if( bsec2.style.display === 'none' ){
         bsec2.style.display = 'grid';
         showbtn1.innerHTML = 'Show Less ↑'; 
-
-        if(mainsec2.style.display === 'grid'){
+        }
+       if(mainsec2.style.display === 'grid'){
             mainsec2.style.display = 'none';
             showbtn2.innerHTML= 'Show More ↓';
         }
@@ -84,19 +88,16 @@ showbtn1.addEventListener('click', function(){
         if(snackssec2.style.display === 'grid'){
             snackssec2.style.display = 'none';
             showbtn6.innerHTML= 'Show More ↓';
-        }
-
-    }
-    else{
+        }} 
+        else{
         bsec2.style.display = 'none';
+        bsec2.style.transitionTimingFunction = 'ease-in';
         showbtn1.innerHTML= 'Show More ↓';
     }
    
 })
 
 /*--Main Meal Show button coding--*/
-
-
 
 showbtn2.addEventListener('click', function(){
     if( mainsec2.style.display === 'none' ){
@@ -303,3 +304,4 @@ showbtn6.addEventListener('click', function(){
         showbtn6.innerHTML= 'Show More ↓';
     }
 })
+

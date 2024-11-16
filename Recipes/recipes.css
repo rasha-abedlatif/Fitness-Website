@@ -1,5 +1,5 @@
 body{
-    background-color: beige;
+    background-color: #e5e0d6;
     font-family: "GFS Didot", serif;
 
 }
@@ -115,7 +115,7 @@ nav a:hover:not(:nth-child(2))::after {
 }
 .line{
     height: 3px;
-    background-color: #686868;
+    background-color: #b2998a;
     width: 200px;   
 }
 .menu h1{
@@ -124,7 +124,7 @@ nav a:hover:not(:nth-child(2))::after {
     letter-spacing: 2px;
     font-family: "GFS Didot", serif;
     text-align: center;
-    color: #686868;
+    color: #b2998a;
     width: 50%;
     margin-bottom: 50px;
 }
@@ -152,12 +152,12 @@ margin-bottom: 200px;
 .lines{
    height: 4px;
    width: 55px;
-   background-color: #686868;
+   background-color: #b2998a;
    margin-bottom: 30px;
 }
 
 .headings{
-  color: #686868;
+  color: #b2998a;
   /*margin: 20px;*/
   font-weight: 100px;
   font-size: 50px;
@@ -166,7 +166,7 @@ margin-bottom: 200px;
 }
 
 .show{
-  background-color: #7e867c;
+  background-color: #695242;
   color: white;
   padding: 7px;
   border-radius: 7px;
@@ -189,6 +189,7 @@ margin-bottom: 200px;
 .recipe-sec1{
   display: flex;
   gap: 50px;
+  cursor: pointer;
 }
 
 
@@ -217,12 +218,12 @@ height: 85%;
 border-radius: 20px 20px 0 0;
 border: 8px;
 border-style: solid;
-border-color: #7e867c;
+border-color: #695242;
 }
 
 .names-div{
   height: 15%;
-  background-color: #7e867c;
+  background-color: #695242;
   color: white;
   text-align: center;
   border-radius: 0 0 20px 20px;
@@ -250,6 +251,7 @@ border-color: #7e867c;
   grid-template-columns: auto auto auto;
   row-gap: 50px;
   column-gap: 50px;
+  cursor: pointer;
 }
 
 /*-- Images of the Main Meal--*/ 

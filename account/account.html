@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="../account/account.css">
+    <script src="../account/account.js" defer></script>
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+          <a href="../home/home.html">NUTRIVOLVE</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="nav-links">
+          <a href="">Home</a>
+          <a href="#">Recipes</a>
+          <a href="../workouts/workouts.html">Workouts</a>
+          <a href="#">Articles</a>
+          <a href="#">About Us</a>
+          <div class="dropdown">
+            <a href="#">
+                <img id="account" src="../images/account.png" alt="Button Image">
+            </a>
+            <div class="dropdown-content-wrapper">
+                <div class="dropdown-content">
+                    <a href="#">Sign in</a>
+                    <a href="#">Sign up</a>
+                </div>
+            </div>
+         </div>
+        </nav>
+      </header>
+
+        <div class="container" id="container">
+          <div class="form-container sign-up-container">
+            <form action="#">
+              <!-- Title of the form -->
+              <h1 class="title">Join Us</h1>
+              <p class="login-with">Login with your account:</p>
+          
+              <!-- Social login options -->
+              <div class="social-container">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          
+              <!-- Separator with lines and 'OR' text -->
+              <div class="separator">
+                <div class="line"></div>
+                <span>OR</span>
+                <div class="line"></div>
+              </div>
+          
+              <!-- User details input fields with spans -->
+              <div class="user-details">
+                <div class="input-box">
+                  <span class="details">First Name:</span>
+                  <input type="text" name="firstName" placeholder="Enter your first name" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Last Name:</span>
+                  <input type="text" name="lastName" placeholder="Enter your last name" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Email:</span>
+                  <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Phone Number:</span>
+                  <input type="text" placeholder="Enter your number" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Password:</span>
+                  <input type="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Confirm Password:</span>
+                  <input type="password" name="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+              </div>
+          
+              <!-- Gender details with radio buttons -->
+              <div class="gender-details">
+                <span class="gender-title">Gender:</span>
+                <div class="category">
+                  <label for="dot-1">
+                    <input type="radio" name="gender" id="dot-1" required>
+                    <span class="dot one"></span>
+                    <span class="gender">Male</span>
+                  </label>
+                  <label for="dot-2">
+                    <input type="radio" name="gender" id="dot-2" required>
+                    <span class="dot two"></span>
+                    <span class="gender">Female</span>
+                  </label>
+                  <label for="dot-3">
+                    <input type="radio" name="gender" id="dot-3" required>
+                    <span class="dot three"></span>
+                    <span class="gender">Prefer not to say</span>
+                  </label>
+                </div>
+              </div>
+          
+              <!-- Terms and conditions checkbox -->
+              <div class="terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">
+                  I agree to all <a href="#">Terms</a>, <a href="#">Privacy Policy</a>
+                </label>
+              </div>
+          
+              <!-- Register button -->
+              <button type="submit" id="registerButton" disabled>Register</button>
+            </form>
+          </div>
+                    
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1 class="title">Login</h1>
+                    <div class="social-container">
+                        <a href="" class=""><i class="fab fa-facebook"></i></a>
+                        <a href="" class=""><i class="fab fa-google-plus-g"></i></a>
+                        <a href="" class=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <!-- <span>Use Your account login</span> -->
+                    <input type="text" name="name" placeholder="Username/Email">
+                    <input type="password" name="password" placeholder="Enter your password">
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class ="overlay-panel overlay-left">
+                        <h1 class="h1">Ready to Glow?</h1>
+                        <img src="../images/whateva.jpg" alt="">
+                        <p class="text">Start your journey to better health with expert insights <br> on nutrition and workouts. It’s time to invest in you.</p>
+                        <p class="p">Login in to stay connected with us</p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1 class="h1">Welcome</h1>
+                        <img src="../images/whateva2.jpg" alt="">
+                        <p class="p">Join our wellness journey today!</p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                     </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -7,6 +7,37 @@ window.addEventListener("scroll",function(){
         header.classList.remove("scrolled");
     }
 });
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const slideInterval = 3000; // 3 seconds
+
+// Function to display the current slide and hide others
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    const slideContent = slide.querySelector('.slide-content');
+    
+    if (i === index) {
+      slide.classList.add('active'); // Show current slide
+    //   slideContent.classList.add('animate'); 
+    } else {
+      slide.classList.remove('active'); 
+    //   slideContent.classList.remove('animate'); 
+    }
+  });
+}
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Initialize slider
+showSlide(currentSlide);
+setInterval(nextSlide, slideInterval);
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     let exercises = document.querySelectorAll('.container');
     let randomButton = document.getElementById('randomButton');

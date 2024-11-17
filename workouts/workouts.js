@@ -1,13 +1,4 @@
-window.addEventListener('scroll',function(){
-    let header=document.querySelector('header');
-    header.classList.toggle('sticky',window.scrollY>0);   
-}); 
-function toggle(){
-    let header=document.getElementById('header');
-    header.classList.toggle('active');
-};
 //change of background-color of nav
-
 window.addEventListener("scroll",function(){
     let navbar=document.querySelector('header');
     if(this.window.scrollY>50){
@@ -17,66 +8,72 @@ window.addEventListener("scroll",function(){
     }
 });
 document.addEventListener("DOMContentLoaded", () => {
-    const exercises = document.querySelectorAll('.container');
-    const randomButton = document.getElementById('randomButton');
+    let exercises = document.querySelectorAll('.container');
+    let randomButton = document.getElementById('randomButton');
     
     randomButton.addEventListener('click', () => {
-        // Remove highlight from any previously selected exercise
         exercises.forEach(exercise => exercise.classList.remove('highlight'));
-
-        // Select a random exercise
-        const randomIndex = Math.floor(Math.random() * exercises.length);
-        const selectedExercise = exercises[randomIndex];
-        
-        // Add highlight class to the selected exercise
+        let randomIndex = Math.floor(Math.random() * exercises.length);
+        let selectedExercise = exercises[randomIndex];
         selectedExercise.classList.add('highlight');
     });
 });
 document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
-    const carouselTrack = document.querySelector('.carousel-track');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    const leftButton = document.querySelector('#prev');
-    const rightButton = document.querySelector('#next');
+    let carouselTrack = document.querySelector('.carousel-track');
+    let carouselItems = Array.from(document.querySelectorAll('.carousel-item'));
+    let leftButton = document.querySelector('#prev');
+    let rightButton = document.querySelector('#next');
 
-    function moveSlide(direction) {
-        currentIndex += direction;
-
-        if (currentIndex < 0) {
-            currentIndex = carouselItems.length - 1; 
-        } else if (currentIndex >= carouselItems.length) {
-            currentIndex = 0; 
-        }
-
-        // Only use the width of each item
-        let itemWidth = carouselItems[0].offsetWidth+20;
+    let itemWidth = carouselItems[0].offsetWidth + 20; 
+   
+    function updateTrackPosition() {
         let offset = -currentIndex * itemWidth;
-
         carouselTrack.style.transform = `translateX(${offset}px)`;
     }
+    
+    function moveToNext() {
+        if (currentIndex >= carouselItems.length - 1) {
+            let firstItem = carouselTrack.firstElementChild;
+            carouselTrack.appendChild(firstItem);
+            currentIndex--;
+        }
+        currentIndex++;
+        updateTrackPosition();
+    }
+    
+    function moveToPrevious() {
+        if (currentIndex <= 0) {
+            let lastItem = carouselTrack.lastElementChild;
+            carouselTrack.insertBefore(lastItem, carouselTrack.firstElementChild);
+            currentIndex++;
+        }
+        currentIndex--;
+        updateTrackPosition();
+    }
 
-    leftButton.addEventListener('click', () => moveSlide(-1));
-    rightButton.addEventListener('click', () => moveSlide(1));
+    rightButton.addEventListener('click', moveToNext);
+    leftButton.addEventListener('click', moveToPrevious);
+
+    updateTrackPosition();
+
+updateTrackPosition();
 });
 document.addEventListener("DOMContentLoaded", () => {
     let apps = document.querySelectorAll(".app");
 
     apps.forEach(app => {
         let ratingText = app.querySelector("h3").textContent;
-        let rating = parseFloat(ratingText); // Convert rating text to a number
+        let rating = parseFloat(ratingText); 
         let stars = app.querySelector(".star");
-
-        // Set number of filled stars based on the rating
-        const filledStars = Math.round(rating); // Round rating to nearest whole number for star count
-
-        // Color the stars
+        let filledStars = Math.round(rating);
         stars.innerHTML = "";
         for (let i = 1; i <= 5; i++) {
             let star = document.createElement("span");
-            star.innerHTML = "&#9733;"; // Star symbol
+            star.innerHTML = "&#9733;"; 
             star.classList.add("star");
             if (i <= filledStars) {
-                star.classList.add("filled"); // Add filled class based on rating
+                star.classList.add("filled");
             }
             stars.appendChild(star);
         }

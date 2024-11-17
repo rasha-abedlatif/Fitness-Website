@@ -53,7 +53,7 @@ header.scrolled {
     text-decoration: none;
     font-weight: bold;
     margin-left: 10px;
-    color: #eeece0;
+    color: whitesmoke;
 }
 
 nav {
@@ -64,7 +64,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #eeece0;
+    color: whitesmoke;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -77,3 +77,320 @@ nav a {
 nav a:hover {
     color: #dbd5c7;
 }
+/* ---FOOTER SECTION--- */
+footer {
+    width: 100%;
+    background: linear-gradient(135deg, #0a0a0a, #1b1b1b);
+    color: #eaeaea;
+    padding: 60px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+  
+  .column {
+    flex-basis: 22%;
+    padding: 10px;
+    position: relative;
+    border: none;
+  }
+  
+  .logo-column .logo-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .LOGO {
+    width: 5vw;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .logo-title h1 {
+    font-size: 24px;
+    color: #ffd700;
+    /* margin: 0; */
+    /* margin-bottom: 40px; */
+  }
+  
+  .logo-column form {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .logo-column .social-icons {
+    margin-top: 10px;
+  }
+  
+  .column p, .column ul, .column form {
+    font-size: 15px;
+    line-height: 1.8;
+    border: none;
+  }
+  
+  .column p, .column a {
+    color: #E8D4B9;
+  }
+  
+  .column a:hover {
+    color: #998F71;
+  }
+  .column form {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .input-group i {
+    color: #ffd700;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 8px;
+    background: #222;
+    color: #eaeaea;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .input-group button {
+    border: none;
+    color: #1b1b1b;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    background: #E8D4B9;
+    color: #282315;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .input-group button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(232, 212, 185, 0.3);
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    background: #333;
+    color: #ffd700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    background: #ffd700;
+    color: #1b1b1b;
+  }
+  
+  .contactInfo {
+    margin-top: 15px;
+  }
+  
+  .logo-column h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #5F563D;
+    margin-top: 5px;
+    transition: width 0.3s ease;
+  }
+  
+  .logo-column h3:hover::after {
+    width: 80px;
+  }
+  
+  .iconGroup {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .icon {
+    color: #5F563D;
+    background-color: #282315;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .icon:hover {
+    background-color: #998F71;
+    transform: scale(1.1);
+  }
+  .icon:focus {
+    outline: none;
+  }
+  .details span {
+    display: block;
+  }
+  
+  .details span:first-child {
+    font-weight: bold;
+    color: #998F71;
+    font-size: 0.9rem;
+  }
+  
+  .details span:last-child {
+    color: #E8D4B9;
+    font-size: 1rem;
+  }
+  
+  .iconGroup:not(:last-child) {
+    margin-bottom: 18px;
+  }
+  
+  .Reach {
+    margin-top: 40px;
+  }
+  
+  .QuickL {
+    margin-top: 40px;
+  }
+  
+  .column ul {
+    list-style: none;
+    padding: 0;
+    border: none;
+    margin-top: 17px;
+    font-size: 18px;
+  }
+  
+  .column ul li {
+    margin-bottom: 10px;
+    border: none;
+  }
+  
+  .column ul li a {
+    color: #eaeaea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .column ul li a:hover {
+    color: #ffd700;
+  }
+  @media (max-width: 600px) {
+    footer .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    footer .column {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    footer .social-icons {
+      justify-content: center;
+      font-size: 45px;
+      gap: 50px;
+    }
+  
+    footer .contactInfo .iconGroup {
+      justify-content: center;
+    }
+  
+    footer .logo-column {
+      text-align: center;
+      /* font-size: 3em; */
+    }
+  
+    footer .logo-column .LOGO {
+      margin-left: 550px;
+      /* margin-bottom: 30px; */
+    }
+    footer .logo-column .logo-title{
+        margin-bottom: 20px;
+    }
+   
+    footer .logo-column h3 {
+      position:relative;
+      margin-bottom: 25px;
+      font-size: 2em;
+    }
+    footer .logo-column p{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    footer .logo-column h3::after {
+      content: "";
+      display: block;
+      width: 20%;
+      height: 2px;
+      background-color: #fff;
+      margin: 10px auto 0;
+    }
+    footer form .input-group .fa-regular{
+        font-size: 30px;
+    }
+    footer .Reach {
+      position: relative;
+      font-size: 30px;
+    }
+  
+    /* footer .Reach::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      margin: 40px 30px;
+    } */
+  
+    footer .contactInfo .details span {
+      font-size: 30px;
+    }
+  footer .QuickL h3{
+    font-size: 50px;
+    /* margin-bottom: 15px; */
+  }
+    footer .QuickL ul {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      list-style: none;
+      gap: 30px;
+    }
+  
+    footer .QuickL ul li {
+      display: inline;
+      font-size: 2em;
+    }
+  }

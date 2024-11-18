@@ -91,7 +91,6 @@ showbtn1.addEventListener('click', function(){
         }} 
         else{
         bsec2.style.display = 'none';
-        bsec2.style.transitionTimingFunction = 'ease-in';
         showbtn1.innerHTML= 'Show More ↓';
     }
    

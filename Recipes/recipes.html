@@ -25,39 +25,63 @@
         </nav>
     </header>
 
+    <!-- Main Section -->
+    <div class="main-div">
+      <!--<div class="firstpart">
+            <span class="lines"></span>
+            <p></p>
+        </div>
+
+        <div class="secondpart">
+        </div>  -->  
+    </div>
+
     <!-- Recipes Menu Section -->
     <div class="recipes">
 
         <div class="image-container">
 
             <div class="box">
-                <img src="../images/meal1.jpeg" alt="">
-                <button id="meals">BREAKFAST</button>
+                <a href="#breakfast">
+                    <img src="../images/meal1.jpeg" alt="">
+                    <button id="meals">BREAKFAST</button>
+                </a>
             </div>
 
             <div class="box">
-                <img src="../images/meal2.jpeg" alt="">
-                <button id="meals">MAIN MEALS</button>
+                <a href="#mainmeal">
+                    <img src="../images/meal2.jpeg" alt="">
+                    <button id="meals">MAIN MEALS</button>
+                </a>
             </div>
 
             <div class="box">
-                <img src="../images/meal3.jpeg" alt="">
-                <button id="meals">DESSERTS</button>
+                <a href="#dessert">
+                    <img src="../images/meal3.jpeg" alt="">
+                    <button id="meals">DESSERTS</button>
+                </a>
+
             </div>
 
             <div class="box">
-                <img src="../images/meal4.jpeg" alt="">
-                <button id="meals">SIDE DISHES</button>
+                <a href="#dishes">
+                    <img src="../images/meal4.jpeg" alt="">
+                    <button id="meals">SIDE DISHES</button>
+                </a>
             </div>
 
             <div class="box">
-                <img src="../images/meal5.jpeg" alt="">
-                <button id="meals">DRINKS</button>
+                <a href="#drinks">
+                    <img src="../images/meal5.jpeg" alt="">
+                    <button id="meals">DRINKS</button>
+                </a>
             </div>
 
             <div class="box">
-                <img src="../images/meal6.jpeg" alt="">
-                <button id="meals">SNACKS</button>
+                <a href="#snacks">
+                    <img src="../images/meal6.jpeg" alt="">
+                    <button id="meals">SNACKS</button>
+                </a>
             </div>
         </div>
     </div>
@@ -70,10 +94,11 @@
 
     <div class="meal-types">
         <!-- Breakfast Section -->
-        <div class="eachsection">
+        <div class="eachsection" id="breakfast">
             <div class="text-div">
                 <div class="text"><span class="lines"></span>
-                    <h1 class="headings">Breakfast</h1></div>
+                    <h1 class="headings">Breakfast</h1>
+                </div>
                 <button class="show" id="show1">Show More ↓</button>
             </div>
 
@@ -82,19 +107,32 @@
                 <!-- Breakfast Section 1 of the recipes -->
                 <section class="recipe-sec1">
                     <div class="recipe">
-                        <div class="imgs" id="img1"></div>
+                        <div class="imgs" id="img1">
+                            <div class="cover">
+                                <p class="foodname">Healthy Blueberry Muffins</p>
+                            </div>
+
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Healthy Blueberry Muffins</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img2"></div>
+                        <div class="imgs" id="img2">
+                            <div class="cover">
+                                <p class="foodname">Tahini Chocolate Balls</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Tahini Chocolate Balls</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img3"></div>
+                        <div class="imgs" id="img3">
+                            <div class="cover">
+                                <p class="foodname">Healthy Flapjack Recipe</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Healthy Flapjack Recipe</h2>
                         </div>
@@ -104,33 +142,45 @@
                 <!-- Breakfast Section 2 of the recipes -->
                 <section class="recipe-sec2" id="breakfast-sec2">
                     <div class="recipe">
-                        <div class="imgs" id="img4"></div>
+                        <div class="imgs" id="img4">
+                            <div class="cover">
+                                <p class="foodname">Scrambled Oats Recipe</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Scrambled Oats Recipe</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img5"></div>
+                        <div class="imgs" id="img5">
+                            <div class="cover">
+                                <p class="foodname">Healthy Blueberry Breakfast Cake</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Healthy Blueberry Breakfast Cake</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img6"></div>
+                        <div class="imgs" id="img6">
+                            <div class="cover">
+                                <p class="foodname">Cottage Cheese Pudding (High Protein)</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Cottage Cheese Pudding (High Protein)</h2>
                         </div>
                     </div>
-                  
+
                 </section>
             </div>
         </div>
         <!-- Main Meals Section -->
-        <div class="eachsection">
+        <div class="eachsection" id="mainmeal">
             <div class="text-div">
                 <div class="text">
                     <span class="lines"></span>
-                <h1 class="headings">Main Meal</h1>
+                    <h1 class="headings">Main Meal</h1>
                 </div>
                 <button class="show" id="show2">Show More ↓</button>
             </div>
@@ -140,19 +190,31 @@
                 <!-- Main Meal Section 1 of the recipes -->
                 <section class="recipe-sec1">
                     <div class="recipe">
-                        <div class="imgs" id="img7"></div>
+                        <div class="imgs" id="img7">
+                            <div class="cover">
+                                <p class="foodname">Crispy Rice Salad</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Crispy Rice Salad</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img8"></div>
+                        <div class="imgs" id="img8">
+                            <div class="cover">
+                                <p class="foodname">Tabbouleh Salad Recipe (Tabouli)</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Tabbouleh Salad Recipe (Tabouli)</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img9"></div>
+                        <div class="imgs" id="img9">
+                            <div class="cover">
+                                <p class="foodname">Healthy Baked Tortilla Samosas</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Healthy Baked Tortilla Samosas</h2>
                         </div>
@@ -162,34 +224,46 @@
                 <!-- Main Meal Section 2 of the recipes -->
                 <section class="recipe-sec2" id="mainmeal-sec2">
                     <div class="recipe">
-                        <div class="imgs" id="img10"></div>
+                        <div class="imgs" id="img10">
+                            <div class="cover">
+                                <p class="foodname">Easy Authentic Middle Eastern Falafel</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Easy Authentic Middle Eastern Falafel</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img11"></div>
+                        <div class="imgs" id="img11">
+                            <div class="cover">
+                                <p class="foodname">Moroccan Zaalouk Recipe (Aubergine Salad)</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Moroccan Zaalouk Recipe (Aubergine Salad)</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img12"></div>
+                        <div class="imgs" id="img12">
+                            <div class="cover">
+                                <p class="foodname">Greek Tomato Fritters (Tomatokeftedes)</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Greek Tomato Fritters (Tomatokeftedes)</h2>
                         </div>
                     </div>
-                  
+
                 </section>
             </div>
         </div>
 
-<!-- Dessert Section -->
-        <div class="eachsection">
+        <!-- Dessert Section -->
+        <div class="eachsection" id="dessert">
             <div class="text-div">
                 <div class="text">
                     <span class="lines"></span>
-                <h1 class="headings">Desserts</h1>
+                    <h1 class="headings">Desserts</h1>
                 </div>
                 <button class="show" id="show3">Show More ↓</button>
             </div>
@@ -199,19 +273,31 @@
                 <!-- Dessert Section 1 of the recipes -->
                 <section class="recipe-sec1">
                     <div class="recipe">
-                        <div class="imgs" id="img13"></div>
+                        <div class="imgs" id="img13">
+                            <div class="cover">
+                                <p class="foodname">Chocolate Sticky Toffee Puddings</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Chocolate Sticky Toffee Puddings</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img14"></div>
+                        <div class="imgs" id="img14">
+                            <div class="cover">
+                                <p class="foodname">Cottage Cheese Cheesecake</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Cottage Cheese Cheesecake</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img15"></div>
+                        <div class="imgs" id="img15">
+                            <div class="cover">
+                                <p class="foodname">Healthy Baked Tortilla Samosas</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Healthy Baked Tortilla Samosas</h2>
                         </div>
@@ -221,33 +307,45 @@
                 <!-- Dessert Section 2 of the recipes -->
                 <section class="recipe-sec2" id="desserts-sec2">
                     <div class="recipe">
-                        <div class="imgs" id="img16"></div>
+                        <div class="imgs" id="img16">
+                            <div class="cover">
+                                <p class="foodname">Easy Authentic Middle Eastern Falafel</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Easy Authentic Middle Eastern Falafel</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img17"></div>
+                        <div class="imgs" id="img17">
+                            <div class="cover">
+                                <p class="foodname">Moroccan Zaalouk Recipe (Aubergine Salad)</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Moroccan Zaalouk Recipe (Aubergine Salad)</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img18"></div>
+                        <div class="imgs" id="img18">
+                            <div class="cover">
+                                <p class="foodname">Greek Tomato Fritters (Tomatokeftedes)</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Greek Tomato Fritters (Tomatokeftedes)</h2>
                         </div>
                     </div>
-                  
+
                 </section>
             </div>
         </div>
         <!-- Side Dishes Section -->
-        <div class="eachsection">
+        <div class="eachsection" id="dishes">
             <div class="text-div">
                 <div class="text">
                     <span class="lines"></span>
-                <h1 class="headings">Side Dishes</h1>
+                    <h1 class="headings">Side Dishes</h1>
                 </div>
                 <button class="show" id="show4">Show More ↓</button>
             </div>
@@ -257,19 +355,31 @@
                 <!-- Side Dishes Section 1 of the recipes -->
                 <section class="recipe-sec1">
                     <div class="recipe">
-                        <div class="imgs" id="img19"></div>
+                        <div class="imgs" id="img19">
+                            <div class="cover">
+                                <p class="foodname">Chocolate Sticky Toffee Puddings</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Chocolate Sticky Toffee Puddings</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img20"></div>
+                        <div class="imgs" id="img20">
+                            <div class="cover">
+                                <p class="foodname">Cottage Cheese Cheesecake</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Cottage Cheese Cheesecake</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img21"></div>
+                        <div class="imgs" id="img21">
+                            <div class="cover">
+                                <p class="foodname">Healthy Baked Tortilla Samosas</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Healthy Baked Tortilla Samosas</h2>
                         </div>
@@ -279,34 +389,46 @@
                 <!-- Side Dishes Section 2 of the recipes -->
                 <section class="recipe-sec2" id="sidedishes-sec2">
                     <div class="recipe">
-                        <div class="imgs" id="img22"></div>
+                        <div class="imgs" id="img22">
+                            <div class="cover">
+                                <p class="foodname">Easy Authentic Middle Eastern Falafel</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Easy Authentic Middle Eastern Falafel</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img23"></div>
+                        <div class="imgs" id="img23">
+                            <div class="cover">
+                                <p class="foodname">Moroccan Zaalouk Recipe (Aubergine Salad)</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Moroccan Zaalouk Recipe (Aubergine Salad)</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img24"></div>
+                        <div class="imgs" id="img24">
+                            <div class="cover">
+                                <p class="foodname">Greek Tomato Fritters (Tomatokeftedes)</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Greek Tomato Fritters (Tomatokeftedes)</h2>
                         </div>
                     </div>
-                  
+
                 </section>
             </div>
         </div>
         <!-- Drinks Section -->
-        <div class="eachsection">
+        <div class="eachsection" id="drinks">
             <div class="text-div">
-              <div class="text">
-                <span class="lines"></span>
-                <h1 class="headings">Drinks</h1>
-              </div>  
+                <div class="text">
+                    <span class="lines"></span>
+                    <h1 class="headings">Drinks</h1>
+                </div>
                 <button class="show" id="show5">Show More ↓</button>
             </div>
 
@@ -315,19 +437,31 @@
                 <!-- Drinks  Section 1 of the recipes -->
                 <section class="recipe-sec1">
                     <div class="recipe">
-                        <div class="imgs" id="img25"></div>
+                        <div class="imgs" id="img25">
+                            <div class="cover">
+                                <p class="foodname">Chocolate Sticky Toffee Puddings</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Chocolate Sticky Toffee Puddings</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img26"></div>
+                        <div class="imgs" id="img26">
+                            <div class="cover">
+                                <p class="foodname">Cottage Cheese Cheesecake</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Cottage Cheese Cheesecake</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img27"></div>
+                        <div class="imgs" id="img27">
+                            <div class="cover">
+                                <p class="foodname">Healthy Baked Tortilla Samosas</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Healthy Baked Tortilla Samosas</h2>
                         </div>
@@ -337,34 +471,46 @@
                 <!-- Drinks Section 2 of the recipes -->
                 <section class="recipe-sec2" id="drinks-sec2">
                     <div class="recipe">
-                        <div class="imgs" id="img28"></div>
+                        <div class="imgs" id="img28">
+                            <div class="cover">
+                                <p class="foodname">Easy Authentic Middle Eastern Falafel</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Easy Authentic Middle Eastern Falafel</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img29"></div>
+                        <div class="imgs" id="img29">
+                            <div class="cover">
+                                <p class="foodname">Moroccan Zaalouk Recipe (Aubergine Salad)</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Moroccan Zaalouk Recipe (Aubergine Salad)</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img30"></div>
+                        <div class="imgs" id="img30">
+                            <div class="cover">
+                                <p class="foodname">Greek Tomato Fritters (Tomatokeftedes)</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Greek Tomato Fritters (Tomatokeftedes)</h2>
                         </div>
                     </div>
-                  
+
                 </section>
             </div>
         </div>
 
-         <!-- Snacks Section -->
-         <div class="eachsection">
+        <!-- Snacks Section -->
+        <div class="eachsection" id="snacks">
             <div class="text-div">
                 <div class="text">
                     <span class="lines"></span>
-                <h1 class="headings">Snacks</h1>
+                    <h1 class="headings">Snacks</h1>
                 </div>
                 <button class="show" id="show6">Show More ↓</button>
             </div>
@@ -374,19 +520,31 @@
                 <!-- Snacks  Section 1 of the recipes -->
                 <section class="recipe-sec1">
                     <div class="recipe">
-                        <div class="imgs" id="img31"></div>
+                        <div class="imgs" id="img31">
+                            <div class="cover">
+                                <p class="foodname">Chocolate Sticky Toffee Puddings</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Chocolate Sticky Toffee Puddings</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img32"></div>
+                        <div class="imgs" id="img32">
+                            <div class="cover">
+                                <p class="foodname">Cottage Cheese Cheesecake</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Cottage Cheese Cheesecake</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img33"></div>
+                        <div class="imgs" id="img33">
+                            <div class="cover">
+                                <p class="foodname">Healthy Baked Tortilla Samosas</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Healthy Baked Tortilla Samosas</h2>
                         </div>
@@ -396,30 +554,113 @@
                 <!-- Snacks Section 2 of the recipes -->
                 <section class="recipe-sec2" id="snacks-sec2">
                     <div class="recipe">
-                        <div class="imgs" id="img34"></div>
+                        <div class="imgs" id="img34">
+                            <div class="cover">
+                                <p class="foodname">Easy Authentic Middle Eastern Falafel</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Easy Authentic Middle Eastern Falafel</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img35"></div>
+                        <div class="imgs" id="img35">
+                            <div class="cover">
+                                <p class="foodname">Moroccan Zaalouk Recipe (Aubergine Salad)</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Moroccan Zaalouk Recipe (Aubergine Salad)</h2>
                         </div>
                     </div>
                     <div class="recipe">
-                        <div class="imgs" id="img36"></div>
+                        <div class="imgs" id="img36">
+                            <div class="cover">
+                                <p class="foodname">Greek Tomato Fritters (Tomatokeftedes)</p>
+                            </div>
+                        </div>
                         <div class="names-div">
                             <h2 class="names">Greek Tomato Fritters (Tomatokeftedes)</h2>
                         </div>
                     </div>
-                  
+
                 </section>
             </div>
         </div>
     </div>
 
+    <footer>
+        <div class="footer-container">
+            <div class="column logo-column">
+                <div class="logo-title">
+                    <img src="../images/logo.png" alt="Logo" class="LOGO">
+                    <h1>NUTRIVOLVE</h1>
+                </div>
+                <p>Stay updated with expert fitness tips, healthy recipes, and exclusive workout plans!</p>
+                <h3>Subscribe Now!</h3>
+                <form>
+                    <div class="input-group">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
 
+            <div class="column Reach">
+                <h3>Reach Us Through:</h3>
+                <div class="contactInfo">
+                    <div class="iconGroup">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="details">
+                            <span>Phone:</span>
+                            <span>+00 110 111 00</span>
+                        </div>
+                    </div>
+                    <div class="iconGroup">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="details">
+                            <span>Email:</span>
+                            <span>nutrivolve-fitness@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="iconGroup">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="details">
+                            <span>Location:</span>
+                            <span>Saida Street, Chohada Road</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column QuickL">
+                <h3>Links:</h3>
+                <ul>
+                    <li><a href="../home/home.html">Home</a></li>
+                    <li><a href="">Recipes</a></li>
+                    <li><a href="../workouts/workouts.html">Workouts</a></li>
+                    <li><a href="">Articles</a></li>
+                    <li><a href="">Work With Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </footer>
 </body>
 
 </html>

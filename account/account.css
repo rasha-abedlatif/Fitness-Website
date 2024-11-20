@@ -13,8 +13,7 @@
     width: 88%;
     min-height: 630px;
 }
-
-form {
+ .join{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -184,8 +183,8 @@ p.login-with {
     accent-color: #0072FF;
   }
   
-  button[type="submit"] {
-    width: 100%;
+  button[type="submit"]{
+    width: 40%;
     margin-top: 25px;
     padding: 12px;
     background: linear-gradient(90deg, #8b5e34, #a3b79f); 
@@ -238,6 +237,20 @@ p.login-with {
 
 .container.right-panel-active .sign-in-container {
     transform: translateX(100%);
+}
+
+.remember{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+ margin-right:90px;
+ gap: 7px;
+}
+.remember label{
+  margin-top: 8px;
+}
+#login{
+  width: 100%;
 }
 /* ---sign-in container--- */
 
@@ -350,14 +363,6 @@ p.login-with {
     color: #e2dcdc;
     margin-bottom: 400px;
 }
-/* ---GENERAL STYLE FOR THE TEXTS AND BUTTONS */
- /* h1 {
-    font-weight: bold;
-    margin: 0;
-} 
- h2 {
-    text-align: center;
-} */
  .text{
     font-size: 1rem;
     color: #dfdad4; 
@@ -418,3 +423,85 @@ button.ghost:hover {
     background-color: #8B5E3C; 
     color: #FFF5E6; 
 }
+.website{
+  border: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  /* padding: 80px; */
+}
+.name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Futura', 'Avenir', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 270px; 
+  font-weight: bold;
+  color: #9D6A4A; 
+  letter-spacing: -1px; 
+}
+footer{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+/*  
+footer .input-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+footer .input-group i {
+  color: #ffd700;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+footer .input-group input {
+  width: 100%;
+  padding: 8px;
+  background: #222;
+  color: #eaeaea;
+  border: none;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+}
+
+footer .input-group button{
+  border: none;
+  color: #1b1b1b;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background: #E8D4B9;
+  color: #282315;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+footer .input-group button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px rgba(232, 212, 185, 0.3);
+}
+
+footer  .social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+footer .social-icons a {
+  width: 35px;
+  height: 35px;
+  background: #333;
+  color: #ffd700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  background: #ffd700;
+  color: #1b1b1b;
+} */

@@ -1,9 +1,9 @@
-window.addEventListener("scroll",function(){
-  let navbar=document.querySelector('header');
-  if(this.window.scrollY>50){
-      header.classList.add("scrolled");
+window.addEventListener("scroll", function() {
+  let navbar = document.querySelector('header');
+  if (this.window.scrollY > 50) {
+      navbar.classList.add("scrolled");
   } else {
-      header.classList.remove("scrolled");
+      navbar.classList.remove("scrolled");
   }
 });
 
@@ -11,7 +11,7 @@ let container = document.getElementById("container");
 let signup = document.getElementById("signUp");
 let signin = document.getElementById("signIn");
 
-// Toggle panels
+// Part 1: Toggle panels
 signup.addEventListener("click", function () {
   container.classList.add("right-panel-active");
 });
@@ -19,6 +19,41 @@ signup.addEventListener("click", function () {
 signin.addEventListener("click", function () {
   container.classList.remove("right-panel-active");
 });
+
+//Part 2: by clicking on the drop down menu bar on sign in / sign up it takes u to the right panel
+// Check the URL fragment on page load
+window.addEventListener("load", function () {
+  let container = document.getElementById("container");
+
+  // Show the sign-up form if the URL contains #sign-up
+  if (window.location.hash === "#sign-up") {
+      container.classList.add("right-panel-active");
+  }
+
+  // Show the sign-in form if the URL contains #sign-in
+  if (window.location.hash === "#sign-in") {
+      container.classList.remove("right-panel-active");
+  }
+});
+
+// Handle nav Sign Up click
+let navSignUp = document.getElementById("navSignUp");
+navSignUp.addEventListener("click", function (event) {
+  event.preventDefault();
+  window.location.hash = "#sign-up"; 
+  let container = document.getElementById("container");
+  container.classList.add("right-panel-active"); 
+});
+
+// Handle nav Sign In click
+let navSignIn = document.getElementById("navSignIn");
+navSignIn.addEventListener("click", function (event) {
+  event.preventDefault();
+  window.location.hash = "#sign-in";
+  let container = document.getElementById("container");
+  container.classList.remove("right-panel-active");
+});
+
 
 // Select the signup form and inputs
 let signupForm = document.querySelector('.sign-up-container form');
@@ -56,76 +91,83 @@ checkInputs();
 // Password and Confirm Password validation
 let passwordInput = signupForm.querySelector('input[name="password"]');
 let confirmPasswordInput = signupForm.querySelector('input[name="confirmPassword"]');
+
 // Create the warning message element
 let passwordWarning = document.createElement('p');
-passwordWarning.classList.add('confirm-password-warning'); // Add a class for specific styling
+passwordWarning.classList.add('confirm-password-warning');
 passwordWarning.style.color = 'red';
 passwordWarning.style.fontSize = '0.9rem';
 passwordWarning.textContent = 'Confirm password does not match the password!';
-passwordWarning.style.display = 'none'; // Initially hidden
+passwordWarning.style.display = 'none';
 confirmPasswordInput.after(passwordWarning);
-
 
 confirmPasswordInput.addEventListener('input', () => {
   if (confirmPasswordInput.value !== passwordInput.value) {
-    passwordWarning.style.display = 'block'; // Show warning
+    passwordWarning.style.display = 'block';
   } else {
-    passwordWarning.style.display = 'none'; // Hide warning
+    passwordWarning.style.display = 'none';
   }
 });
 
-// Handle form submission
+// Handle form submission for sign-up
 signupForm.addEventListener('submit', (e) => {
-  e.preventDefault(); // Prevent default form submission
+  e.preventDefault(); 
 
-  // Final validation check
   if (!registerButton.disabled) {
-    alert("Registration successful!"); // Optional success message
-    location.reload(); // Reload the page after successful registration
+    // Save email and password to localStorage
+    let email = signupForm.querySelector('input[name="email"]').value;
+    let password = signupForm.querySelector('input[name="password"]').value;
+    
+    // Save user data in localStorage
+    localStorage.setItem('userEmail', email);
+    localStorage.setItem('userPassword', password);
+    
+    // Redirect to the home page after successful registration
+    window.location.href = '../home/home.html'; 
   } else {
-    alert("Please fill out all fields correctly."); // Optional error message
+    alert("Please fill out all fields correctly.");
   }
 });
 
-  // Predefined user credentials
-  let validCredentials = {
-    email: "user@example.com",
-    password: "password123"
-  };
+// Handle form submission for sign-in
+let loginForm = document.querySelector('.sign-in-container form');
+let emailInput = loginForm.querySelector('input[name="name"]');
+let loginPasswordInput = loginForm.querySelector('input[name="password"]');
+let loginButton = loginForm.querySelector('button[type="submit"]');
 
-  // Get login form and inputs
-  let loginForm = document.querySelector('.sign-in-container form');
-  let emailInput = loginForm.querySelector('input[name="name"]');
-  let loginPasswordInput = loginForm.querySelector('input[name="password"]');
-  let loginButton = loginForm.querySelector('button[type="submit"]');
+// Warning messages for login
+let loginWarning = document.createElement('p');
+loginWarning.style.color = 'red';
+loginWarning.style.fontSize = '0.9rem';
+loginWarning.style.display = 'none';
+loginForm.appendChild(loginWarning);
 
-  // Warning messages
-  let loginWarning = document.createElement('p');
-  loginWarning.style.color = 'red';
-  loginWarning.style.fontSize = '0.9rem';
-  loginWarning.style.display = 'none'; // Initially hidden
-  loginForm.appendChild(loginWarning);
+loginForm.addEventListener('submit', (e) => {
+  e.preventDefault(); 
 
-  loginForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevent form submission
-    let emailValue = emailInput.value.trim();
-    let passwordValue = loginPasswordInput.value.trim();
+  let emailValue = emailInput.value.trim();
+  let passwordValue = loginPasswordInput.value.trim();
 
-    // Check if email or password is invalid
-    if (emailValue !== validCredentials.email && passwordValue !== validCredentials.password) {
-      loginWarning.textContent = 'Both email and password are incorrect!';
-      loginWarning.style.display = 'block';
-    } else if (emailValue !== validCredentials.email) {
-      loginWarning.textContent = 'Email is incorrect!';
-      loginWarning.style.display = 'block';
-    } else if (passwordValue !== validCredentials.password) {
-      loginWarning.textContent = 'Password is incorrect!';
-      loginWarning.style.display = 'block';
-    } else {
-      loginWarning.style.display = 'none'; // Hide warnings
-      alert('Login successful!'); // Simulate successful login
-      // Add any redirect logic here if needed
-    }
-  });
+  // Retrieve stored email and password from localStorage
+  let storedEmail = localStorage.getItem('userEmail');
+  let storedPassword = localStorage.getItem('userPassword');
 
-
+  // Check if email or password is invalid
+  if (!storedEmail || !storedPassword) {
+    loginWarning.textContent = 'No account found. Please register first!';
+    loginWarning.style.display = 'block';
+  } else if (emailValue !== storedEmail && passwordValue !== storedPassword) {
+    loginWarning.textContent = 'Both email and password are incorrect!';
+    loginWarning.style.display = 'block';
+  } else if (emailValue !== storedEmail) {
+    loginWarning.textContent = 'Email is incorrect!';
+    loginWarning.style.display = 'block';
+  } else if (passwordValue !== storedPassword) {
+    loginWarning.textContent = 'Password is incorrect!';
+    loginWarning.style.display = 'block';
+  } else {
+    loginWarning.style.display = 'none'; 
+    // Redirect to the home page
+    window.location.href = '../home/home.html'; 
+  }
+});

@@ -60,6 +60,9 @@ nav a:hover {
     color: #dbd5c7;
 }
 .dropdown {
+  /* display: flex; */
+  /* align-items: center; */
+  /* position: relative; */
   float: left;
   overflow: hidden;
 }
@@ -68,13 +71,30 @@ nav a:hover {
 }
 .dropdown #account{
   width: 50px;
+  height: 50px;
+  /* margin-bottom: 20px; */
 }
+/* .dropdown button{
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+} */
+.Arrow{
+  font-size: 23px;
+  color: black;
+  /* margin-left: 5px; */
+  /* margin-right: 20px; */
+  margin-bottom: 300px;
+  /* bottom: 200%; */
+}
+
 .dropdown-content-wrapper {
   position: absolute;
   left: 96%; 
   transform: translateX(-50%); 
   display: none;
 }
+
 .dropdown-content {
   background-color: #f9f9f9;
   min-width: 30px;
@@ -82,14 +102,15 @@ nav a:hover {
   z-index: 1;
 }
 .dropdown-content a {
-  color: black;
+  color: #000;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
+  transition: background-color 0.2s;
 }
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #f0f0f0;
 }
 .dropdown:hover .dropdown-content-wrapper {
   display: block;
@@ -183,8 +204,7 @@ nav a:hover {
   .nav-links a{
     font-size: 25px;
   }
-}
-/* ---FOOTER SECTION--- */
+}/* ---FOOTER SECTION--- */
 footer {
     width: 100%;
     background: linear-gradient(135deg, #0a0a0a, #1b1b1b);
@@ -501,4 +521,3 @@ footer {
       font-size: 2em;
     }
   }
-  

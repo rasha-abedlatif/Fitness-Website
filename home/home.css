@@ -51,7 +51,7 @@ position:absolute;
 }
 .recipes{
   height: 150vh;
-  background-color: beige;
+  background-color: #f4efed;
   background-size: cover;
   background-position: center;
 }
@@ -180,13 +180,13 @@ position:absolute;
     gap:500px;
     align-items: center;
     max-width: 800px;
-    /* margin: 10 auto 20px; */
     margin-top: 60px;
-    margin-left:400px ;
+    margin-left:370px ;
   }
 
 
 .top h1{
+    margin-left: 100px;
     font-size: 40px;
     white-space: nowrap;
     font-family: "Poppins", sans-serif;
@@ -195,6 +195,7 @@ position:absolute;
   }
 
   .top .meal-btn {
+    margin-right: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -250,9 +251,7 @@ position:absolute;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    /* overflow: hidden; */
-    /* align-items: flex-start; */
-    max-width: 950px;
+    max-width: 990px;
     margin-left: 280px;
     margin-top: 40px;
   }
@@ -272,7 +271,7 @@ position:absolute;
     position: absolute;
     bottom: 0;
     margin-bottom: 180px;
-    margin-left: 50px;
+    margin-left: 40px;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.6);
@@ -322,7 +321,7 @@ position:absolute;
 /* ----workout section---- */
 .workout {
   padding: 50px;
-  background-color: #e1daca;
+  background-color: #ede8e6;
   overflow: hidden;
 }
 
@@ -516,7 +515,7 @@ position:absolute;
 
 .brands {
   position: relative;
-  background-color: beige;
+  background-color: #f4efed;
   overflow: hidden;
   padding: 60px 0;
   white-space: nowrap;
@@ -562,7 +561,7 @@ position:absolute;
 
 /* ---frequently asked questions:--- */
 .askedQs {
-  background-color: #D2CBC1; 
+  background-color: #ede8e6; 
   min-height: 70vh;
   display: flex;
   flex-direction: column;
@@ -576,7 +575,7 @@ position:absolute;
   font-weight: bold;
   font-family: 'Merriweather', serif;
   margin-bottom: 20px;
-  color: #222217; 
+  color: #755d4c;
 }
 
 .faq-list {
@@ -588,7 +587,7 @@ position:absolute;
 }
 
 .ques {
-  background-color: #4D5038; 
+  background-color: #694f3d; 
   padding: 15px 20px; 
   font-size: 18px;
   display: flex;
@@ -644,7 +643,7 @@ position:absolute;
   justify-content: center;
   align-items: center;
   padding: 30px 8%;
-  background-color: beige;
+  background-color: #f4efed;
   color: #5F563D;
 }
 
@@ -797,7 +796,7 @@ section.left .socialMedia {
 
 .messageForm textarea {
   resize: none;
-  height: 230px;
+  height: 240px;
   display: block;
 }
 
@@ -818,7 +817,7 @@ textarea::-webkit-scrollbar-thumb {
 .inputGroup label {
   position: absolute;
   left: 0;
-  bottom: 8px;
+  bottom: 13px;
   margin-left: 13px;
   color: #5F563D;
   font-size: 18px;
@@ -827,14 +826,14 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .inputGroup:nth-child(4) label {
-  top: 2px;
+  top: 14px;
 }
 
 .inputGroup input:focus ~ label,
 .inputGroup textarea:focus ~ label,
 .inputGroup input:valid ~ label,
 .inputGroup textarea:valid ~ label {
-  transform: translateY(-42px);
+  transform: translateY(-38px);
   font-size: 16px;
 }
 

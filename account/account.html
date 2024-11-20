@@ -20,7 +20,7 @@
           <span></span>
         </div>
         <nav class="nav-links">
-          <a href="">Home</a>
+          <a href="../home/home.html">Home</a>
           <a href="#">Recipes</a>
           <a href="../workouts/workouts.html">Workouts</a>
           <a href="#">Articles</a>
@@ -31,8 +31,8 @@
             </a>
             <div class="dropdown-content-wrapper">
                 <div class="dropdown-content">
-                    <a href="#">Sign in</a>
-                    <a href="#">Sign up</a>
+                  <a href="../account/account.html#sign-in" id="navSignIn">Sign in</a>
+                  <a href="../account/account.html#sign-up" id="navSignUp">Sign up</a>
                 </div>
             </div>
          </div>
@@ -40,8 +40,8 @@
       </header>
 
         <div class="container" id="container">
-          <div class="form-container sign-up-container">
-            <form action="#">
+          <div class="form-container sign-up-container" id="sign-up">
+            <form class="join">
               <!-- Title of the form -->
               <h1 class="title">Join Us</h1>
               <p class="login-with">Login with your account:</p>
@@ -123,18 +123,31 @@
             </form>
           </div>
                     
-            <div class="form-container sign-in-container">
-                <form action="#">
+            <div class="form-container sign-in-container" id="sign-in">
+                <form action="#" class="join">
                     <h1 class="title">Login</h1>
+                     <!-- <span>Use Your account login</span> -->
+                      <div class="input-box">
+                        <input type="text" name="name" placeholder="Email">
+                        <input type="password" name="password" placeholder="Enter your password">
+                        <div class="remember">
+                          <input type="checkbox" id="remember" required>
+                          <label for="remember">Remember me</label>
+                        </div>
+                        <button type="submit" id="login">Login</button>
+                      </div>
+                    <div class="separator">
+                      <div class="line"></div>
+                      <span>or continue with</span>
+                      <div class="line"></div>
+                    </div>
+                    <!-- OR SIGN WITH -->
                     <div class="social-container">
                         <a href="" class=""><i class="fab fa-facebook"></i></a>
                         <a href="" class=""><i class="fab fa-google-plus-g"></i></a>
                         <a href="" class=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <!-- <span>Use Your account login</span> -->
-                    <input type="text" name="name" placeholder="Username/Email">
-                    <input type="password" name="password" placeholder="Enter your password">
-                    <button type="submit">Login</button>
+                 
                 </form>
             </div>
             <div class="overlay-container">
@@ -149,11 +162,91 @@
                     <div class="overlay-panel overlay-right">
                         <h1 class="h1">Welcome</h1>
                         <img src="../images/whateva2.jpg" alt="">
-                        <p class="p">Join our wellness journey today!</p>
+                        <p class="p">Don't have an account? Join our wellness journey today!</p>
                         <button class="ghost" id="signUp">Sign Up</button>
                      </div>
                 </div>
             </div>
         </div>
+
+   
+<footer>
+  <div class="website">
+    <h1 class="name">
+      nutrivolve
+    </h1>
+  </div>
+  <hr style="width: 100%;">
+  <div class="footer-container">
+    <div class="column logo-column">
+      <div class="logo-title">
+          <img src="../images/logo.png" alt="Logo" class="LOGO">
+          <h1>NUTRIVOLVE</h1>
+      </div>
+      <p>Stay updated with expert fitness tips, healthy recipes, and exclusive workout plans!</p>
+      <h3>Subscribe Now!</h3>
+      <form>
+        <div class="input-group">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </form>
+      <div class="social-icons">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+        <a href=""><i class="fa-brands fa-pinterest"></i></a>
+      </div>
+    </div>
+
+    <div class="column Reach">
+      <h3>Reach Us Through:</h3>
+      <div class="contactInfo">
+        <div class="iconGroup">
+          <div class="icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="details">
+            <span>Phone:</span>
+            <span>+00 110 111 00</span>
+          </div>
+        </div>
+        <div class="iconGroup">
+          <div class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="details">
+            <span>Email:</span>
+            <span>nutrivolve-fitness@gmail.com</span>
+          </div>
+        </div>
+        <div class="iconGroup">
+          <div class="icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="details">
+            <span>Location:</span>
+            <span>Saida Street, Chohada Road</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column QuickL">
+      <h3>Links:</h3>
+      <ul>
+        <li><a href="../home/home.html">Home</a></li>
+        <li><a href="">Recipes</a></li>
+        <li><a href="../workouts/workouts.html">Workouts</a></li>
+        <li><a href="">Articles</a></li>
+        <li><a href="">Work With Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+</footer>
 </body>
 </html>

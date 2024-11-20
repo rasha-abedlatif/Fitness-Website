@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="home.css">
   <script src="home.js" defer></script>
   <link rel="stylesheet" href="../general.css">
@@ -22,19 +22,20 @@
       <span></span>
     </div>
     <nav class="nav-links">
-      <a href="">Home</a>
+      <a href="../home/home.html">Home</a>
       <a href="#">Recipes</a>
       <a href="../workouts/workouts.html">Workouts</a>
       <a href="#">Articles</a>
       <a href="#">About Us</a>
       <div class="dropdown">
-        <a href="#">
+        <a href="#" class="dropdown-button">
             <img id="account" src="../images/account.png" alt="Button Image">
+            <span class="Arrow">▼</span>
         </a>
         <div class="dropdown-content-wrapper">
             <div class="dropdown-content">
-                <a href="#">Sign in</a>
-                <a href="#">Sign up</a>
+                <a href="../account/account.html#sign-in">Sign in</a>
+                <a href="../account/account.html#sign-up"  id="navSignUp">Sign up</a>
             </div>
         </div>
     </div>
@@ -355,9 +356,7 @@
               </div>
             </div>
             <hr>
-          </footer>
-          
-                
+          </footer>            
   </div> 
 
    

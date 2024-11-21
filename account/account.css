@@ -402,6 +402,7 @@ a {
     text-transform: uppercase;
     transition: transform 80ms ease-in;
     cursor: pointer;
+    z-index: 10;
 }
 button:active {
     transform: scale(0.95);
@@ -504,4 +505,4 @@ footer .social-icons a {
 footer .social-icons a:hover {
   background: #ffd700;
   color: #1b1b1b;
-} */
+}*/

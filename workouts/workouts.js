@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let randomButton = document.getElementById('randomButton');
     
     randomButton.addEventListener('click', () => {
-        // Remove highlight from any previously selected exercise
         exercises.forEach(exercise => exercise.classList.remove('highlight'));
 
         // Select a random exercise
@@ -52,10 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
     let apps = document.querySelectorAll(".app");
-
     apps.forEach(app => {
         let ratingText = app.querySelector("h3").textContent;
-        let rating = parseFloat(ratingText); // Convert rating text to a number
+        let rating = parseFloat(ratingText);
         let stars = app.querySelector(".star");
 
         // Set number of filled stars based on the rating
@@ -65,10 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
         stars.innerHTML = "";
         for (let i = 1; i <= 5; i++) {
             let star = document.createElement("span");
-            star.innerHTML = "&#9733;"; // Star symbol
+            star.innerHTML = "&#9733;";
             star.classList.add("star");
             if (i <= filledStars) {
-                star.classList.add("filled"); // Add filled class based on rating
+                star.classList.add("filled");
             }
             stars.appendChild(star);
         }

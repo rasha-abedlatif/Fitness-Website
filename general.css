@@ -35,7 +35,7 @@ header.scrolled {
     font-size: 24px;
     font-weight: bold;
     margin-left: 10px;
-    color: #eeece0;
+    color: whitesmoke;
 }
 
 nav {
@@ -46,7 +46,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #eeece0;
+    color: whitesmoke;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;

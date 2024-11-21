@@ -16,18 +16,34 @@
 </head>
 
 <body>
-    <header id="header">
-        <div class="logo">
-            <a href="../home/home.html">NUTRIVOLVE</a>
+  <header id="header">
+    <div class="logo">
+      <a href="../home/home.html">NUTRIVOLVE</a>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav-links">
+      <a href="../home/home.html">Home</a>
+      <a href="#">Recipes</a>
+      <a href="../workouts/workouts.html">Workouts</a>
+      <a href="#">Articles</a>
+      <a href="#">About Us</a>
+      <div class="dropdown">
+        <a href="#">
+            <img id="account" src="../images/account.png" alt="Button Image">
+        </a>
+        <div class="dropdown-content-wrapper">
+            <div class="dropdown-content">
+                <a href="../account/account.html#sign-in">Sign in</a>
+                <a href="../account/account.html#sign-up">Sign up</a>
+            </div>
         </div>
-        <nav>
-            <a href="../home/home.html">Home</a>
-            <a href="#">Recipes</a>
-            <a href="../workouts/workouts.html">Workouts</a>
-            <a href="#">Articles</a>
-            <a href="#">About Us</a>
-        </nav>
-    </header>
+    </div>
+    </nav>
+  </header>
     <div class="slider">
         <div class="slide">
             <img class="slide-image" src="../images/about us.jpg" alt="Workout 1" />
@@ -45,7 +61,7 @@
                     <div class="card">
                         <img src="../images/nutritionist.jpg" alt="" />
                         <div class="overlay">Nutritionist</div>
-                        <h3>Mr. Jonson Mendela</h3>
+                        <h3>Mrs. Juliana Rodrigues</h3>
                         <div class="icons1">
                             <img src="../images/whatsapp.png" alt="">
                             <img src="../images/facebook.png" alt="">
@@ -55,7 +71,7 @@
                     <div class="card">
                         <img class="img2" src="../images/manager.jpg" alt="" />
                         <div class="overlay">Manager</div>
-                        <h3>Mrs. Juliana Rodrigues</h3>
+                        <h3>  Mr. Jonson Mendela </h3>
                         <div class="icons1">
                             <img src="../images/whatsapp.png" alt="">
                             <img src="../images/facebook.png" alt="">
@@ -65,7 +81,7 @@
                     <div class="card">
                         <img src="../images/coach.jpg" alt="" />
                         <div class="overlay">Coach</div>
-                        <h3>Mrs. Rokmini Moniam</h3>
+                        <h3>Mr. James Smith</h3>
                         <div class="icons1">
                             <img src="../images/whatsapp.png" alt="">
                             <img src="../images/facebook.png" alt="">
@@ -106,15 +122,7 @@
         <section class="section3">
             <h2>Our Services</h2>
             <div class="services">
-            <div class="service">
-                <div class="imags">
-                    <img src="../images/Designer (2).png" alt="">
-                </div>
-                <div class="content">
-                    <h3>User Dashboard Service</h3>
-                    <p>Log in to track progress, like and save favorites, and access personalized recommendations.</p>
-                </div>
-            </div>
+           
             <div class="service">
                 <div class="imags">
                     <img src="../images/Designer (3).png" alt="">

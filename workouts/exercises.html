@@ -15,16 +15,34 @@
 <body class="Exercises-body">
     <header id="header">
         <div class="logo">
-            <a href="../home/home.html">NUTRIVOLVE</a>
+          <a href="../home/home.html">NUTRIVOLVE</a>
         </div>
-        <nav>
-            <a href="../home/home.html">Home</a>
-            <a href="#">Recipes</a>
-            <a href="../workouts/workouts.html">Workouts</a>
-            <a href="#">Articles</a>
-            <a href="../about us/aboutus.html">About Us</a>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="nav-links">
+          <a href="../home/home.html">Home</a>
+          <a href="#">Recipes</a>
+          <a href="../workouts/workouts.html">Workouts</a>
+          <a href="#">Articles</a>
+          <a href="#">About Us</a>
+          <div class="dropdown">
+            <a href="#">
+                <img id="account" src="../images/account.png" alt="Button Image">
+            </a>
+            <div class="dropdown-content-wrapper">
+                <div class="dropdown-content">
+                    <a href="../account/account.html#sign-in">Sign in</a>
+                    <a href="../account/account.html#sign-up">Sign up</a>
+                </div>
+            </div>
+        </div>
+        
         </nav>
-    </header>
+       
+      </header>
     <main class="Exercises">
         <h1 class="heading-exercise">Exercises</h1>
         <div class="Exercises-slider">
@@ -75,8 +93,6 @@
                         </p>
                     </div>
                 </div>
-                <button class="rating-btn">Rate Me</button>
-
             </div>
             <div class="btns">
                 <button id="previousbtn">previous</button>

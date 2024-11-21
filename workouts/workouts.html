@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-  <!-- <link rel="https://fonts.adobe.com/search?query=Didot" href=""> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="workouts.css">
   <script src="workouts.js" defer></script>
   <link rel="stylesheet" href="../general.css">
@@ -20,99 +19,206 @@
     <div class="logo">
       <a href="../home/home.html">NUTRIVOLVE</a>
     </div>
-    <nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav-links">
       <a href="../home/home.html">Home</a>
       <a href="#">Recipes</a>
       <a href="../workouts/workouts.html">Workouts</a>
       <a href="#">Articles</a>
       <a href="../about us/aboutus.html">About Us</a>
+      <div class="dropdown">
+        <a href="#">
+          <img id="account" src="../images/account.png" alt="Button Image">
+        </a>
+        <div class="dropdown-content-wrapper">
+          <div class="dropdown-content">
+            <a href="../account/account.html#sign-in">Sign in</a>
+            <a href="../account/account.html#sign-up">Sign up</a>
+          </div>
+        </div>
+      </div>
+
     </nav>
+
   </header>
   <main>
-  <div class="slider">
-    <div class="slide">
-      <img class="slide-image" src="../images/t3ebet.jpeg" alt="Workout 1">
-      <div class="slide-content">
-        <h1>FITNESS WORKOUTS FOR ALL</h1>
-        <p>Fitness <br> Sport Club</p>
-        <button>Learn More</button>
+    <div class="slider">
+      <div class="slide">
+        <img class="slide-image" src="../images/t3ebet.jpeg" alt="Workout 1">
+        <div class="slide-content">
+          <h1>FITNESS WORKOUTS FOR ALL</h1>
+          <p>Fitness <br> Sport Club</p>
+          <button class="btn">Learn More</button>
+        </div>
+      </div>
+      <div class="slide">
+        <img class="slide-image" src="../images/hekkman_Nero AI_Photo_Face.jpeg" alt="Workout 2">
+        <div class="slide-content">
+          <h1>FITNESS WORKOUTS FOR ALL</h1>
+          <p>Fitness <br> Sport Club</p>
+          <button class="btn">Learn More</button>
+        </div>
+      </div>
+      <div class="slide">
+        <img class="slide-image" src="../images/mashi_Nero AI_Photo_Face.jpeg" alt="Workout 3">
+        <div class="slide-content">
+          <h1>FITNESS WORKOUTS FOR ALL</h1>
+          <p>Fitness <br> Sport Club</p>
+          <button class="btn">Learn More</button>
+        </div>
       </div>
     </div>
-    <div class="slide">
-      <img class="slide-image" src="../images/hekkman_Nero AI_Photo_Face.jpeg" alt="Workout 2">
-      <div class="slide-content">
-        <h1>FITNESS WORKOUTS FOR ALL</h1>
-        <p>Fitness <br> Sport Club</p>
-        <button>Learn More</button>
-      </div>
-    </div>
-    <div class="slide">
-      <img class="slide-image" src="../images/mashi_Nero AI_Photo_Face.jpeg" alt="Workout 3">
-      <div class="slide-content">
-        <h1>FITNESS WORKOUTS FOR ALL</h1>
-        <p>Fitness <br> Sport Club</p>
-        <button>Learn More</button>
-      </div>
-    </div>
-  </div>
-  
-
- 
     <section class="section1">
-      <h1 class="heading1">Level Up Your Workout:</h1>
+      <h2 class="heading1">Level Up Your Workout:</h2>
       <div class="cards">
-        <div class="container">
-          <a href=""><img src="../images/download (12).jpg" alt=""></a>
-          <div class="content"> <b>Dumbbell Shoulder Press</b></div>
+        <div class="container" data-id="Dumbbell-shoulder-press">
+          <a href=""><img src="../images/workout1.jpg" alt=""></a>
+          <div class="content">
+            <p><b>Dumbbell Shoulder Press</b></p>
+            <div class="rating">
+              <span data-value="1">&#9733;</span>
+              <span data-value="2">&#9733;</span>
+              <span data-value="3">&#9733;</span>
+              <span data-value="4">&#9733;</span>
+              <span data-value="5">&#9733;</span>
+            </div>
+          </div>
         </div>
-        <div class="container">
+        <div class="container" data-id="Barbell-Lunge">
           <a href=""><img src="../images/workout2.jpg" alt=""></a>
-          <div class="content"><b>Barbell Lunge</b></div>
+          <div class="content">
+            <p><b>Barbell Lunge</b></p>
+            <div class="rating">
+              <span data-value="1">&#9733;</span>
+              <span data-value="2">&#9733;</span>
+              <span data-value="3">&#9733;</span>
+              <span data-value="4">&#9733;</span>
+              <span data-value="5">&#9733;</span>
+            </div>
+          </div>
         </div>
-        <div class="container">
+        <div class="container" data-id="battle-rope">
           <a href=""><img src="../images/workout3.jpg" alt=""></a>
-          <div class="content"><b>Battle Rope Wave</b></div>
+          <div class="content">
+            <p><b>Battle Rope Wave</b></p>
+            <div class="rating">
+              <span data-value="1">&#9733;</span>
+              <span data-value="2">&#9733;</span>
+              <span data-value="3">&#9733;</span>
+              <span data-value="4">&#9733;</span>
+              <span data-value="5">&#9733;</span>
+            </div>
+          </div>
         </div>
-        <div class="container">
+        <div class="container" data-id="Lat-pulldown">
           <a href=""><img src="../images/workout4.jpg" alt=""></a>
-          <div class="content"><b>Lat pulldown</b></div>
+          <div class="content">
+            <p><b>Lat pulldown</b></p>
+            <div class="rating">
+              <span data-value="1">&#9733;</span>
+              <span data-value="2">&#9733;</span>
+              <span data-value="3">&#9733;</span>
+              <span data-value="4">&#9733;</span>
+              <span data-value="5">&#9733;</span>
+            </div>
+            <div class="card-icons">
+            </div>
+          </div>
         </div>
-        <div class="container">
+        <div class="container" data-id="Biking">
           <a href=""><img src="../images/workout5.jpg" alt=""></a>
-          <div class="content"><b>Biking</b></div>
+          <div class="content">
+            <p><b>Biking</b></p>
+            <div class="rating">
+              <span data-value="1">&#9733;</span>
+              <span data-value="2">&#9733;</span>
+              <span data-value="3">&#9733;</span>
+              <span data-value="4">&#9733;</span>
+              <span data-value="5">&#9733;</span>
+            </div>
+          </div>
         </div>
-        <div class="container">
+        <div class="container" data-id="Incline-walk/Run">
           <a href=""><img src="../images/workout6.jpg" alt=""></a>
-          <div class="content"><b>Incline Walk/Run</b></div>
+          <div class="content">
+            <p><b>Incline Walk/Run</b></p>
+            <div class="rating">
+              <span data-value="1">&#9733;</span>
+              <span data-value="2">&#9733;</span>
+              <span data-value="3">&#9733;</span>
+              <span data-value="4">&#9733;</span>
+              <span data-value="5">&#9733;</span>
+            </div>
+          </div>
         </div>
-        <div class="container">
+        <div class="container" data-id="kick-boxing">
           <a href=""><img src="../images/workout7.jpg" alt=""></a>
-          <div class="content"><b>kick boxing</b></div>
+          <div class="content">
+            <p><b>kick boxing</b></p>
+            <div class="rating">
+              <span data-value="1">&#9733;</span>
+              <span data-value="2">&#9733;</span>
+              <span data-value="3">&#9733;</span>
+              <span data-value="4">&#9733;</span>
+              <span data-value="5">&#9733;</span>
+            </div>
+          </div>
         </div>
-        <div class="container">
+        <div class="container" data-id="shoulder-press">
           <a href=""><img src="../images/workout8.jpg" alt=""></a>
-          <div class="content"><b>Shoulder Press</b></div>
+          <div class="content">
+            <p><b>Shoulder Press</b></p>
+            <div class="rating">
+              <span data-value="1">&#9733;</span>
+              <span data-value="2">&#9733;</span>
+              <span data-value="3">&#9733;</span>
+              <span data-value="4">&#9733;</span>
+              <span data-value="5">&#9733;</span>
+            </div>
+          </div>
         </div>
-        <div class="container">
+        <div class="container" data-id="roller-skate">
           <a href=""><img src="../images/workout9.jpg" alt=""></a>
-          <div class="content"><b>Roller Skating</b></div>
+          <div class="content">
+            <p><b>Roller Skating</b></p>
+            <div class="rating">
+              <span data-value="1">&#9733;</span>
+              <span data-value="2">&#9733;</span>
+              <span data-value="3">&#9733;</span>
+              <span data-value="4">&#9733;</span>
+              <span data-value="5">&#9733;</span>
+            </div>
+          </div>
         </div>
-        <div class="container">
+        <div class="container" data-id="Yoga">
           <a href=""><img src="../images/workout10.jpg" alt=""></a>
-          <div class="content"><b>Yoga </b></div>
+          <div class="content">
+            <p><b>Yoga </b></p>
+            <div class="rating">
+              <span data-value="1">&#9733;</span>
+              <span data-value="2">&#9733;</span>
+              <span data-value="3">&#9733;</span>
+              <span data-value="4">&#9733;</span>
+              <span data-value="5">&#9733;</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="part2">
-      <div class="line"></div>
-      <div class="randomly">
-      <p>"Need a bit of inspiration for your next workout? Click the button below to explore a random exercise and discover something new to try!"</p>
-      <button id="randomButton">Get Inspired</button>
-    </div>
-  </div>
+        <div class="line"></div>
+        <div class="randomly">
+          <p>"Need a bit of inspiration for your next workout? Click the button below to explore a random exercise and
+            discover something new to try!"</p>
+          <button id="randomButton">Get Inspired</button>
+        </div>
+      </div>
     </section>
-
     <section class="section2">
-      <h1>Products</h1>
+      <h2>Products</h2>
       <div class="carousel">
         <button class="arrow" id="prev">&#9664;</button>
         <div class="carousel-track-container">
@@ -164,7 +270,7 @@
     </section>
 
     <section class="section3">
-      <h1>Apps</h1>
+      <h2>Apps</h2>
       <div class="Apps">
         <div class="app">
           <a href="https://play.google.com/store/apps/details?id=com.mapmyfitness.android2&hl=en">
@@ -209,8 +315,8 @@
     <div class="footer-container">
       <div class="column logo-column">
         <div class="logo-title">
-            <img src="../images/logo.png" alt="Logo" class="LOGO">
-            <h1>NUTRIVOLVE</h1>
+          <img src="../images/logo.png" alt="Logo" class="LOGO">
+          <h1>NUTRIVOLVE</h1>
         </div>
         <p>Stay updated with expert fitness tips, healthy recipes, and exclusive workout plans!</p>
         <h3>Subscribe Now!</h3>
@@ -230,7 +336,7 @@
           <a href=""><i class="fa-brands fa-pinterest"></i></a>
         </div>
       </div>
-  
+
       <div class="column Reach">
         <h3>Reach Us Through:</h3>
         <div class="contactInfo">
@@ -263,7 +369,7 @@
           </div>
         </div>
       </div>
-  
+
       <div class="column QuickL">
         <h3>Links:</h3>
         <ul>

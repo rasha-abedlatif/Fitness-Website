@@ -10,20 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const slideInterval = 3000; // 3 seconds
-
-    // Function to display the current slide and hide others
+    let slides = document.querySelectorAll('.slide');
+    let slideInterval = 3000; // 3 seconds
     function showSlide(index) {
         slides.forEach((slide, i) => {
-            const slideContent = slide.querySelector('.slide-content');
-
+            let slideContent = slide.querySelector('.slide-content');
             if (i === index) {
-                slide.classList.add('active'); // Show current slide
-                //   slideContent.classList.add('animate'); 
+                slide.classList.add('active'); 
             } else {
                 slide.classList.remove('active');
-                //   slideContent.classList.remove('animate'); 
             }
         });
     }
@@ -31,10 +26,40 @@ document.addEventListener("DOMContentLoaded", () => {
         currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
     }
-
-    // Initialize slider
     showSlide(currentSlide);
     setInterval(nextSlide, slideInterval);
+    document.querySelectorAll('.btn').forEach(button => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('.section1')?.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    document.querySelectorAll('.container').forEach(card => {
+        let exerciseId = card.getAttribute('data-id');
+        let savedRating = localStorage.getItem(`rating-${exerciseId}`);
+           if (savedRating) {
+            fillStars(card, parseInt(savedRating));
+        }
+        let stars = card.querySelectorAll('.rating span');
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                let rating = parseInt(star.getAttribute('data-value'));
+                localStorage.setItem(`rating-${exerciseId}`, rating);
+                fillStars(card, rating);
+            });
+        });
+    });
+    function fillStars(card, rating) {
+       let stars = card.querySelectorAll('.rating span');
+        stars.forEach(star => {
+            let starValue = parseInt(star.getAttribute('data-value'));
+            if (starValue <= rating) {
+                star.classList.add('filled'); 
+            } else {
+                star.classList.remove('filled'); 
+            }
+        });
+    }    
     let exercises = document.querySelectorAll('.container');
     let randomButton = document.getElementById('randomButton');
 
@@ -44,51 +69,62 @@ document.addEventListener("DOMContentLoaded", () => {
         let selectedExercise = exercises[randomIndex];
         selectedExercise.classList.add('highlight');
     });
-
-
-    let currentIndex = 0;
-    let carouselTrack = document.querySelector('.carousel-track');
-    let carouselItems = Array.from(document.querySelectorAll('.carousel-item'));
-    let leftButton = document.querySelector('#prev');
-    let rightButton = document.querySelector('#next');
-
-    let itemWidth = carouselItems[0].offsetWidth + 20;
-
-    function updateTrackPosition() {
-        let offset = -currentIndex * itemWidth;
-        carouselTrack.style.transform = `translateX(${offset}px)`;
-    }
-
-    function moveToNext() {
-        if (currentIndex >= carouselItems.length - 1) {
-            let firstItem = carouselTrack.firstElementChild;
-            carouselTrack.appendChild(firstItem);
-            currentIndex--;
+        let currentIndex = 0;
+        const carouselTrack = document.querySelector('.carousel-track');
+        const carouselItems = Array.from(document.querySelectorAll('.carousel-item'));
+        const leftButton = document.querySelector('#prev');
+        const rightButton = document.querySelector('#next');
+        const itemWidth = carouselItems[0].getBoundingClientRect().width + 20; 
+        const firstClone = carouselItems.slice(0, 3).map(item => item.cloneNode(true));
+        const lastClone = carouselItems.slice(-3).map(item => item.cloneNode(true));
+        firstClone.forEach(clone => carouselTrack.appendChild(clone));
+        lastClone.forEach(clone => carouselTrack.insertBefore(clone, carouselTrack.firstChild));
+        currentIndex += lastClone.length;
+        function updateTrackPosition() {
+            const offset = -currentIndex * itemWidth;
+            carouselTrack.style.transform = `translateX(${offset}px)`;
         }
-        currentIndex++;
-        updateTrackPosition();
-    }
-
-    function moveToPrevious() {
-        if (currentIndex <= 0) {
-            let lastItem = carouselTrack.lastElementChild;
-            carouselTrack.insertBefore(lastItem, carouselTrack.firstElementChild);
+        function moveToNext() {
             currentIndex++;
+            carouselTrack.style.transition = 'transform 0.3s ease-in-out';
+            updateTrackPosition();
+            if (currentIndex === carouselItems.length + lastClone.length) {
+                setTimeout(() => {
+                    currentIndex = lastClone.length; 
+                    carouselTrack.style.transition = 'none'; 
+                    updateTrackPosition();
+                }, 300); 
+            }
         }
-        currentIndex--;
+        function moveToPrevious() {
+            currentIndex--;
+            carouselTrack.style.transition = 'transform 0.3s ease-in-out';
+            updateTrackPosition();
+            if (currentIndex < lastClone.length) {
+                setTimeout(() => {
+                    currentIndex = carouselItems.length + lastClone.length - 1; // Reset index
+                    carouselTrack.style.transition = 'none'; // Disable transition
+                    updateTrackPosition();
+                }, 300); 
+            }
+        }
+        rightButton.addEventListener('click', moveToNext);
+        leftButton.addEventListener('click', moveToPrevious);
+        let isMoving = false;
+    
+        function handleButtonClick(moveFunction) {
+            if (!isMoving) {
+                isMoving = true;
+                moveFunction();
+                setTimeout(() => {
+                    isMoving = false;
+                }, 300); 
+            }
+        }
+        rightButton.addEventListener('click', () => handleButtonClick(moveToNext));
+        leftButton.addEventListener('click', () => handleButtonClick(moveToPrevious));
         updateTrackPosition();
-    }
-
-    rightButton.addEventListener('click', moveToNext);
-    leftButton.addEventListener('click', moveToPrevious);
-
-    updateTrackPosition();
-
-    updateTrackPosition();
-
-
     let apps = document.querySelectorAll(".app");
-
     apps.forEach(app => {
         let ratingText = app.querySelector("h3").textContent;
         let rating = parseFloat(ratingText);

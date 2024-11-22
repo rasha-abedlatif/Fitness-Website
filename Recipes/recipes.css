@@ -31,10 +31,25 @@ nav a:hover:not(:nth-child(2))::after {
     width: 100%;
 }
 
+/*--- Opening Section Styling---*/ 
+.opening-sen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+}
 
+.h1{
+  color: #b2998a;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 100;
+}
 /* ---Recipes Styling--- */ 
 .recipes{
-    margin-top: 200px;
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 .image-container {
@@ -225,7 +240,7 @@ background-image: url(images-recipes/Breakfast1.jpeg);
 background-position: center;
 background-repeat: no-repeat;
 background-size: 400px;
-height: 85%;
+height: 80%;
 border-radius: 20px 20px 0 0;
 border: 8px;
 border-style: solid;
@@ -235,7 +250,7 @@ position: relative;
 }
 
 .names-div{
-  height: 15%;
+  height: 20%;
   background-color: #695242;
   color: white;
   text-align: center;
@@ -400,16 +415,68 @@ position: relative;
   overflow: hidden;
   transition: width 0.5s ease-in-out;
   border-radius: 10px 10px 0 0;
-  
+
   
 }
 .foodname{
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 10px;
+  
 }
 
 .imgs:hover .cover{
-  width: 100%;} 
+  width: 100%;  
+} 
+
+
+  /* ---Tips Section---*/ 
+  .tips{
+    margin-bottom: 100px;
+  }
+  h4{
+    margin: 50px;
+    font-size: 40px;
+    color: #998F71;
+    text-align: center;
+
+  }
+
+  .quotes-div{
+    width: 100%;
+    height: 500px;
+     margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .quotes-div .q-div:nth-child(odd){
+  align-self: flex-start;
+  }
+  .quotes-div .q-div:nth-child(even){
+    align-self: flex-end;
+  }
+  .q-div{
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  padding: 10px;
+  border: solid 3px #695242;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .quote{
+    color: #998F71;
+    font-size: 25px;
+  }
+  .authors{
+    margin-top: 20px;
+    color: #b2998a;
+    font-size: 15px;
+  }
 
   /* ---FOOTER SECTION--- */
 footer {
@@ -775,32 +842,3 @@ background-position: center;
 
 }
 
-/*.firstpart{
-  width: 50%;
-  height: 100%;
-  color: #dbd5c7;
-  background-color: #e5e0d6;
-  border: #b2998a solid 10px;
-}
-
-.secondpart{
-  background-image: url(images-recipes/main1.jpeg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box ;
-  border-width: 10px 10px 10px 0;
-  border: #b2998a solid;
-  
-}
-.secondpart img{
-  border: #b2998a solid; 
-  border-width: 10px 10px 10px 0px;
-  width: 100%;
-  height: 100%;
-} */

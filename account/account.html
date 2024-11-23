@@ -1,252 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../general.css">
-    <link rel="stylesheet" href="../account/account.css">
-    <script src="../account/account.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../account/account.css" />
+  
+  <script src="../account/account.js" defer></script>
+  <title>Account</title>
 </head>
+
 <body>
-    <header id="header">
-        <div class="logo">
-          <a href="../home/home.html">NUTRIVOLVE</a>
-        </div>
-        <div class="menu-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <nav class="nav-links">
-          <a href="../home/home.html">Home</a>
-          <a href="#">Recipes</a>
-          <a href="../workouts/workouts.html">Workouts</a>
-          <a href="#">Articles</a>
-          <a href="#">About Us</a>
-          <div class="dropdown">
-            <a href="#">
-                <img id="account" src="../images/vecteezy_gold-user-icon_11947163.png" alt="Button Image">
-            </a>
-            <div class="dropdown-content-wrapper">
-                <div class="dropdown-content">
-                  <a href="../account/account.html#sign-in" id="navSignIn">Sign in</a>
-                  <a href="../account/account.html#sign-up" id="navSignUp">Sign up</a>
-                </div>
-            </div>
-         </div>
-        </nav>
-      </header>
 
-        <div class="container" id="container">
-          <div class="form-container sign-up-container" id="sign-up">
-            <form class="join">
-              <!-- Title of the form -->
-              <h1 class="title">Join Us</h1>
-              <p class="login-with">Login with your account:</p>
-          
-              <!-- Social login options -->
-              <div class="social-container">
-                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-          
-              <!-- Separator with lines and 'OR' text -->
-              <div class="separator">
-                <div class="line"></div>
-                <span>OR</span>
-                <div class="line"></div>
-              </div>
-          
-              <!-- User details input fields with spans -->
-              <div class="user-details">
-                <div class="input-box">
-                  <span class="details">First Name:</span>
-                  <input type="text" name="firstName" placeholder="Enter your first name" required>
-                </div>
-                <div class="input-box">
-                  <span class="details">Last Name:</span>
-                  <input type="text" name="lastName" placeholder="Enter your last name" required>
-                </div>
-                <div class="input-box">
-                  <span class="details">Email:</span>
-                  <input type="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="input-box">
-                  <span class="details">Phone Number:</span>
-                  <input type="text" placeholder="Enter your number" required>
-                </div>
-                <div class="input-box">
-                  <span class="details">Password:</span>
-                  <input type="password" name="password" placeholder="Enter your password" required>
-                </div>
-                <div class="input-box">
-                  <span class="details">Confirm Password:</span>
-                  <input type="password" name="confirmPassword" placeholder="Confirm your password" required>
-                </div>
-              </div>
-          
-              <!-- Gender details with radio buttons -->
-              <div class="gender-details">
-                <span class="gender-title">Gender:</span>
-                <div class="category">
-                  <label for="dot-1">
-                    <input type="radio" name="gender" id="dot-1" required>
-                    <span class="dot one"></span>
-                    <span class="gender">Male</span>
-                  </label>
-                  <label for="dot-2">
-                    <input type="radio" name="gender" id="dot-2" required>
-                    <span class="dot two"></span>
-                    <span class="gender">Female</span>
-                  </label>
-                  <label for="dot-3">
-                    <input type="radio" name="gender" id="dot-3" required>
-                    <span class="dot three"></span>
-                    <span class="gender">Prefer not to say</span>
-                  </label>
-                </div>
-              </div>
-          
-              <!-- Terms and conditions checkbox -->
-              <div class="terms">
-                <input type="checkbox" id="terms" required>
-                <label for="terms">
-                  I agree to all <a href="#">Terms</a>, <a href="#">Privacy Policy</a>
-                </label>
-              </div>
-          
-              <!-- Register button -->
-              <button type="submit" id="registerButton" disabled>Register</button>
-            </form>
+  <div class="container">
+
+    <div class="forms-container">
+
+      <div class="signin-signup">
+
+        <form id="sign-in-form" action="" class="sign-in-form">
+          <h2 class="title">Sign in</h2>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="text" name="email" placeholder="email" required />
           </div>
-                    
-            <div class="form-container sign-in-container" id="sign-in">
-                <form action="#" class="join">
-                    <h1 class="title">Login</h1>
-                     <!-- <span>Use Your account login</span> -->
-                      <div class="input-box">
-                        <input type="text" name="name" placeholder="Email">
-                        <input type="password" name="password" placeholder="Enter your password">
-                        <div class="remember">
-                          <input type="checkbox" id="remember" required>
-                          <label for="remember">Remember me</label>
-                        </div>
-                        <button type="submit" id="login">Login</button>
-                      </div>
-                    <div class="separator">
-                      <div class="line"></div>
-                      <span>or continue with</span>
-                      <div class="line"></div>
-                    </div>
-                    <!-- OR SIGN WITH -->
-                    <div class="social-container">
-                        <a href="" class=""><i class="fab fa-facebook"></i></a>
-                        <a href="" class=""><i class="fab fa-google-plus-g"></i></a>
-                        <a href="" class=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                 
-                </form>
-            </div>
-            <div class="overlay-container">
-                <div class="overlay">
-                    <div class ="overlay-panel overlay-left">
-                        <h1 class="h1">Ready to Glow?</h1>
-                        <img src="../images/whateva.jpg" alt="">
-                        <p class="text">Start your journey to better health with expert insights <br> on nutrition and workouts. It’s time to invest in you.</p>
-                        <p class="p">Login in to stay connected with us</p>
-                        <button class="ghost" id="signIn">Sign In</button>
-                    </div>
-                    <div class="overlay-panel overlay-right">
-                        <h1 class="h1">Welcome</h1>
-                        <img src="../images/whateva2.jpg" alt="">
-                        <p class="p">Don't have an account? Join our wellness journey today!</p>
-                        <button class="ghost" id="signUp">Sign Up</button>
-                     </div>
-                </div>
-            </div>
-        </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" placeholder="Password"  required />
+          </div>
+          <input type="submit" value="Login" class="btn solid" />
+          <a href="#">Forget Password?</a>
+          <div class="separator">
+            <div class="line"></div>
+            <span>or continue with</span>
+            <div class="line"></div>
+          </div>
+          <!-- OR SIGN WITH -->
+          <div class="social-container">
+            <a href="#" class=""><i class="fab fa-facebook"></i></a>
+            <a href="#" class=""><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </form>
 
-   
-<footer>
-  <div class="website">
-    <h1 class="name">
-      nutrivolve
-    </h1>
-  </div>
-  <hr style="width: 100%;">
-  <div class="footer-container">
-    <div class="column logo-column">
-      <div class="logo-title">
-          <img src="../images/logo.png" alt="Logo" class="LOGO">
-          <h1>NUTRIVOLVE</h1>
+        <form id="sign-up-form" action="" class="sign-up-form">
+          <h2 class="title">Sign up</h2>
+          <p class="login-with"> with your account:</p>
+          <div class="social-container">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <!-- Separator with lines and 'OR' text -->
+          <div class="separator">
+            <div class="line"></div>
+            <span>OR</span>
+            <div class="line"></div>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="U-Name" placeholder="First Name" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" name="U-Name" placeholder="Last Name"  required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" placeholder="Email" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="create-password" name="password" placeholder="Create Password" minlength="8" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" minlength="8" required />
+          </div>
+          <div class="gender-details">
+            <span class="gender-title">Gender:</span>
+            <div class="category">
+              <label for="dot-1">
+                <input type="radio" name="gender" id="dot-1" required>
+                <span class="dot one"></span>
+                <span class="gender">Male</span>
+              </label>
+              <label for="dot-2">
+                <input type="radio" name="gender" id="dot-2" required>
+                <span class="dot two"></span>
+                <span class="gender">Female</span>
+              </label>
+              <label for="dot-3">
+                <input type="radio" name="gender" id="dot-3" required>
+                <span class="dot three"></span>
+                <span class="gender">Prefer not to say</span>
+              </label>
+            </div>
+            <div class="terms">
+              <input type="checkbox" id="terms" required>
+              <label for="terms">
+                I agree to all <a href="#">Terms</a>, <a href="#">Privacy Policy</a>
+              </label>
+            </div>
+
+          </div>
+          <input type="submit" class="btn" value="Sign up" />
+        </form>
       </div>
-      <p>Stay updated with expert fitness tips, healthy recipes, and exclusive workout plans!</p>
-      <h3>Subscribe Now!</h3>
-      <form>
-        <div class="input-group">
-          <i class="fa-regular fa-envelope"></i>
-          <input type="email" placeholder="Enter your email" required>
-          <button type="submit">
-            <i class="fa-solid fa-arrow-right"></i>
+    </div>
+
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <div class="icon-container2"><a href="../home/home.html" class="refhome"><span><ion-icon name="home"
+                  size="large"></ion-icon></span></a></div>
+          <h3>New here ? </h3>
+          <p>
+            Unlock a wealth of health knowledge and empower your family's well-being journey by signing up now!
+          </p>
+          <button class="btn transparent" id="sign-up-btn">
+            Sign up
           </button>
         </div>
-      </form>
-      <div class="social-icons">
-        <a href=""><i class="fa-brands fa-facebook"></i></a>
-        <a href=""><i class="fa-brands fa-twitter"></i></a>
-        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-        <a href=""><i class="fa-brands fa-pinterest"></i></a>
+        <img src="../images/sign-up.png" class="image" alt="" />
       </div>
-    </div>
-
-    <div class="column Reach">
-      <h3>Reach Us Through:</h3>
-      <div class="contactInfo">
-        <div class="iconGroup">
-          <div class="icon">
-            <i class="fa-solid fa-phone"></i>
-          </div>
-          <div class="details">
-            <span>Phone:</span>
-            <span>+00 110 111 00</span>
-          </div>
+      <div class="panel right-panel">
+        <div class="content">
+          <div class="icon-container1"><a href="../home/home.html" class="refhome"><span><ion-icon name="home"
+                  size="large"></ion-icon></span></a></div>
+          <h3>One of us ?</h3>
+          <p>
+            Sign in now to access exclusive content and personalized features.
+          </p>
+          <button class="btn transparent" id="sign-in-btn">
+            Sign in
+          </button>
         </div>
-        <div class="iconGroup">
-          <div class="icon">
-            <i class="fa-solid fa-envelope"></i>
-          </div>
-          <div class="details">
-            <span>Email:</span>
-            <span>nutrivolve-fitness@gmail.com</span>
-          </div>
-        </div>
-        <div class="iconGroup">
-          <div class="icon">
-            <i class="fa-solid fa-location-dot"></i>
-          </div>
-          <div class="details">
-            <span>Location:</span>
-            <span>Saida Street, Chohada Road</span>
-          </div>
-        </div>
+        <img src="../images/sign-in.png" class="image" alt="" />
       </div>
-    </div>
-
-    <div class="column QuickL">
-      <h3>Links:</h3>
-      <ul>
-        <li><a href="../home/home.html">Home</a></li>
-        <li><a href="">Recipes</a></li>
-        <li><a href="../workouts/workouts.html">Workouts</a></li>
-        <li><a href="">Articles</a></li>
-        <li><a href="">Work With Us</a></li>
-      </ul>
     </div>
   </div>
-  <hr>
-</footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>

@@ -574,9 +574,11 @@ h2 {
    footer{
     width: 1000px !important;
    }
-  
-   footer .logo-column h3 {
-    margin-right: 300vw;
-   }   
-   
+   footer .logo-column .logo-title{
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-right: 530px;
+   }
+
 }

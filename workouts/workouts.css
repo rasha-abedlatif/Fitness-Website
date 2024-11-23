@@ -634,3 +634,18 @@ h2 {
   }
   
 }
+
+@media(max-width:600px){
+
+   main, .section1, .section2, .section3{
+    width: 1000px;
+   }
+   footer{
+    width: 1000px !important;
+   }
+  
+   footer .logo-column h3 {
+    margin-right: 300vw;
+   }   
+   
+}

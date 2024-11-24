@@ -195,10 +195,6 @@ nav>a:hover:not(:nth-child(1))::after {
 
 /* ----main section---- */
 
-.sections {
-  /* width: 100vw; */
-}
-
 /* ----recipes section---- */
 
 .top {
@@ -565,17 +561,6 @@ nav>a:hover:not(:nth-child(1))::after {
   margin-bottom: 50px;
   margin-left: 20px;
 }
-
-/*---BRANDS I HAVE WORKED WITH--- */
-/* @keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-} */
 
 .brands {
   position: relative;

@@ -1,3 +1,9 @@
+function toggleMenu() {
+  let menuIcon = document.querySelector('.menu-icon');
+  let navLinks = document.querySelector('.nav-links');
+  menuIcon.classList.toggle('active');
+  navLinks.classList.toggle('active'); 
+}
 document.addEventListener("DOMContentLoaded", () => {
   const signUpButton = document.getElementById("sign-up-btn");
   const signInButton = document.getElementById("sign-in-btn");
@@ -70,51 +76,34 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clear form and notify success
     signUpForm.reset();
     alert("Account created successfully!");
+    window.location.href = "../home/home.html";
   });
-});
 
-// Sign up functionality
-let signUpForm = document.getElementById('signup-form');
-let loginForm = document.getElementById('login-form');
+  // Sign up functionality
+  // let signUpForm = document.getElementById('signup-form');
+  let loginForm = document.getElementById("sign-in-form");
 
-// Handling sign up
-signUpForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    
-    let email = document.getElementById('signup-email').value;
-    let password = document.getElementById('signup-password').value;
-
-    if (email && password) {
-        // Store the user credentials in localStorage
-        localStorage.setItem('userEmail', email);
-        localStorage.setItem('userPassword', password);
-
-        alert("Account created successfully!");
-        // Redirect to the home page
-        window.location.href = "../home/home.html";
-    } else {
-        alert("Please fill out all fields.");
-    }
-});
-
-// Handling login
-loginForm.addEventListener('submit', function (e) {
+  // Handling login
+  loginForm.addEventListener("submit", function (e) {
+    console.log("here");
     e.preventDefault();
 
-    let email = document.getElementById('login-email').value;
-    let password = document.getElementById('login-password').value;
-    let message = document.getElementById('login-message'); // Alert <p> for messages
+    let email = document.getElementById("login-email").value;
+    let password = document.getElementById("login-password").value;
+    let message = document.getElementById("login-message"); // Alert <p> for messages
 
-    let storedEmail = localStorage.getItem('userEmail');
-    let storedPassword = localStorage.getItem('userPassword');
+    let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+    let curUser=accounts.find((user)=>user.email==email);
 
-    if (email === storedEmail && password === storedPassword) {
-        message.style.color = "green";
-        message.textContent = "Login successful!";
-        // Redirect to the home page
-        window.location.href = "../home/home.html";
+
+    if (curUser && password === curUser.password) {
+      message.style.color = "green";
+      message.textContent = "Login successful!";
+      // Redirect to the home page
+      window.location.href = "../home/home.html";
     } else {
-        message.style.color = "red";
-        message.textContent = "Invalid email or password. Please try again.";
+      message.style.color = "red";
+      message.textContent = "Invalid email or password. Please try again.";
     }
+  });
 });

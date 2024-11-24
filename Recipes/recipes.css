@@ -165,7 +165,7 @@ width: 100%;
   width: 30%;
   padding: 10px 50px 0px 50px;
   margin-left: 30px;
-  gap: 140px;
+  gap: 190px;
  
 }
 .text{
@@ -213,8 +213,9 @@ width: 100%;
 
 .recipe-sec1{
   display: flex;
-  gap: 50px;
+  gap: 30px;
   cursor: pointer;
+  flex-wrap: wrap;
   
 }
 
@@ -222,7 +223,8 @@ width: 100%;
 .recipe{
   display: flex;
   flex-direction: column;
-  height: 400px;
+  flex-wrap: wrap;
+  height: 450px;
   width: 300px;
 }
 
@@ -262,6 +264,7 @@ position: relative;
   cursor: pointer;
   padding-bottom: 20px;
   font-size: 15px;
+  padding: 5px;
 }
 .names-div:hover{
   color: #b48869;
@@ -404,7 +407,7 @@ position: relative;
   position: absolute;
   top: 0;
   left: 0;
-  height: 325px;
+  height: 375px;
   width: 0;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -415,17 +418,17 @@ position: relative;
   overflow: hidden;
   transition: width 0.5s ease-in-out;
   border-radius: 10px 10px 0 0;
-
-  
+  text-align: center;  
 }
 .foodname{
-  font-size: 15px;
-  font-weight: 10px;
-  
+  font-weight: 10px;  
+  position: relative;
+  padding: 0 10px;
+  white-space: nowrap;
 }
 
 .imgs:hover .cover{
-  width: 100%;  
+  width: 100%;
 } 
 
 
@@ -453,16 +456,18 @@ position: relative;
   
   .quotes-div .q-div:nth-child(odd){
   align-self: flex-start;
+  flex-wrap: wrap;
   }
   .quotes-div .q-div:nth-child(even){
     align-self: flex-end;
+    flex-wrap: wrap;
   }
   .q-div{
   width: 250px;
   height: 250px;
   margin: 20px;
   padding: 10px;
-  border: solid 3px #695242;
+  border: solid 5px #695242;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -842,3 +847,26 @@ background-position: center;
 
 }
 
+/* --- Responsive styling ---*/ 
+@media (max-width: 1068px){
+
+  .recipe-sec2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .recipe-sec1{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .tips{
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .recipes{
+    flex-direction: column;
+    overflow: hidden;
+  }
+}

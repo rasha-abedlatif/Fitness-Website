@@ -31,46 +31,24 @@ nav a:hover:not(:nth-child(2))::after {
 /* --- body styling ---*/ 
 body{
     background-color: #e5e0d6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+  
 }
 
-.main {
-   
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-}
-.first-div{
-    height: 500px;
-    background-color: #232d3f;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
+
 .p-div{
      font-size: 20px;
      display: flex;
      flex-direction: column;
      gap: 30px;
+     margin-top: 200px;
      margin: 50px;
-     width: 100%;
+     width: 50%;
      justify-content: center;
      align-items: center;
 
-     
-    
 }
 .par{
-    width:  1000px;
+    width:  600px;
 
 }
 a{
@@ -82,14 +60,43 @@ a:hover{
     
     color: #b2998A;
 }
-.middlesec{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px;
 
+.second-div{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  height: 50%;
+  /*margin: 50px;*/
+  width: 100%;
 }
+
+.second-div .division:nth-child(odd){
+    align-items: self-start;
+}
+
+
+.second-div .division:nth-child(even){
+  align-items: self-end;
+}
+
+
+.firstimg{
+  background-image: url(wwu-imgs/img3.jpeg);
+}
+
+.secondimg{
+  background-image: url(wwu-imgs/img2.jpeg);
+}
+
+.imgs{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 50%;
+}
+
 .inputs-div{
 display: flex;
 flex-direction: column;
@@ -138,32 +145,8 @@ border: #695242 solid 10px;
     width: 50%;  
 }
 
-/*.firstimg{
-    background-image: url("wwu-imgs/img1.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
-    
 
-}
-.secondimg{
-    background-image: url("wwu-imgs/img3.jpeg");
-}*/
-
-/*.imgs{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-}
-*/
-
-
-
+/*---Footer Styling---*/
 
 footer {
     width: 100%;

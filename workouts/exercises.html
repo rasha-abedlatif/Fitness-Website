@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercises</title>
     <link rel="stylesheet" href="workouts.css">
-    <script src="workouts.js" defer></script>
     <link rel="stylesheet" href="../general.css">
     <title>Workouts</title>
     <link rel="icon" href="workout-icon.jpg" type="../image/png">
@@ -15,91 +14,419 @@
 <body class="Exercises-body">
     <header id="header">
         <div class="logo">
-          <a href="../home/home.html">NUTRIVOLVE</a>
+            <a href="../home/home.html">NUTRIVOLVE</a>
         </div>
         <div class="menu-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <nav class="nav-links">
-          <a href="../home/home.html">Home</a>
-          <a href="#">Recipes</a>
-          <a href="../workouts/workouts.html">Workouts</a>
-          <a href="#">Articles</a>
-          <a href="#">About Us</a>
-          <div class="dropdown">
-            <a href="#">
-                <img id="account" src="../images/account.png" alt="Button Image">
-            </a>
-            <div class="dropdown-content-wrapper">
-                <div class="dropdown-content">
-                    <a href="../account/account.html#sign-in">Sign in</a>
-                    <a href="../account/account.html#sign-up">Sign up</a>
+            <a href="../home/home.html">Home</a>
+            <a href="#">Recipes</a>
+            <a href="../workouts/workouts.html">Workouts</a>
+            <a href="#">Articles</a>
+            <a href="#">About Us</a>
+            <div class="dropdown">
+                <a href="#">
+                    <img id="account" src="../images/account.png" alt="Button Image">
+                </a>
+                <div class="dropdown-content-wrapper">
+                    <div class="dropdown-content">
+                        <a href="../account/account.html#sign-in">Sign in</a>
+                        <a href="../account/account.html#sign-up">Sign up</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        
+
         </nav>
-       
-      </header>
+
+    </header>
     <main class="Exercises">
-        <h1 class="heading-exercise">Exercises</h1>
-        <div class="Exercises-slider">
-            <div class="upper-part">
-
-
-                <div class="content-part1">
-
-                    <h2>Dumbbell Shoulder Press</h2>
-                    <h4>Product:</h4>
-                    <div class="p1-images">
-                        <img class="Products" src="../images/dumbbells.jpg">
-                    </div>
-                    <h4>Benefits:</h4>
-                    <ul>
-                        <li>Builds Shoulder Strength and Stability</li>
-                        <li>Enhances Muscle Symmetry</li>
-                        <li>Improves Overhead Stability</li>
-                        <li>Strengthens Core Stability</li>
-                    </ul>
-                </div>
-                <img id="slidder" src="../images/workout1.jpg" alt="image slider">
-
-            </div>
-            <div class="down-part">
-                <div class="content-part2">
-                    <h4>Instructions:</h4>
-                    <h5>Seated dumbbell military press</h5>
-                    <div class="p2-images"><img src="../images/dumbell-gif1.gif" alt=""></div>
-                    <p>Grab two dumbbells and sit on an incline bench. Make sure the back of the bench is set at a
-                        90-degree
-                        angle.</p>
-                    <div>
-                        <p>1. Once you’re seated, rest one dumbbell on each thigh. Sit with your lower back firmly
-                            against
-                            the back of the bench. Keep your shoulders and back as straight as possible.</p>
-                        <p>2. Raise the dumbbells from your thighs and bring them to shoulder height. If you have heavy
-                            dumbbells, raise your thighs one at a time to help lift the dumbbells. Raising a heavy
-                            dumbbell
-                            with only your arm could cause injury.</p>
-                        <p>3. With the dumbbells at shoulder height, rotate your palms so that they face forward. If you
-                            prefer, you can also complete a dumbbell press with your palms facing your body. Make sure
-                            your
-                            forearms are perpendicular to the ground.</p>
-                        <p>4. Begin to press the dumbbells above your head until your arms fully extend. Hold the weight
-                            above your head for a moment, and then lower the dumbbells back to shoulder height.</p>
-                        <p>5. Complete the desired number of reps. If you’re a beginner, start with 1 set of 8–10 reps.
-                        </p>
+        <div class="exercises-header">
+            <div class="header">
+                <div class="header-image">
+                    <img src="../images/exercise-header.jpg" alt="">
+                    <div class="content-header">
+                        <h1>Exercises</h1>
+                        <div class="Line"></div>
                     </div>
                 </div>
-            </div>
-            <div class="btns">
-                <button id="previousbtn">previous</button>
-                <button id="nextbtn">Next</button>
             </div>
         </div>
+        <div class="Exercises-slider">
+            <div class="exercise"id="dumbbells-press">
+                <h2>Dumbbell Shoulder Press</h2>
+                <div class="upper-part">
+                    <div class="content-part1">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Builds Shoulder Strength and Stability</li>
+                            <li>Enhances Muscle Symmetry</li>
+                            <li>Improves Overhead Stability</li>
+                            <li>Strengthens Core Stability</li>
+                        </ul>
+                    </div>
+                    <div class="p1-image">
+                        <img id="slidder" src="../images/exercise1.jpeg" alt="image slider">
+                    </div>
+                </div>
+                <div class="lower-part">
+                    <div class="heading-and-image">
+                        <h4>Instructions:</h4>
+                        <div class="p2-images"><img src="../images/dumbell.gif" alt=""></div>
+                    </div>
+                    <div class="content-part2">
+
+                        <p>1. <b>Setup:</b> Hold dumbbells at shoulder height, palms forward, with a stable stance or
+                            seated
+                            on a bench.</p>
+                        <p>2.<b> Press:</b> Push dumbbells upward, extending arms fully without locking elbows, keeping
+                            them
+                            slightly in front of your head.</p>
+                        <p>3.<b> Lower:</b> Slowly return to the starting position, maintaining control.</p>
+                        <p>4.<b>Tips:</b> Keep your core engaged, back straight, and shoulders relaxed. Avoid using
+                            momentum
+                            or shrugging.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Exercises-slider">
+            <div class="exercise" id="barbell-lunge">
+                <h2> Barbell Lunge</h2>
+                <div class="upper-part">
+                    <div class="content-part1">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Builds Lower Body Strength</li>
+                            <li>Improves Balance and Stability</li>
+                            <li>Enhances Functional Mobility</li>
+                            <li>Boosts Athletic Performance</li>
+                        </ul>
+                    </div>
+                    <div class="p1-image">
+                        <img id="slidder" src="../images/barbell-lunge.jpg" alt="image slider">
+                    </div>
+                </div>
+                <div class="lower-part">
+                    <div class="heading-and-image">
+                        <h4>Instructions:</h4>
+                        <div class="p2-images"><img src="../images/barbell.gif" alt=""></div>
+                    </div>
+                    <div class="content-part2">
+
+                        <p>1. <b>Setup:</b> Place the barbell on your upper back, keeping your feet shoulder-width
+                            apart.</p>
+                        <p>2.<b> Step Forward:</b> Take a big step forward with one leg, lowering your hips to form
+                            a 90-degree angle in both knees.</p>
+                        <p>3.<b> Push Back:</b> Push through the front heel to return to the starting position.</p>
+                        <p>4.<b>Tip:</b> Keep your chest lifted, knees behind your toes, and engage your core for
+                            stability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Exercises-slider">
+            <div class="exercise" id="rope-wave">
+                <h2>Battle Rope Wave</h2>
+                <div class="upper-part">
+                    <div class="content-part1">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Builds Full-Body Strength</li>
+                            <li>Improves Cardiovascular Fitness</li>
+                            <li>Boosts Coordination and Stability</li>
+                            <li>Burns Calories</li>
+                        </ul>
+                    </div>
+                    <div class="p1-image">
+                        <img id="slidder" src="../images/wave.jpg" alt="image slider">
+                    </div>
+                </div>
+                <div class="lower-part">
+                    <div class="heading-and-image">
+                        <h4>Instructions:</h4>
+                        <div class="p2-images"><img src="../images/wave.gif" alt=""></div>
+                    </div>
+                    <div class="content-part2">
+
+                        <p>1. <b>Setup:</b> Hold the ends of the rope in both hands with feet shoulder-width apart,
+                            knees slightly bent, and core engaged.</p>
+                        <p>2.<b> Create Waves:</b> Rapidly alternate raising and lowering each arm to create continuous
+                            ripples in the rope.</p>
+                        <p>3.<b> Maintain Form:</b>Keep your back straight, chest lifted, and use controlled movements.
+                        </p>
+                        <p>4.<b>Tips:</b> Focus on consistent wave patterns and proper breathing to maximize
+                            effectiveness.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Exercises-slider">
+            <div class="exercise" id="Lat-pulldown">
+                <h2>Lat pulldown</h2>
+                <div class="upper-part">
+                    <div class="content-part1">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Strengthens the Back</li>
+                            <li>Enhances Pulling Strength</li>
+                            <li>Improves Shoulder Stability</li>
+                            <li>Aesthetic Development</li>
+                        </ul>
+                    </div>
+                    <div class="p1-image">
+                        <img id="slidder" src="../images/pulldown.jpg" alt="image slider">
+                    </div>
+                </div>
+                <div class="lower-part">
+                    <div class="heading-and-image">
+                        <h4>Instructions:</h4>
+                        <div class="p2-images"><img src="../images/pulldown.gif" alt=""></div>
+                    </div>
+                    <div class="content-part2">
+
+                        <p>1. <b>Setup:</b> Sit on the pulldown machine with feet flat on the floor and adjust the thigh
+                            pad to secure your legs.</p>
+                        <p>2.<b> Grip the Bar:</b> Use a wide overhand grip slightly wider than shoulder-width.
+                        </p>
+                        <p>3.<b> Pull Down:</b>Lean slightly back, engage your core, and pull the bar toward your chest
+                            and squeeze your shoulder blades together at the bottom of the movement.</p>
+                        <p>4.<b>Tips:</b> Avoid using momentum; focus on controlled movements and keep your shoulders
+                            down and avoid shrugging.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="Exercises-slider">
+            <div class="exercise" id="biking">
+                <h2>Biking</h2>
+                <div class="upper-part">
+                    <div class="content-part1">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Cardiovascular Health</li>
+                            <li>Strengthens Lower Body</li>
+                            <li>Mental Well-being</li>
+                            <li>Weight Management</li>
+                        </ul>
+                    </div>
+                    <div class="p1-image">
+                        <img id="slidder" src="../images/biking.jpg" alt="image slider">
+                    </div>
+                </div>
+                <div class="lower-part">
+                    <div class="heading-and-image">
+                        <h4>Instructions:</h4>
+                        <div class="p2-images"><img src="../images/biking.gif" alt=""></div>
+                    </div>
+                    <div class="content-part2">
+
+                        <p>1. <b>Setup:</b>Adjust seat height for a slight knee bend at the pedal's lowest point and
+                            ensure handlebars are comfortable and aligned.</p>
+                        <p>2.<b>Start Slowly:</b> Begin at an easy pace for warm-up and gradually increase speed or
+                            resistance.</p>
+                        <p>3.<b>Maintain Proper Form:</b>Keep your back straight and shoulders relaxed and grip
+                            handlebars lightly.</p>
+                        <p>4.<b>Safety Tips:</b> Wear a helmet and reflective gear and use bike lights when cycling in
+                            low visibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="Exercises-slider">
+            <div class="exercise" id="walk-run">
+                <h2>Incline Walk/Run</h2>
+                <div class="upper-part">
+                    <div class="content-part1">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Improved Cardiovascular Health</li>
+                            <li>Enhanced Calorie Burn</li>
+                            <li>Strengthened Lower Body Muscles</li>
+                            <li>Increased Endurance:</li>
+                        </ul>
+                    </div>
+                    <div class="p1-image">
+                        <img id="slidder" src="../images/treadmill2.jpg" alt="image slider">
+                    </div>
+                </div>
+                <div class="lower-part">
+                    <div class="heading-and-image">
+                        <h4>Instructions:</h4>
+                        <div class="p2-images"><img src="../images/treadmill.gif" alt=""></div>
+                    </div>
+                    <div class="content-part2">
+
+                        <p>1. <b>Setup:</b> Adjust the treadmill incline to a comfortable level (start with 3-5% and
+                            gradually increase)and ensure proper footwear for grip and cushioning.</p>
+                        <p>2.<b> Posture:</b> Keep your back straight, shoulders relaxed, and look forward (not at your
+                            feet) and avoid holding onto the treadmill handrails.</p>
+                        <p>3.<b> Cool Down:</b>Gradually decrease the incline and speed for 5–10 minutes to allow your
+                            heart rate to return to normal.
+                        </p>
+                        <p>4.<b>Tips:</b>Stay hydrated during and after the workout and monitor your heart rate if using
+                            a treadmill with sensors to stay within your target zone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="Exercises-slider">
+            <div class="exercise" id="kick-boxing">
+                <h2>kick boxing</h2>
+                <div class="upper-part">
+                    <div class="content-part1">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Improves Cardiovascular Health</li>
+                            <li>Enhances Strength and Power</li>
+                            <li>Burns Calories and Supports Weight Loss</li>
+                            <li>mproves Mental Health</li>
+                        </ul>
+                    </div>
+                    <div class="p1-image">
+                        <img id="slidder" src="../images/workout7.jpg" alt="image slider">
+                    </div>
+                </div>
+                <div class="lower-part">
+                    <div class="heading-and-image">
+                        <h4>Instructions:</h4>
+                        <div class="p2-images"><img src="../images/kicking.gif" alt=""></div>
+                    </div>
+                    <div class="content-part2">
+
+                        <p>1. <b>Warm-Up:</b> Begin with dynamic stretches, jogging, or jumping jacks for 5-10 minutes.
+                        </p>
+                        <p>2.<b> Punches:</b> Practice jabs, crosses, hooks, and uppercuts with controlled motion.</p>
+                        <p>3.<b> Kicks:</b>Incorporate front kicks, roundhouse kicks, and sidekicks with proper hip
+                            rotation.
+                        </p>
+                        <p>4.<b>Tips:</b> Engage your core for balance and power, keep movements controlled to avoid
+                            injury, and focus on technique before speed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="Exercises-slider">
+            <div class="exercise" id="shoulder-press">
+                <h2>Shoulder Press </h2>
+                <div class="upper-part">
+                    <div class="content-part1">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Builds Shoulder Strength</li>
+                            <li>Improves Overhead Stability</li>
+                            <li>Strengthens Core</li>
+                            <li>Enhances Mobility and Grip Strength</li>
+                        </ul>
+                    </div>
+                    <div class="p1-image">
+                        <img id="slidder" src="../images/kettlebells2.jpg" alt="image slider">
+                    </div>
+                </div>
+                <div class="lower-part">
+                    <div class="heading-and-image">
+                        <h4>Instructions:</h4>
+                        <div class="p2-images"><img src="../images/kettlebell.gif" alt=""></div>
+                    </div>
+                    <div class="content-part2">
+
+                        <p>1. <b>Setup:</b> Hold kettlebells at shoulder height with palms facing inward, elbows close
+                            to your torso and stand with feet shoulder-width apart or sit on a bench for stability.</p>
+                        <p>2.<b> Press:</b> Push the kettlebells upward in a controlled motion, keeping them slightly in
+                            front of your head.</p>
+                        <p>3.<b>Lower:</b>Slowly bring the kettlebells back down to the starting position, keeping
+                            control throughout.</p>
+                        <p>4.<b>Tips:</b>Engage your core and avoid arching your lower back and move in a straight,
+                            smooth path to avoid unnecessary strain on shoulders.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="Exercises-slider">
+            <div class="exercise"id="roller-skate">
+                <h2>Roller Skating</h2>
+                <div class="upper-part">
+                    <div class="content-part1">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Cardiovascular Health</li>
+                            <li>Strengthens Muscles</li>
+                            <li>Low-Impact Workout</li>
+                            <li>Stress Relief</li>
+                        </ul>
+                    </div>
+                    <div class="p1-image">
+                        <img id="slidder" src="../images/workout9.jpg" alt="image slider">
+                    </div>
+                </div>
+                <div class="lower-part">
+                    <div class="heading-and-image">
+                        <h4>Instructions:</h4>
+                        <div class="p2-images"><img src="../images/skating.gif" alt=""></div>
+                    </div>
+                    <div class="content-part2">
+
+                        <p>1. <b>Start Position:</b>Stand with knees slightly bent and arms relaxed for balance.
+                        </p>
+                        <p>2.<b> Basic Movement:</b>Push off with one foot while gliding with the other and alternate
+                            feet in a skating motion while keeping your body balanced.</p>
+                        <p>3.<b> Stopping:</b>Use the toe stop on your skates to slow down or stop. </p>
+                        <p>4.<b>Tips:</b> Start slow and practice balance before increasing speed and avoid crowded
+                            areas and check for obstacles in your path.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="Exercises-slider">
+            <div class="exercise" id="Yoga">
+                <h2>Yoga</h2>
+                <div class="upper-part">
+                    <div class="content-part1">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Improves Flexibility</li>
+                            <li>Reduces Stress</li>
+                            <li>Boosts Breathing</li>
+                            <li>Strengthens Muscles</li>
+                        </ul>
+                    </div>
+                    <div class="p1-image">
+                        <img id="slidder" src="../images/yoga-image.jpg" alt="image slider">
+                    </div>
+                </div>
+                <div class="lower-part">
+                    <div class="heading-and-image">
+                        <h4>Instructions:</h4>
+                        <div class="p2-images"><img src="../images/yoga.gif" alt=""></div>
+                    </div>
+                    <div class="content-part2">
+
+                        <p>1. <b>Set Your Space:</b> Choose a quiet and comfortable area.</p>
+                        <p>2.<b>Focus on Breathing: </b> Inhale deeply and exhale slowly during each pose.</p>
+                        <p>3.<b> Stay Present:</b>Focus on your body and breath to stay in the moment.
+                        </p>
+                        <p>4.<b>Cool Down:</b>Finish with relaxation poses like Child’s Pose or Savasana.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="btns">
+            <button id="previousbtn">Previous</button>
+            <button id="nextbtn">Next</button>
+        </div>
+
     </main>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/exercises.js"></script>
 </body>
 
 </html>

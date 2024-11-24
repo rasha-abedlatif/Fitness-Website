@@ -530,12 +530,8 @@ p.login-with {
     left: 50%;
   }
 }
-.back {
-  border-radius: 49px;
-  color: white;
-  font-size: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+
+.alert-message {
+  font-size: 0.9rem;
+  font-weight: bold;
 }

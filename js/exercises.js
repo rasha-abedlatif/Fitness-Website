@@ -27,7 +27,15 @@ $(document).ready(function () {
         currentSlide = (currentSlide + 1) % $slides.length;
         showSlide(currentSlide);
     }
-
+    function toggleMenu() {
+        let $menuIcon = $('.menu-icon');
+        let $navLinks = $('.nav-links');
+        $menuIcon.toggleClass('active');
+        $navLinks.toggleClass('active');
+    }
+    
+    // Call the function (optional depending on your implementation)
+    
     showSlide(currentSlide); 
     setInterval(nextSlide, slideInterval);
     // Exercises Slider

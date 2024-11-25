@@ -28,6 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     showSlide(currentSlide);
     setInterval(nextSlide, slideInterval);
+    function toggleMenu() {
+        let menuIcon = document.querySelector('.menu-icon');
+        let navLinks = document.querySelector('.nav-links');
+        menuIcon.classList.toggle('active');
+        navLinks.classList.toggle('active'); 
+      }
+      
     document.querySelectorAll('.btn').forEach(button => {
         button.addEventListener('click', function (e) {
             e.preventDefault();

@@ -173,7 +173,7 @@ width: 40px;
 position: absolute;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 689px) {
 /* Show menu icon */
 .menu-icon {
   display: flex;
@@ -520,4 +520,5 @@ footer .QuickL h3{
     display: inline;
     font-size: 2em;
   }
+ 
 }

@@ -41,7 +41,9 @@ nav a:hover:not(:nth-child(3))::after {
 }
 
 .slide-image {
+    max-width: 1000vw;
     width: 100%;
+  
     height: 100%;
     object-fit: cover;
 }
@@ -352,7 +354,7 @@ h2 {
     width: 180px;
     height: 180px;
     border-radius: 5px;
-   
+
 }
 
 .arrow {
@@ -454,40 +456,39 @@ h2 {
 .star.filled {
     color: gold;
 }
-.Exercises {
-  
-    
-}
+
 .Exercises-header {
     position: relative;
-    width: 100%;
+    max-width: 1000vw;
+    
     height: 700px;
-    overflow: hidden;
+
 }
 
 .header {
     position: absolute;
+    
     width: 100%;
-  
     opacity: 0;
     transition: opacity 1s ease-in-out;
     top: 0;
-    
+
 }
 
-.header-image img{
-    width: 100%;
+.header-image img {
+   width: 100%;
+
     height: 700px;
     object-fit: cover;
 }
 
-.content-header{
+.content-header {
     position: absolute;
     bottom: 60%;
     left: 35%;
     text-align: left;
     z-index: 2;
-   
+
     transition: opacity 1s ease, transform 0.8s ease;
 }
 
@@ -496,7 +497,7 @@ h2 {
     z-index: 1;
 }
 
-.header.active .content-header{
+.header.active .content-header {
     opacity: 1;
     transform: translateY(0);
 }
@@ -510,18 +511,21 @@ h2 {
     opacity: 0;
     animation: fadeIn 1s forwards ease-in-out;
 }
-.Line{
+
+.Line {
     width: 400px;
     height: 2px;
     background-color: #fff;
     transform-origin: center;
-   
+
 }
-.Exercises-slider h2{
+
+.Exercises-slider h2 {
     padding-top: 780px;
     padding-bottom: 50px;
 }
-.upper-part{
+
+.upper-part {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -530,67 +534,70 @@ h2 {
     color: #232d3f;
     flex-wrap: wrap;
 }
-.Exercises-slider h4{
+
+.Exercises-slider h4 {
     padding-bottom: 40px;
     font-size: 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: underline;
 
 }
-.Exercises-slider ul, p{
-   
-   color: #232d3f;
-   font-size: 23px;
+
+.Exercises-slider ul,
+p {
+
+    color: #232d3f;
+    font-size: 23px;
 }
-.heading-and-image h4{
-    padding-left: 25px;
-}
-.heading-and-image {
-    padding-left: 40px;
-}
-.content-part1 ul li{
+
+
+
+.content-part1 ul li {
     padding: 6px;
-    
+
 }
-.content-part1 ul{
+
+.content-part1 ul {
     padding-bottom: 40px;
 }
-.upper-part img{
+
+.upper-part img {
     width: 400px;
     height: 400px;
-    
+
     border-radius: 10px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
-.lower-part img{
+
+.lower-part img {
     width: 400px;
     height: 400px;
-     
+
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.lower-part {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
    
-    border-radius: 10px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    color: #232d3f;
 }
 
-.lower-part{
+.content-part2 {
     padding-top: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 320px;
-  color: #232d3f;
-}
-.content-part2{
-    padding-top: 40px;
-    
+
 }
 
-.content-part2 p{
+.content-part2 p {
     max-width: 500px;
     padding: 6px;
     line-height: 20x;
-    padding-left: 70px;
- 
+   
+
 }
 
 .Exercises-slider .exercise {
@@ -602,52 +609,43 @@ h2 {
 }
 
 .btns {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 50px;
-   padding-top: 100px;
-   padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
+
 .btns button {
     padding: 10px 20px;
     cursor: pointer;
-    background-color:#cdc3bd ;
-    color:#232d3f ;
+    background-color: #cdc3bd;
+    color: #232d3f;
     border: none;
     border-radius: 2px;
-    
+
 }
-.btns button:hover{
-    background-color:#b2998a;
+
+.btns button:hover {
+    background-color: #b2998a;
     transform: scale(1.1);
 }
 
+
+
 @media screen and (max-width:970px) {
-    .upper-part, .lower-part{
+
+    .upper-part,
+    .lower-part {
         flex-direction: column;
-       justify-content: center;
-       align-items: center;
+        justify-content: center;
+        align-items: center;
     }
-  .lower-part{
-    gap: 0;
-  }
-  
-}
 
-@media(max-width:600px){
-
-   main, .section1, .section2, .section3{
-    width: 1000px;
-   }
-   footer{
-    width: 1000px !important;
-   }
-   footer .logo-column .logo-title{
-    display: flex;
-    justify-content: center !important;
-    align-items: center !important;
-    margin-right: 530px;
-   }
+    .lower-part {
+        gap: 0;
+    }
 
 }
+

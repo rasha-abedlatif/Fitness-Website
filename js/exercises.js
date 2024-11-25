@@ -27,17 +27,28 @@ $(document).ready(function () {
         currentSlide = (currentSlide + 1) % $slides.length;
         showSlide(currentSlide);
     }
+    showSlide(currentSlide);
+    setInterval(nextSlide, slideInterval);
     function toggleMenu() {
         let $menuIcon = $('.menu-icon');
         let $navLinks = $('.nav-links');
         $menuIcon.toggleClass('active');
         $navLinks.toggleClass('active');
     }
-    
+
     // Call the function (optional depending on your implementation)
-    
-    showSlide(currentSlide); 
-    setInterval(nextSlide, slideInterval);
+
+
+
+    $('.btn').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('.upper-part').offset().top // Smoothly scroll to the section
+        },1000); 
+        
+    });
+
+
     // Exercises Slider
     var $exerciseSlider = $('.Exercises-slider');
     var $exerciseSlides = $exerciseSlider.find('.exercise');
@@ -75,7 +86,8 @@ $(document).ready(function () {
         $exerciseSlides.hide();
         $target.show();
     }
+    console.log('jQuery is loaded and working!');
 });
 
 
-    
+

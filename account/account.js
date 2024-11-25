@@ -5,14 +5,86 @@ function toggleMenu() {
   navLinks.classList.toggle('active'); 
 }
 document.addEventListener("DOMContentLoaded", () => {
-  const signUpButton = document.getElementById("sign-up-btn");
-  const signInButton = document.getElementById("sign-in-btn");
-  const container = document.querySelector(".container");
+  let signUpButton = document.getElementById("sign-up-btn");
+  let signInButton = document.getElementById("sign-in-btn");
+  let container = document.querySelector(".container");
+
+  // Handle navigation based on the URL hash (e.g., #sign-up-form)
+  if (window.location.hash === "#sign-up-form") {
+    container.classList.add("sign-up-mode");
+  } else if (window.location.hash === "#sign-in-form") {
+    container.classList.remove("sign-up-mode");
+  }
+
+  // Event listeners for buttons
   signUpButton.addEventListener("click", () => {
     container.classList.add("sign-up-mode");
   });
   signInButton.addEventListener("click", () => {
     container.classList.remove("sign-up-mode");
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const signInForm = document.getElementById("sign-in-form");
+  const signUpForm = document.getElementById("sign-up-form");
+
+  // Handle Sign In
+  signInForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const email = document.getElementById("login-email").value;
+    const password = document.getElementById("login-password").value;
+
+    // Check localStorage for existing accounts
+    const accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+    const userAccount = accounts.find(
+      (account) => account.email === email && account.password === password
+    );
+
+    if (userAccount) {
+      // Set login state
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("userName", userAccount.firstName);
+      alert("Login successful!");
+      window.location.href = "../home/home.html";
+    } else {
+      alert("Invalid email or password.");
+    }
+  });
+
+  // Handle Sign Up
+  signUpForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const firstName = signUpForm.elements["U-Name"][0].value;
+    const lastName = signUpForm.elements["U-Name"][1].value;
+    const email = document.getElementById("email").value;
+    const createPassword = document.getElementById("create-password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
+
+    if (createPassword !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+
+    const accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+    if (accounts.some((account) => account.email === email)) {
+      alert("Email is already registered.");
+      return;
+    }
+
+    const newAccount = {
+      firstName,
+      lastName,
+      email,
+      password: createPassword,
+    };
+    accounts.push(newAccount);
+    localStorage.setItem("accounts", JSON.stringify(accounts));
+
+    alert("Sign-up successful!");
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("userName", firstName);
+    window.location.href = "../home/home.html";
   });
 });
 

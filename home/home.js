@@ -14,6 +14,34 @@ function toggleMenu() {
   menuIcon.classList.toggle('active');
   navLinks.classList.toggle('active'); 
 }
+  document.addEventListener("DOMContentLoaded", () => {
+    let navLinks = document.querySelector(".nav-links .dropdown-content");
+    let isLoggedIn = localStorage.getItem("isLoggedIn");
+    let userName = localStorage.getItem("userName");
+
+    if (isLoggedIn === "true" && userName) {
+      navLinks.innerHTML = `
+        <a href="#">${userName}</a>
+        <a href="#" id="logout">Log out</a>
+      `;
+    } else {
+      navLinks.innerHTML = `
+        <a href="../account/account.html#sign-in-form">Sign in</a>
+        <a href="../account/account.html#sign-up-form">Sign up</a>
+      `;
+    }
+
+    // Log out functionality
+    let logoutLink = document.getElementById("logout");
+    if (logoutLink) {
+      logoutLink.addEventListener("click", () => {
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("userName");
+        window.location.reload(); // Reload to update navigation
+      });
+    }
+  });
+
 //effect on meals button 
 let button = document.querySelector('.meal-btn');
 button.addEventListener('click', function () {

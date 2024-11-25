@@ -240,10 +240,6 @@ h2 {
     padding-bottom: 50px;
     background-color: #e5e0d6;
     flex-direction: column;
-
-
-
-
 }
 
 .icons2 {
@@ -293,7 +289,6 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-   
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -305,6 +300,7 @@ h2 {
     max-width: 800px;
     width: 60%;
     text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .section3 {
@@ -357,8 +353,9 @@ h2 {
     text-align: center;
     max-width: 300px;
     padding-top: 20px;
-    line-height: 25px;
+    line-height: 1.5;
     font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
@@ -414,6 +411,7 @@ h2 {
     flex-direction: column;
     margin-top: 20px;
     font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
@@ -444,3 +442,26 @@ h2 {
         transform: translateY(0);
     }
 }
+@media(max-width:660px){
+
+    main, .section1, .section2, .section3{
+     width: 1200px;
+    }
+    footer{
+     width: 1200px !important;
+    }
+    footer .logo-column .logo-title{
+     display: flex;
+     justify-content: center !important;
+     align-items: center !important;
+     margin-right:530px;
+ }
+ .slider{
+    width: 1200px;
+ }
+ 
+.service p, .content-s2 p,.service h3, .belief-content, .belief-button {
+    font-size: 25px;
+}
+
+ }

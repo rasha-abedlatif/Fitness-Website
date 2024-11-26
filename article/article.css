@@ -6,8 +6,8 @@
   box-sizing: border-box;
 }
 
-nav a:nth-child(4)::after {
-  content: "";
+nav>a:nth-child(4)::after {
+  content: '';
   position: absolute;
   width: 100%;
   height: 2px;
@@ -16,8 +16,8 @@ nav a:nth-child(4)::after {
   left: 0;
 }
 
-nav a:not(:nth-child(4))::after {
-  content: "";
+nav>a:not(:nth-child(4))::after {
+  content: '';
   position: absolute;
   width: 0;
   height: 2px;
@@ -27,7 +27,7 @@ nav a:not(:nth-child(4))::after {
   transition: width 0.3s ease;
 }
 
-nav a:hover:not(:nth-child(4))::after {
+nav>a:hover:not(:nth-child(4))::after {
   width: 100%;
 }
 
@@ -270,6 +270,7 @@ section {
   color: #795548;
   margin-top: 10px;
 }
+
 @media (max-width: 1060px) {
   .container {
     margin: 0 auto;
@@ -388,3 +389,4 @@ section {
     padding: 10px;
   }
 }
+

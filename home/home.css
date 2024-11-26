@@ -75,7 +75,7 @@ nav>a:hover:not(:nth-child(1))::after {
   height: 1px;
   background-color: #c7c7ba;
   margin-top: 350px;
-  margin-left: 320px;
+  margin-left: 390px;
   animation: expand 2s ease forwards;
   transform-origin: center;
 }
@@ -1171,8 +1171,21 @@ textarea::-webkit-scrollbar-thumb {
   }
 }
 @media (max-width: 599px) {
+  .image-container {
+    display: flex;
+    align-items: center; 
+    margin-left: 55vw;
+    padding: 0;
+  }
+.top h1{
+  margin-left: 50vw;
+  font-size: 35px;
+}
+.top .meal-btn{
+  margin-right: 40vw;
+}
   .image-container .box:nth-child(3) {
-    height: 80vh;
+    height: 56.5vh;
   }
 
 }

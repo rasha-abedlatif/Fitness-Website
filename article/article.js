@@ -6,13 +6,28 @@ window.addEventListener("scroll",function(){
         header.classList.remove("scrolled");
     }
 });
-
 function toggleMenu() {
-    let menuIcon = document.querySelector('.menu-icon');
-    let navLinks = document.querySelector('.nav-links');
-    menuIcon.classList.toggle('active');
-    navLinks.classList.toggle('active'); 
+  let menuIcon = document.querySelector('.menu-icon');
+  let navLinks = document.querySelector('.nav-links');
+  menuIcon.classList.toggle('active');
+  navLinks.classList.toggle('active'); 
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownButton = document.querySelector(".dropdown-button");
+  const dropdownContentWrapper = document.querySelector(".dropdown-content-wrapper");
+
+  if (dropdownButton) {
+    dropdownButton.addEventListener("click", (e) => {
+      e.stopPropagation(); // Prevent closing the dropdown if clicked inside
+      dropdownContentWrapper.classList.toggle("active");
+    });
+
+    // Close the dropdown if clicked outside
+    document.addEventListener("click", () => {
+      dropdownContentWrapper.classList.remove("active");
+    });
   }
+});
 
 $(document).ready(function(){
     $(".filter-item").click(function(){

@@ -14,6 +14,23 @@ function toggleMenu() {
   menuIcon.classList.toggle('active');
   navLinks.classList.toggle('active'); 
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownButton = document.querySelector(".dropdown-button");
+  const dropdownContentWrapper = document.querySelector(".dropdown-content-wrapper");
+
+  if (dropdownButton) {
+    dropdownButton.addEventListener("click", (e) => {
+      e.stopPropagation(); // Prevent closing the dropdown if clicked inside
+      dropdownContentWrapper.classList.toggle("active");
+    });
+
+    // Close the dropdown if clicked outside
+    document.addEventListener("click", () => {
+      dropdownContentWrapper.classList.remove("active");
+    });
+  }
+});
+
   document.addEventListener("DOMContentLoaded", () => {
     let navLinks = document.querySelector(".nav-links .dropdown-content");
     let isLoggedIn = localStorage.getItem("isLoggedIn");

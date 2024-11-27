@@ -1,56 +1,74 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
-    //change of background-color of nav
-    window.addEventListener("scroll", function () {
+
+    // Change background color of navbar on scroll
+    window.addEventListener("scroll", () => {
         let navbar = document.querySelector('header');
-        if (this.window.scrollY > 50) {
-            header.classList.add("scrolled");
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
         } else {
-            header.classList.remove("scrolled");
+            navbar.classList.remove("scrolled");
         }
     });
 
+    // Toggle the menu
+    function toggleMenu() {
+        let menuIcon = document.querySelector('.menu-icon');
+        let navLinks = document.querySelector('.nav-links');
+        menuIcon.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    }
+
+    // Dropdown functionality
+    let dropdownButton = document.querySelector(".dropdown-button");
+    let dropdownContentWrapper = document.querySelector(".dropdown-content-wrapper");
+
+    if (dropdownButton) {
+        dropdownButton.addEventListener("click", (e) => {
+            e.stopPropagation(); // Prevent closing dropdown if clicked inside
+            dropdownContentWrapper.classList.toggle("active");
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener("click", () => {
+            dropdownContentWrapper.classList.remove("active");
+        });
+    }
+
+    // Slide Show Logic (Header)
     let currentSlide = 0;
     let slides = document.querySelectorAll('.slide');
     let slideInterval = 3000; // 3 seconds
+
     function showSlide(index) {
         slides.forEach((slide, i) => {
-            let slideContent = slide.querySelector('.slide-content');
-            if (i === index) {
-                slide.classList.add('active');
-            } else {
-                slide.classList.remove('active');
-            }
+            slide.classList.toggle('active', i === index);
         });
     }
+
     function nextSlide() {
         currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
     }
+
     showSlide(currentSlide);
     setInterval(nextSlide, slideInterval);
-    function toggleMenu() {
-        let menuIcon = document.querySelector('.menu-icon');
-        let navLinks = document.querySelector('.nav-links');
-        console.log('menuIcon:', menuIcon);
-        console.log('navLinks:', navLinks);
-        menuIcon.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        console.log("Menu toggled!");
-    }
 
+    // Smooth Scroll to Section
     document.querySelectorAll('.btn').forEach(button => {
-        button.addEventListener('click', function (e) {
+        button.addEventListener('click', (e) => {
             e.preventDefault();
             document.querySelector('.section1')?.scrollIntoView({ behavior: 'smooth' });
         });
     });
+
+    // Rating System with Local Storage
     document.querySelectorAll('.container').forEach(card => {
         let exerciseId = card.getAttribute('data-id');
         let savedRating = localStorage.getItem(`rating-${exerciseId}`);
         if (savedRating) {
             fillStars(card, parseInt(savedRating));
         }
+
         let stars = card.querySelectorAll('.rating span');
         stars.forEach(star => {
             star.addEventListener('click', () => {
@@ -60,45 +78,54 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+
     function fillStars(card, rating) {
         let stars = card.querySelectorAll('.rating span');
         stars.forEach(star => {
             let starValue = parseInt(star.getAttribute('data-value'));
-            if (starValue <= rating) {
-                star.classList.add('filled');
-            } else {
-                star.classList.remove('filled');
-            }
+            star.classList.toggle('filled', starValue <= rating);
         });
     }
+
+    // Random Exercise Highlighter
     let exercises = document.querySelectorAll('.container');
     let randomButton = document.getElementById('randomButton');
-
     randomButton.addEventListener('click', () => {
         exercises.forEach(exercise => exercise.classList.remove('highlight'));
         let randomIndex = Math.floor(Math.random() * exercises.length);
-        let selectedExercise = exercises[randomIndex];
-        selectedExercise.classList.add('highlight');
+        exercises[randomIndex].classList.add('highlight');
     });
+
+    // Carousel Functionality
     let currentIndex = 0;
-    const carouselTrack = document.querySelector('.carousel-track');
-    const carouselItems = Array.from(document.querySelectorAll('.carousel-item'));
-    const leftButton = document.querySelector('#prev');
-    const rightButton = document.querySelector('#next');
-    const itemWidth = carouselItems[0].getBoundingClientRect().width + 20;
-    const firstClone = carouselItems.slice(0, 3).map(item => item.cloneNode(true));
-    const lastClone = carouselItems.slice(-3).map(item => item.cloneNode(true));
+    let carouselTrack = document.querySelector('.carousel-track');
+    let carouselItems = Array.from(document.querySelectorAll('.carousel-item'));
+    let leftButton = document.querySelector('#prev');
+    let rightButton = document.querySelector('#next');
+    let itemWidth = carouselItems[0].getBoundingClientRect().width + 20;
+
+    // Clone the first 3 and last 3 items for infinite scrolling effect
+    let firstClone = carouselItems.slice(0, 3).map(item => item.cloneNode(true));
+    let lastClone = carouselItems.slice(-3).map(item => item.cloneNode(true));
+
     firstClone.forEach(clone => carouselTrack.appendChild(clone));
     lastClone.forEach(clone => carouselTrack.insertBefore(clone, carouselTrack.firstChild));
+
     currentIndex += lastClone.length;
+
+    // Update track position for carousel
     function updateTrackPosition() {
-        const offset = -currentIndex * itemWidth;
+        let offset = -currentIndex * itemWidth;
         carouselTrack.style.transform = `translateX(${offset}px)`;
     }
+
+    // Move carousel to next item
     function moveToNext() {
         currentIndex++;
         carouselTrack.style.transition = 'transform 0.3s ease-in-out';
         updateTrackPosition();
+
+        // Reset carousel position if at the end
         if (currentIndex === carouselItems.length + lastClone.length) {
             setTimeout(() => {
                 currentIndex = lastClone.length;
@@ -107,10 +134,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 300);
         }
     }
+
+    // Move carousel to previous item
     function moveToPrevious() {
         currentIndex--;
         carouselTrack.style.transition = 'transform 0.3s ease-in-out';
         updateTrackPosition();
+
+        // Reset carousel position if at the beginning
         if (currentIndex < lastClone.length) {
             setTimeout(() => {
                 currentIndex = carouselItems.length + lastClone.length - 1; // Reset index
@@ -119,10 +150,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 300);
         }
     }
-    rightButton.addEventListener('click', moveToNext);
-    leftButton.addEventListener('click', moveToPrevious);
-    let isMoving = false;
 
+    // Button click handlers for carousel
+    let isMoving = false;
     function handleButtonClick(moveFunction) {
         if (!isMoving) {
             isMoving = true;
@@ -132,9 +162,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 300);
         }
     }
+
     rightButton.addEventListener('click', () => handleButtonClick(moveToNext));
     leftButton.addEventListener('click', () => handleButtonClick(moveToPrevious));
+
     updateTrackPosition();
+
+    // Rating Display for Apps
     let apps = document.querySelectorAll(".app");
     apps.forEach(app => {
         let ratingText = app.querySelector("h3").textContent;
@@ -153,5 +187,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-
 });
+

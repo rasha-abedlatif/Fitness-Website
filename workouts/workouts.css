@@ -1,4 +1,4 @@
-nav a:nth-child(3)::after {
+nav>a:nth-child(3)::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -6,9 +6,9 @@ nav a:nth-child(3)::after {
     background-color: #dbd5c7;
     bottom: 0;
     left: 0;
-}
-
-nav a:not(:nth-child(3))::after {
+  }
+  
+  nav>a:not(:nth-child(3))::after {
     content: '';
     position: absolute;
     width: 0;
@@ -17,11 +17,11 @@ nav a:not(:nth-child(3))::after {
     bottom: 0;
     left: 0;
     transition: width 0.3s ease;
-}
-
-nav a:hover:not(:nth-child(3))::after {
-    width: 100%;
-}
+  }
+  
+  nav>a:hover:not(:nth-child(3))::after {
+    width:100%;
+  }
 
 .slider {
     position: relative;
@@ -526,7 +526,6 @@ p {
     color: #232d3f;
     font-size: 23px;
 }
-
 .upper-part {
     display: flex;
     justify-content: space-around;
@@ -577,12 +576,6 @@ p {
     flex-wrap: wrap;
 padding-left: 50px;
     color: #232d3f;
-}
-.lower-part h4{
-    
-}
-.p2-images{
-    
 }
 .content-part2 {
     padding-top: 40px;

@@ -1,13 +1,32 @@
 $(document).ready(function () {
-    // Navbar scroll functionality
-    $(window).scroll(function () {
-        var navbar = $('header'); // Ensure `header` is a valid tag in your HTML
+
+    $(window).on("scroll", function () {
+        let $header = $("header");
         if ($(this).scrollTop() > 50) {
-            navbar.addClass('scrolled');
+            $header.addClass("scrolled");
         } else {
-            navbar.removeClass('scrolled');
+            $header.removeClass("scrolled");
         }
     });
+
+    $(".menu-icon").on("click", function () {
+        $(this).toggleClass("active");
+        $(".nav-links").toggleClass("active");
+    });
+
+    let $dropdownButton = $(".dropdown-button");
+    let $dropdownContentWrapper = $(".dropdown-content-wrapper");
+
+    if ($dropdownButton.length) {
+        $dropdownButton.on("click", function (e) {
+            e.stopPropagation(); 
+            $dropdownContentWrapper.toggleClass("active");
+        });
+
+        $(document).on("click", function () {
+            $dropdownContentWrapper.removeClass("active");
+        });
+    }
 
     let currentSlide = 0;
     let $slides = $('.header');
@@ -15,11 +34,7 @@ $(document).ready(function () {
 
     function showSlide(index) {
         $slides.each(function (i) {
-            if (i === index) {
-                $(this).addClass('active');
-            } else {
-                $(this).removeClass('active');
-            }
+            $(this).toggleClass('active', i === index);
         });
     }
 
@@ -27,38 +42,33 @@ $(document).ready(function () {
         currentSlide = (currentSlide + 1) % $slides.length;
         showSlide(currentSlide);
     }
+    
     showSlide(currentSlide);
     setInterval(nextSlide, slideInterval);
-    function toggleMenu() {
-        let $menuIcon = $('.menu-icon');
-        let $navLinks = $('.nav-links');
-        $menuIcon.toggleClass('active');
-        $navLinks.toggleClass('active');
-    }
 
-    // Call the function (optional depending on your implementation)
-
-
-
-    $('.btn').on('click', function (e) {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $('.upper-part').offset().top // Smoothly scroll to the section
-        },1000); 
-        
-    });
-
-
-    // Exercises Slider
-    var $exerciseSlider = $('.Exercises-slider');
-    var $exerciseSlides = $exerciseSlider.find('.exercise');
-    var totalExerciseSlides = $exerciseSlides.length;
-    var exerciseSlideIndex = 0;
+    let $exercises = $(".Exercises-slider");
+    let totalExerciseSlides = $exercises.length;
+    let exerciseSlideIndex = 0;
 
     function showExerciseSlide(index) {
-        $exerciseSlides.hide().eq(index).show(); // Only show the current slide
+        let $exerciseSlides = $exercises.eq(index).find('.exercise');
+        
+        $exercises.hide().eq(index).show();
+
+        let $currentExercise = $exerciseSlides.first();
+        if ($currentExercise.length) {
+            $('html, body').stop(true).animate({
+                scrollTop: $currentExercise.closest('.exercise').find(".upper-part").offset().top
+            }, 1000);
+        }
     }
 
+   
+    $(".btn").on("click", function (e) {
+        e.preventDefault();
+        showExerciseSlide(exerciseSlideIndex);
+        exerciseSlideIndex = (exerciseSlideIndex + 1) % totalExerciseSlides;
+    });
     $('#nextbtn').click(function () {
         exerciseSlideIndex = (exerciseSlideIndex + 1) % totalExerciseSlides;
         showExerciseSlide(exerciseSlideIndex);
@@ -68,24 +78,18 @@ $(document).ready(function () {
         exerciseSlideIndex = (exerciseSlideIndex - 1 + totalExerciseSlides) % totalExerciseSlides;
         showExerciseSlide(exerciseSlideIndex);
     });
+    showExerciseSlide(exerciseSlideIndex);
+    let $target = $(targetId);
 
-    showExerciseSlide(exerciseSlideIndex); // Initialize slider with the first slide
-
-    // Smooth Scroll for Hash Links
-    if (window.location.hash) {
-        var targetId = window.location.hash; // e.g., #slide2
-        var $target = $(targetId);
-
-        if ($target.length) {
-            $('html, body').animate({
-                scrollTop: $target.offset().top,
-            }, 500); // Smooth scroll
-        }
-
-        // Ensure target is visible if hidden
-        $exerciseSlides.hide();
+    if ($target.length) {
+        $exercises.hide();
         $target.show();
+
+        $('html, body').animate({
+            scrollTop: $target.offset().top
+        }, 1000);
     }
+
     console.log('jQuery is loaded and working!');
 });
 

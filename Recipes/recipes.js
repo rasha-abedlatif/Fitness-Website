@@ -57,35 +57,35 @@ let snackssec2 = document.getElementById('snacks-sec2');
 showbtn1.addEventListener('click', function(){
 
         if( bsec2.style.display === 'none' ){
-            bsec2.style.display = 'grid';
+            bsec2.style.display = 'flex';
             showbtn1.innerHTML = 'Show Less ↑'; 
 
         if( bsec2.style.display === 'none' ){
-        bsec2.style.display = 'grid';
+        bsec2.style.display = 'flex';
         showbtn1.innerHTML = 'Show Less ↑'; 
         }
-       if(mainsec2.style.display === 'grid'){
+       if(mainsec2.style.display === 'flex'){
             mainsec2.style.display = 'none';
             showbtn2.innerHTML= 'Show More ↓';
         }
 
-        if(dessertsec2.style.display === 'grid'){
+        if(dessertsec2.style.display === 'flex'){
             dessertsec2.style.display = 'none';
             showbtn3.innerHTML= 'Show More ↓';
         }
 
 
-        if(sidesec2.style.display === 'grid'){
+        if(sidesec2.style.display === 'flex'){
             sidesec2.style.display = 'none';
             showbtn4.innerHTML= 'Show More ↓';
         }
 
-        if(drinkssec2.style.display === 'grid'){
+        if(drinkssec2.style.display === 'flex'){
             drinkssec2.style.display = 'none';
             showbtn5.innerHTML= 'Show More ↓';
         }
 
-        if(snackssec2.style.display === 'grid'){
+        if(snackssec2.style.display === 'flex'){
             snackssec2.style.display = 'none';
             showbtn6.innerHTML= 'Show More ↓';
         }} 
@@ -100,31 +100,31 @@ showbtn1.addEventListener('click', function(){
 
 showbtn2.addEventListener('click', function(){
     if( mainsec2.style.display === 'none' ){
-        mainsec2.style.display = 'grid';
+        mainsec2.style.display = 'flex';
         showbtn2.innerHTML = 'Show Less ↑'; 
 
-        if(bsec2.style.display === 'grid'){
+        if(bsec2.style.display === 'flex'){
            bsec2.style.display = 'none';
             showbtn1.innerHTML= 'Show More ↓';
         }
 
-        if(dessertsec2.style.display === 'grid'){
+        if(dessertsec2.style.display === 'flex'){
             dessertsec2.style.display = 'none';
             showbtn3.innerHTML= 'Show More ↓';
         }
 
 
-        if(sidesec2.style.display === 'grid'){
+        if(sidesec2.style.display === 'flex'){
             sidesec2.style.display = 'none';
             showbtn4.innerHTML= 'Show More ↓';
         }
 
-        if(drinkssec2.style.display === 'grid'){
+        if(drinkssec2.style.display === 'flex'){
             drinkssec2.style.display = 'none';
             showbtn5.innerHTML= 'Show More ↓';
         }
 
-        if(snackssec2.style.display === 'grid'){
+        if(snackssec2.style.display === 'flex'){
             snackssec2.style.display = 'none';
             showbtn6.innerHTML= 'Show More ↓';
         }
@@ -142,31 +142,31 @@ showbtn2.addEventListener('click', function(){
 
 showbtn3.addEventListener('click', function(){
     if(dessertsec2.style.display === 'none' ){
-        dessertsec2.style.display = 'grid';
+        dessertsec2.style.display = 'flex';
         showbtn3.innerHTML = 'Show Less ↑';
         
-        if(mainsec2.style.display === 'grid'){
+        if(mainsec2.style.display === 'flex'){
             mainsec2.style.display = 'none';
             showbtn2.innerHTML= 'Show More ↓';
         }
 
-        if(bsec2.style.display === 'grid'){
+        if(bsec2.style.display === 'flex'){
             bsec2.style.display = 'none';
             showbtn1.innerHTML= 'Show More ↓';
         }
 
 
-        if(sidesec2.style.display === 'grid'){
+        if(sidesec2.style.display === 'flex'){
             sidesec2.style.display = 'none';
             showbtn4.innerHTML= 'Show More ↓';
         }
 
-        if(drinkssec2.style.display === 'grid'){
+        if(drinkssec2.style.display === 'flex'){
             drinkssec2.style.display = 'none';
             showbtn5.innerHTML= 'Show More ↓';
         }
 
-        if(snackssec2.style.display === 'grid'){
+        if(snackssec2.style.display === 'flex'){
             snackssec2.style.display = 'none';
             showbtn6.innerHTML= 'Show More ↓';
         }
@@ -184,31 +184,31 @@ showbtn3.addEventListener('click', function(){
 
 showbtn4.addEventListener('click', function(){
     if( sidesec2.style.display === 'none' ){
-        sidesec2.style.display = 'grid';
+        sidesec2.style.display = 'flex';
         showbtn4.innerHTML = 'Show Less ↑'; 
 
-        if(mainsec2.style.display === 'grid'){
+        if(mainsec2.style.display === 'flex'){
             mainsec2.style.display = 'none';
             showbtn2.innerHTML= 'Show More ↓';
         }
 
-        if(dessertsec2.style.display === 'grid'){
+        if(dessertsec2.style.display === 'flex'){
             dessertsec2.style.display = 'none';
             showbtn3.innerHTML= 'Show More ↓';
         }
 
 
-        if(bsec2.style.display === 'grid'){
+        if(bsec2.style.display === 'flex'){
             bsec2.style.display = 'none';
             showbtn1.innerHTML= 'Show More ↓';
         }
 
-        if(drinkssec2.style.display === 'grid'){
+        if(drinkssec2.style.display === 'flex'){
             drinkssec2.style.display = 'none';
             showbtn5.innerHTML= 'Show More ↓';
         }
 
-        if(snackssec2.style.display === 'grid'){
+        if(snackssec2.style.display === 'flex'){
             snackssec2.style.display = 'none';
             showbtn6.innerHTML= 'Show More ↓';
         }
@@ -226,31 +226,31 @@ showbtn4.addEventListener('click', function(){
 
 showbtn5.addEventListener('click', function(){
     if( drinkssec2.style.display === 'none' ){
-        drinkssec2.style.display = 'grid';
+        drinkssec2.style.display = 'flex';
         showbtn5.innerHTML = 'Show Less ↑'; 
 
-        if(mainsec2.style.display === 'grid'){
+        if(mainsec2.style.display === 'flex'){
             mainsec2.style.display = 'none';
             showbtn2.innerHTML= 'Show More ↓';
         }
 
-        if(dessertsec2.style.display === 'grid'){
+        if(dessertsec2.style.display === 'flex'){
             dessertsec2.style.display = 'none';
             showbtn3.innerHTML= 'Show More ↓';
         }
 
 
-        if(sidesec2.style.display === 'grid'){
+        if(sidesec2.style.display === 'flex'){
             sidesec2.style.display = 'none';
             showbtn4.innerHTML= 'Show More ↓';
         }
 
-        if(bsec2.style.display === 'grid'){
+        if(bsec2.style.display === 'flex'){
             bsec2.style.display = 'none';
             showbtn1.innerHTML= 'Show More ↓';
         }
 
-        if(snackssec2.style.display === 'grid'){
+        if(snackssec2.style.display === 'flex'){
             snackssec2.style.display = 'none';
             showbtn6.innerHTML= 'Show More ↓';
         }
@@ -268,31 +268,31 @@ showbtn5.addEventListener('click', function(){
 
 showbtn6.addEventListener('click', function(){
     if( snackssec2.style.display === 'none' ){
-        snackssec2.style.display = 'grid';
+        snackssec2.style.display = 'flex';
         showbtn6.innerHTML = 'Show Less ↑'; 
 
-        if(mainsec2.style.display === 'grid'){
+        if(mainsec2.style.display === 'flex'){
             mainsec2.style.display = 'none';
             showbtn2.innerHTML= 'Show More ↓';
         }
 
-        if(dessertsec2.style.display === 'grid'){
+        if(dessertsec2.style.display === 'flex'){
             dessertsec2.style.display = 'none';
             showbtn3.innerHTML= 'Show More ↓';
         }
 
 
-        if(sidesec2.style.display === 'grid'){
+        if(sidesec2.style.display === 'flex'){
             sidesec2.style.display = 'none';
             showbtn4.innerHTML= 'Show More ↓';
         }
 
-        if(drinkssec2.style.display === 'grid'){
+        if(drinkssec2.style.display === 'flex'){
             drinkssec2.style.display = 'none';
             showbtn5.innerHTML= 'Show More ↓';
         }
 
-        if(bsec2.style.display === 'grid'){
+        if(bsec2.style.display === 'flex'){
            bsec2.style.display = 'none';
             showbtn1.innerHTML= 'Show More ↓';
         }

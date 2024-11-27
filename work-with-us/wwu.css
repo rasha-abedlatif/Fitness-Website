@@ -31,9 +31,14 @@ nav a:hover:not(:nth-child(2))::after {
 /* --- body styling ---*/ 
 body{
     background-color: #e5e0d6;
-        display: flex;
+      display: flex;
     flex-direction: column;
+    min-height: 100vh;
   
+}
+
+main{
+  flex-grow: 1;
 }
 
 .heading-div{
@@ -61,14 +66,17 @@ body{
      flex-direction: column;
      gap: 30px;
      margin-top: 50px;
-     margin-bottom: 100px;
+     margin-bottom: 110px;
      justify-content: center;
      align-items: center;
-}
+     flex-wrap: wrap;
+    }
 
 .par{
-  width: 1000px;
+  width: 70%;
   line-height: 30px;
+
+  
 }
 
 a{
@@ -92,39 +100,55 @@ a:hover{
   
 }
 
-.firstimg{
+#firstimg{
   background-image: url(wwu-imgs/img1.jpeg);
   position: absolute;
-  top: 0px;
-  left: 150px;
+  top: 0; 
+  left: 10%; 
   z-index: 1;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 2s ease, transform 2s ease;
 
 }
 
-.secondimg{
+#secondimg{
   background-image: url(wwu-imgs/img2.jpeg);
   position: absolute;
-  top: 900px;
-  right: 610px;
+  top: 860px;
+  left: 10%;
   z-index: 1;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 2s ease, transform 2s ease;
 
 }
 
+#firstimg.visible {
+  opacity: 0.9;
+  transform: translateX(0); 
+}
+
+
+#secondimg.visible {
+  opacity: 0.9;
+  transform: translateX(0); 
+}
 .imgs{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
   width: 50%;
-  opacity: 0.9;
 }
+
 
 .division{
   position: absolute;
   border-radius: 10px;
 }
 
-.inputs-div{
+.inputs-div{ 
   position: absolute;
 display: flex;
 flex-direction: column;
@@ -141,7 +165,7 @@ z-index: 2;
 background-color: #e5e0d6;
  
 }
-.inputs-div input,select,textarea{
+.inputs-div input,.inputs-div select,.inputs-div textarea{
     width: 100%;
     border-width: 0 0 3px 0;
     background-color: #e5e0d6;
@@ -151,6 +175,10 @@ background-color: #e5e0d6;
     color: black;
     font-size: 15px;
     border-bottom: #695242 solid;
+}
+
+.inputs-div input.focused, .inputs-div select.focused, .inputs-div textarea.focused {
+  border: 3px solid #695242; /* Border color when the element is focused */
 }
 
 .inputs-div input:hover{
@@ -186,6 +214,12 @@ background-color: #e5e0d6;
   margin-bottom: 10px;
   width: 150px;
   cursor: pointer;
+  border: none;
+  transition: transform 0.3s ease;
+}
+.btn-div:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
 }
 
 #textbtn{
@@ -194,13 +228,15 @@ background-color: #e5e0d6;
   width: 80%;
   height: 100%;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 7px;
+  border: none;
+
 }
 #iconbtn{
   height: 100%;
   width: 20%;
   padding-top: 5px;
-
+ 
 }
 
 #iconbtn img{
@@ -211,13 +247,12 @@ width: 20px;
 /*---Footer Styling---*/
 
 footer {
-   margin-top: 1700px;
+    margin-top: 1700px;
     width: 100%;
     background: linear-gradient(135deg, #0a0a0a, #1b1b1b);
     color: #eaeaea;
     padding: 60px 0;
     font-family: Arial, sans-serif;
-    flex-grow: 1;
   }
   
   .footer-container {

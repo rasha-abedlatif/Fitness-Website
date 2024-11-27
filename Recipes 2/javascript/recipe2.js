@@ -1,45 +1,41 @@
 $(document).ready(function () {
-    let slideIndex = 0;
-    const slides = $(".slides");
-    const dots = $(".dot");
-    const slideCount = slides.length;
+    let listimg = ['images2/img1.jpg', 'images2/img2.jpg', 'images2/img3.webp', 'images2/img4.jpg', ];
+    let index = 0;
+    let $image = $('.slides');
+    let intervalTime = 3000; // Time in milliseconds for auto-slide
+    let autoSlide;
 
-    function showSlide(index) {
-        slides.removeClass("active-slide").fadeOut(1000);
-        slides.eq(index).addClass("active-slide").fadeIn(1000);
-
-        dots.removeClass("active");
-        dots.eq(index).addClass("active");
+    // Function to change the image
+    function changeImage(next = true) {
+        index = next ? (index + 1) % listimg.length : (index - 1 + listimg.length) % listimg.length;
+        $image.attr('src', listimg[index]);
     }
 
-    function nextSlide() {
-        slideIndex = (slideIndex + 1) % slideCount;
-        showSlide(slideIndex);
+    // Start automatic sliding
+    function startAutoSlide() {
+        autoSlide = setInterval(() => {
+            changeImage(true); // Automatically go to the next image
+        }, intervalTime);
     }
 
-    function prevSlide() {
-        slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-        showSlide(slideIndex);
+    // Stop automatic sliding
+    function stopAutoSlide() {
+        clearInterval(autoSlide);
     }
 
-    // Initialize the slideshow
-    showSlide(slideIndex);
-
-    // Auto slide every 3 seconds
-    const autoSlide = setInterval(nextSlide, 3000);
-
-    // Next and previous controls
-    $(".next").click(function () {
-        nextSlide();
+    // Event listeners for buttons
+    $('.prev').on('click', function () {
+        stopAutoSlide(); // Stop auto sliding when user interacts
+        changeImage(false); // Go to the previous image
+        startAutoSlide(); // Restart auto sliding
     });
 
-    $(".prev").click(function () {
-        prevSlide();
+    $('.next').on('click', function () {
+        stopAutoSlide(); // Stop auto sliding when user interacts
+        changeImage(true); // Go to the next image
+        startAutoSlide(); // Restart auto sliding
     });
 
-    // Dot navigation
-    $(".dot").click(function () {
-        slideIndex = $(this).data("slide");
-        showSlide(slideIndex);
-    });
+    // Initialize auto-slide
+    startAutoSlide();
 });

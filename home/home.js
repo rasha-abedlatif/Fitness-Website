@@ -8,12 +8,20 @@ window.addEventListener("scroll",function(){
         header.classList.remove("scrolled");
     }
 });
-function toggleMenu() {
-  let menuIcon = document.querySelector('.menu-icon');
-  let navLinks = document.querySelector('.nav-links');
-  menuIcon.classList.toggle('active');
-  navLinks.classList.toggle('active'); 
-}
+let menuIcon = document.querySelector('.menu-icon');
+let navLinks = document.querySelector('.nav-links');
+// Toggle menu visibility on click
+menuIcon.addEventListener('click', function () {
+  navLinks.classList.toggle('active');
+});
+menuIcon.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+    console.log('Menu toggled:', navLinks.classList.contains('active'));
+});
+menuIcon.addEventListener('click', function () {
+  menuIcon.classList.toggle('open');
+  navLinks.classList.toggle('active');
+});
 document.addEventListener("DOMContentLoaded", () => {
   const dropdownButton = document.querySelector(".dropdown-button");
   const dropdownContentWrapper = document.querySelector(".dropdown-content-wrapper");

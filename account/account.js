@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("userName", userAccount.firstName);
       alert("Login successful!");
-      window.location.href = "../home/home.html";
+      window.location.href = "../index.html";
     } else {
       alert("Invalid email or password.");
     }
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("Sign-up successful!");
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("userName", firstName);
-    window.location.href = "../home/home.html";
+    window.location.href = "../index.html";
   });
 });
 
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clear form and notify success
     signUpForm.reset();
     alert("Account created successfully!");
-    window.location.href = "../home/home.html";
+    window.location.href = "../index.html";
   });
 
   // Sign up functionality
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
       message.style.color = "green";
       message.textContent = "Login successful!";
       // Redirect to the home page
-      window.location.href = "../home/home.html";
+      window.location.href = "../index.html";
     } else {
       message.style.color = "red";
       message.textContent = "Invalid email or password. Please try again.";

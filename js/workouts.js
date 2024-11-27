@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+    
 
     function fillStars(card, rating) {
         let stars = card.querySelectorAll('.rating span');

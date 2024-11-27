@@ -22,7 +22,9 @@ nav>a:nth-child(3)::after {
   nav>a:hover:not(:nth-child(3))::after {
     width:100%;
   }
-
+  html {
+    scroll-behavior: smooth;
+}
 .slider {
     position: relative;
     width: 100%;
@@ -263,7 +265,7 @@ h2 {
     color: #232d3f;
     padding: 20px;
     font-size: 25px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .section2 {
@@ -442,6 +444,7 @@ h2 {
 animation: bounce 4s infinite;
     height: 700px;
     object-fit: cover;
+    display: block;
 }
 
 .content-header {
@@ -519,7 +522,21 @@ background-color: #695242;
     text-decoration: underline;
 
 }
-
+/* Hide all exercises by default */
+.exercise {
+    display: none;
+  }
+  
+  /* Show the targeted exercise when the hash matches */
+  .exercise:target {
+    display: block;
+  }
+  
+  /* Optional: Ensure the first exercise is visible by default */
+  .exercise:first-child {
+    display: block;
+  }
+  
 .Exercises-slider ul,
 p {
 
@@ -670,16 +687,32 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     .header {
         width: 1000px;
     }
-
+    
+    .container  {
+       height: 100%;
+       width: 350px;
+    }
+    .container img{
+        width: 100%;
+    }
     .carousel-track-container {
         max-width: 700px;
     }
-
+    .container .content{
+        font-size: 20px
+    }
+    .randomly, .carousel-item p, .app h3, .star  {
+        font-size: 25px
+    }
     .carousel-item img {
 
         width: 200px;
         height: 200px;
     }
+    h2{
+        font-size: 35px;
+    }
+    
 }
 
 @media screen and (max-width:970px) {

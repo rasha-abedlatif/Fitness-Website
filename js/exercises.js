@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $(window).on("scroll", function () {
         let $header = $("header");
         if ($(this).scrollTop() > 50) {
@@ -19,13 +18,30 @@ $(document).ready(function () {
 
     if ($dropdownButton.length) {
         $dropdownButton.on("click", function (e) {
-            e.stopPropagation(); 
+            e.stopPropagation();
             $dropdownContentWrapper.toggleClass("active");
         });
 
         $(document).on("click", function () {
             $dropdownContentWrapper.removeClass("active");
         });
+    }
+
+    function navigateToHash() {
+        if (window.location.hash) {
+            const targetId = window.location.hash.substring(1);
+            const $element = $('#' + targetId);
+            if ($element.length) {
+                console.log("Navigating to:", targetId); // Debugging line
+                exerciseSlideIndex = $element.closest('.Exercises-slider').index();
+                showExerciseSlide(exerciseSlideIndex);
+                $('html, body').animate({
+                    scrollTop: $element.offset().top
+                }, 1000);
+            } else {
+                console.log("Element not found for ID:", targetId); // Debugging line
+            }
+        }
     }
 
     let currentSlide = 0;
@@ -42,7 +58,7 @@ $(document).ready(function () {
         currentSlide = (currentSlide + 1) % $slides.length;
         showSlide(currentSlide);
     }
-    
+
     showSlide(currentSlide);
     setInterval(nextSlide, slideInterval);
 
@@ -52,7 +68,7 @@ $(document).ready(function () {
 
     function showExerciseSlide(index) {
         let $exerciseSlides = $exercises.eq(index).find('.exercise');
-        
+
         $exercises.hide().eq(index).show();
 
         let $currentExercise = $exerciseSlides.first();
@@ -63,12 +79,12 @@ $(document).ready(function () {
         }
     }
 
-   
     $(".btn").on("click", function (e) {
         e.preventDefault();
         showExerciseSlide(exerciseSlideIndex);
         exerciseSlideIndex = (exerciseSlideIndex + 1) % totalExerciseSlides;
     });
+
     $('#nextbtn').click(function () {
         exerciseSlideIndex = (exerciseSlideIndex + 1) % totalExerciseSlides;
         showExerciseSlide(exerciseSlideIndex);
@@ -78,20 +94,8 @@ $(document).ready(function () {
         exerciseSlideIndex = (exerciseSlideIndex - 1 + totalExerciseSlides) % totalExerciseSlides;
         showExerciseSlide(exerciseSlideIndex);
     });
+
     showExerciseSlide(exerciseSlideIndex);
-    let $target = $(targetId);
-
-    if ($target.length) {
-        $exercises.hide();
-        $target.show();
-
-        $('html, body').animate({
-            scrollTop: $target.offset().top
-        }, 1000);
-    }
 
     console.log('jQuery is loaded and working!');
 });
-
-
-

@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   let signUpButton = document.getElementById("sign-up-btn");
   let signInButton = document.getElementById("sign-in-btn");
@@ -160,8 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let message = document.getElementById("login-message"); // Alert <p> for messages
 
     let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
-    let curUser=accounts.find((user)=>user.email==email);
-
+    let curUser = accounts.find((user) => user.email == email);
 
     if (curUser && password === curUser.password) {
       message.style.color = "green";

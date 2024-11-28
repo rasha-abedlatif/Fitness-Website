@@ -26,11 +26,8 @@ let contentItems = document.querySelectorAll('.belief-item');
 
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
-    // Remove 'active' class from all buttons and items
     buttons.forEach((btn) => btn.classList.remove('active'));
     contentItems.forEach((item) => item.classList.remove('active'));
-
-    // Add 'active' class to the clicked button and corresponding content
     button.classList.add('active');
     const targetId = button.getAttribute('data-target');
     document.getElementById(targetId).classList.add('active');

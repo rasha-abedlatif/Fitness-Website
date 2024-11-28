@@ -5,25 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthy Recipes</title>
-    <link rel="stylesheet" href="../general.css">
     <link rel="stylesheet" href="recipes.css">
-    <script src="recipes.js" defer></script>
+    <script src="../java/recipes.js" defer></script>
+    <link rel="stylesheet" href="../css/general.css">
+    <script src="../java/general.js" defer></script>
 </head>
 
 <body>
-    <!-- header section -->
     <header id="header">
         <div class="logo">
-            <span>NUTRIVOLVE</span>
+          <a href="index.html">NUTRIVOLVE</a>
         </div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Recipes</a>
-            <a href="#">Workouts</a>
-            <a href="#">Articles</a>
-            <a href="#">About Us</a>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="#">Recipes</a>
+          <a href="../workouts/workouts.html">Workouts</a>
+          <a href="../article/article.html">Articles</a>
+          <a href="../about us/aboutus.html">About Us</a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-button">
+              <i class="fa-regular fa-user" style="color: #000000;"></i>
+            </a>
+            <div class="dropdown-content-wrapper">
+              <div class="dropdown-content">
+                <a href="../html/account.html#sign-in-form">Sign in</a>
+              <a href="../html/account.html#sign-up-form">Sign up</a>
+              </div>
+            </div>
+          </div>
         </nav>
-    </header>
+      </header>
 
     <!-- Recipes Menu Section -->
     <div class="recipes">

@@ -1,39 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-    // Change background color of navbar on scroll
-    window.addEventListener("scroll", () => {
-        let navbar = document.querySelector('header');
-        if (window.scrollY > 50) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
-    });
-
-    // Toggle the menu
-    function toggleMenu() {
-        let menuIcon = document.querySelector('.menu-icon');
-        let navLinks = document.querySelector('.nav-links');
-        menuIcon.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    }
-
-    // Dropdown functionality
-    let dropdownButton = document.querySelector(".dropdown-button");
-    let dropdownContentWrapper = document.querySelector(".dropdown-content-wrapper");
-
-    if (dropdownButton) {
-        dropdownButton.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevent closing dropdown if clicked inside
-            dropdownContentWrapper.classList.toggle("active");
-        });
-
-        // Close dropdown if clicked outside
-        document.addEventListener("click", () => {
-            dropdownContentWrapper.classList.remove("active");
-        });
-    }
-
     // Slide Show Logic (Header)
     let currentSlide = 0;
     let slides = document.querySelectorAll('.slide');

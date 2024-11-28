@@ -1,13 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-window.addEventListener("scroll",function(){
-    let navbar=document.querySelector('header');
-    if(this.window.scrollY>50){
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-});
-
 let backgroundContent = document.querySelector('.background-content');
 backgroundContent.classList.add('active');
   let card = document.querySelector(".card");

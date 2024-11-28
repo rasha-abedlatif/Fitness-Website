@@ -1,9 +1,4 @@
-function toggleMenu() {
-  let menuIcon = document.querySelector('.menu-icon');
-  let navLinks = document.querySelector('.nav-links');
-  menuIcon.classList.toggle('active');
-  navLinks.classList.toggle('active'); 
-}
+
 document.addEventListener("DOMContentLoaded", () => {
   let signUpButton = document.getElementById("sign-up-btn");
   let signInButton = document.getElementById("sign-in-btn");

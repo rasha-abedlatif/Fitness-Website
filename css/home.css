@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=GFS+Didot&family=Jura:wght@300..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Khitan+Small+Script&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=GFS+Didot&family=Jura:wght@300..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Khitan+Small+Script&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic&display=swap");
 
 body {
   overflow: visible;
 }
 
-nav>a:nth-child(1)::after {
-  content: '';
+nav > a:nth-child(1)::after {
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
@@ -14,8 +14,8 @@ nav>a:nth-child(1)::after {
   left: 0;
 }
 
-nav>a:not(:nth-child(1))::after {
-  content: '';
+nav > a:not(:nth-child(1))::after {
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -25,7 +25,7 @@ nav>a:not(:nth-child(1))::after {
   transition: width 0.3s ease;
 }
 
-nav>a:hover:not(:nth-child(1))::after {
+nav > a:hover:not(:nth-child(1))::after {
   width: 100%;
 }
 
@@ -53,13 +53,6 @@ nav>a:hover:not(:nth-child(1))::after {
   display: flex;
   flex-direction: column;
   background-color: #f4efed;
-}
-
-.recipes {
-  height: 150vh;
-  background-color: #f4efed;
-  background-size: cover;
-  background-position: center;
 }
 
 ::-webkit-scrollbar {
@@ -196,18 +189,21 @@ nav>a:hover:not(:nth-child(1))::after {
 /* ----main section---- */
 
 /* ----recipes section---- */
-
+.recipes {
+  height: 120vh;
+  background-color: #f4efed;
+  background-size: cover;
+  background-position: center;
+}
 .top {
   display: flex;
   justify-content: center;
   gap: 500px;
   align-items: center;
   max-width: 800px;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-left: 370px;
-  
 }
-
 
 .top h1 {
   /* margin-left: 100px; */
@@ -280,7 +276,6 @@ nav>a:hover:not(:nth-child(1))::after {
   max-width: 990px;
   margin-left: 240px;
   margin-top: 8px;
- 
 }
 
 .box {
@@ -291,6 +286,7 @@ nav>a:hover:not(:nth-child(1))::after {
 
 .box img {
   width: 100%;
+  height: 100%;
   display: block;
 }
 
@@ -299,6 +295,9 @@ nav>a:hover:not(:nth-child(1))::after {
   bottom: 0;
   margin-bottom: 180px;
   margin-left: 40px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.6);
@@ -322,7 +321,7 @@ nav>a:hover:not(:nth-child(1))::after {
 .recipes .box #meals {
   opacity: 0;
   transform: translateX(-50px);
-  transition: opacity 1.5s ease, transform 1.5s ease;
+  transition: opacity 1.5s ease, transform 0.8s ease;
 }
 
 .recipes .top .meal-btn {
@@ -485,7 +484,7 @@ nav>a:hover:not(:nth-child(1))::after {
 }
 
 .card1 .card-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-weight: 700;
   color: white;
@@ -496,7 +495,7 @@ nav>a:hover:not(:nth-child(1))::after {
 }
 
 .card2 .card-subtitle {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 13px;
   font-weight: 400;
   color: #7e867c;
@@ -507,7 +506,7 @@ nav>a:hover:not(:nth-child(1))::after {
 }
 
 .card2 .card-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 800;
   color: #7e867c;
@@ -518,7 +517,7 @@ nav>a:hover:not(:nth-child(1))::after {
 }
 
 .card2 button {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 600;
   font-style: italic;
@@ -535,12 +534,12 @@ nav>a:hover:not(:nth-child(1))::after {
 }
 
 .card2 button:hover {
-  background-color: #8B8D87;
+  background-color: #8b8d87;
 }
 
 .card3 .card-subtitle,
 .card4 .card-subtitle {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: white;
@@ -552,7 +551,7 @@ nav>a:hover:not(:nth-child(1))::after {
 
 .card3 .card-title,
 .card4 .card-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 30px;
   font-weight: 700;
   color: white;
@@ -599,12 +598,9 @@ nav>a:hover:not(:nth-child(1))::after {
   background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 }
 
-
 .brands:hover .brand-slide {
   /* transform: scale(5.1); */
   animation-play-state: paused;
-  
-
 }
 .brand-slide img {
   height: 120px;
@@ -614,10 +610,9 @@ nav>a:hover:not(:nth-child(1))::after {
 }
 .brands .brand-slide {
   display: inline-flex;
- 
+
   /* animation: slide 16s infinite linear; */
 }
-
 
 @keyframes slide-left {
   0% {
@@ -631,9 +626,6 @@ nav>a:hover:not(:nth-child(1))::after {
   display: flex;
   animation: slide-left 16s linear infinite;
 }
-
-
-
 /* ---frequently asked questions:--- */
 .askedQs {
   background-color: #ede8e6;
@@ -648,7 +640,7 @@ nav>a:hover:not(:nth-child(1))::after {
 .askedQs h1 {
   font-size: 32px;
   font-weight: bold;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   margin-bottom: 20px;
   color: #755d4c;
 }
@@ -669,8 +661,8 @@ nav>a:hover:not(:nth-child(1))::after {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  color: #D2CBC1;
-  font-family: 'Roboto', sans-serif;
+  color: #d2cbc1;
+  font-family: "Roboto", sans-serif;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -683,12 +675,12 @@ nav>a:hover:not(:nth-child(1))::after {
   max-height: 0px;
   width: 100%;
   overflow: hidden;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .faq i {
-  transition: all .3s ease-in-out;
-  color: #D2CBC1;
+  transition: all 0.3s ease-in-out;
+  color: #d2cbc1;
 }
 
 .faq.active .ans {
@@ -700,13 +692,13 @@ nav>a:hover:not(:nth-child(1))::after {
 }
 
 .ans p {
-  background-color: #EAE1D2;
+  background-color: #eae1d2;
   padding: 15px 20px;
   font-size: 16px;
-  border-top: 1px solid #4D5038;
+  border-top: 1px solid #4d5038;
   color: #222217;
   border-radius: 0 0 8px 8px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -719,7 +711,7 @@ nav>a:hover:not(:nth-child(1))::after {
   align-items: center;
   padding: 30px 8%;
   background-color: #f4efed;
-  color: #5F563D;
+  color: #5f563d;
 }
 
 .Contact .row {
@@ -753,21 +745,21 @@ section.left .contactTitle h2 {
 }
 
 section.left .contactTitle h2::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 50%;
   height: 1px;
-  background-color: #5F563D;
+  background-color: #5f563d;
   top: 120%;
   left: 0;
 }
 
 section.left .contactTitle h2::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 25%;
   height: 3px;
-  background-color: #998F71;
+  background-color: #998f71;
   top: calc(120% - 1px);
   left: 0;
   animation: slide 1s ease-in-out infinite alternate;
@@ -785,7 +777,7 @@ section.left .contactTitle h2::after {
 
 section.left .contactTitle p {
   font-size: 17px;
-  color: #5F563D;
+  color: #5f563d;
   letter-spacing: 1px;
   line-height: 1.2;
   padding-bottom: 22px;
@@ -804,7 +796,7 @@ section.left .contactInfo {
 .iconGroup .icon {
   width: 45px;
   height: 45px;
-  border: 2px solid #998F71;
+  border: 2px solid #998f71;
   border-radius: 50%;
   margin-right: 20px;
   position: relative;
@@ -821,13 +813,13 @@ section.left .contactInfo {
 .iconGroup .details span {
   display: block;
   display: flex;
-  color: #5F563D;
+  color: #5f563d;
   font-size: 18px;
 }
 
 .iconGroup .details span:nth-child(1) {
   text-transform: uppercase;
-  color: #998F71;
+  color: #998f71;
 }
 
 section.left .socialMedia {
@@ -864,9 +856,9 @@ section.left .socialMedia {
   font-size: 30px;
   padding: 6px 9px;
   background-color: #998f71;
-  color: #E8D4B9;
+  color: #e8d4b9;
   border: none;
-  border-bottom: 2px solid #998F71;
+  border-bottom: 2px solid #998f71;
   outline: none;
   border-radius: 20px;
 }
@@ -882,12 +874,12 @@ textarea::-webkit-scrollbar {
 }
 
 textarea::-webkit-scrollbar-track {
-  background-color: #5F563D;
+  background-color: #5f563d;
   border-radius: 15px;
 }
 
 textarea::-webkit-scrollbar-thumb {
-  background-color: #998F71;
+  background-color: #998f71;
   border-radius: 15px;
 }
 
@@ -896,7 +888,7 @@ textarea::-webkit-scrollbar-thumb {
   left: 0;
   bottom: 13px;
   margin-left: 13px;
-  color: #5F563D;
+  color: #5f563d;
   font-size: 18px;
   transition: 0.4s;
   pointer-events: none;
@@ -906,10 +898,10 @@ textarea::-webkit-scrollbar-thumb {
   top: 14px;
 }
 
-.inputGroup input:focus~label,
-.inputGroup textarea:focus~label,
-.inputGroup input:valid~label,
-.inputGroup textarea:valid~label {
+.inputGroup input:focus ~ label,
+.inputGroup textarea:focus ~ label,
+.inputGroup input:valid ~ label,
+.inputGroup textarea:valid ~ label {
   transform: translateY(-38px);
   font-size: 16px;
 }
@@ -917,8 +909,8 @@ textarea::-webkit-scrollbar-thumb {
 .inputGroup button {
   padding: 8px 16px;
   font-size: 18px;
-  background-color: #5F563D;
-  color: #E8D4B9;
+  background-color: #5f563d;
+  color: #e8d4b9;
   border: 1px solid transparent;
   border-radius: 25px;
   outline: none;
@@ -929,91 +921,66 @@ textarea::-webkit-scrollbar-thumb {
 
 .inputGroup button:hover {
   background-color: #282315;
-  color: #998F71;
+  color: #998f71;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-  border: 1px solid #5F563D;
+  border: 1px solid #5f563d;
 }
 
 /* --responsiveness for everything */
+
+@media (max-width: 1100px) {
+  .messageForm .halfWidth {
+    flex-basis: 100%;
+  }
+  .sections{
+    width:1500px;
+  }
+  .recipes{
+    margin-left: 40px;
+    height: 85vh;
+  }
+}
 @media (max-width: 1000px) {
   .sections {
     width: 1500px;
   }
-}
-
-@media (max-width:600px) {
-  .recipes {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
+  .recipes{
+    height: 90vh;
   }
-
-  .image-container {
-    display: flex;
+}
+@media (max-width: 900px) {
+  .Contact .row {
     flex-wrap: wrap;
-    gap: 10px;
   }
 
-  .image-container .box {
-    width: 48%;
-    margin-bottom: 10px;
-  }
-
-  .image-container .box .img {
-    width: 100%;
-    display: block;
-  }
-
-  .image-container .box:nth-child(1),
-  .image-container .box:nth-child(2) {
-    order: 1;
-  }
-
-  .image-container .box:nth-child(3),
-  .image-container .box:nth-child(4) {
-    order: 2;
-    /* height: 100vh; */
-  }
-  .image-container .box:nth-child(2) {
-    height: 60.2vh;
-  }
-  .image-container .box:nth-child(3) {
-    height: 56.6vh;
-  }
-  .image-container .box:nth-child(5) {
-    height: 56.6vh;
-  }
-  .image-container .box:nth-child(5),
-  .image-container .box:nth-child(6) {
-    order: 3;
-  }
-
-  #meals {
-    font-size: 25px;
-    cursor: pointer;
-    margin-bottom: 258px;
-    margin-left: 80px;
-    transition: background 0.7s ease;
-  }
-
-  #meals:hover {
-    background: rgba(0, 0, 0, 0.8);
-  }
-
-  .top .meal-btn {
-    font-size: 40px;
-  }
-
-  .recipes .top .meal-btn .text {
-    font-size: 20px;
-  }
-
-  .recipes .top .meal-btn .arrow {
-    font-size: 29px;
+  .row section.left,
+  .row section.right {
+    flex-basis: 100%;
+    margin: 0px;
   }
 }
-
+@media(max-width:740px){
+  .recipes{
+    height: 200vh;
+  }
+  .top .text{
+    font-size: 26px;
+  }
+  .top .meal-btn{
+    font-size: 25px;
+  }
+  .meal-btn .arrow {
+    font-size: 30px;
+  }
+  .image-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+  #meals{
+    margin-bottom: 300px;
+    margin-left: 60px;
+    font-size: 25px;
+  }
+}
 @media (max-width: 700px) {
   .grid-container {
     display: flex;
@@ -1108,27 +1075,96 @@ textarea::-webkit-scrollbar-thumb {
     font-size: 30px;
   }
 }
-
-@media(max-width: 1100px) {
-  .messageForm .halfWidth {
-    flex-basis: 100%;
+@media(max-width: 600px){
+  .content h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+ .subheading .text{
+  margin-bottom: 30px;
+    font-size: 30px;
+  }
+  .work-btn{
+    font-size: 25px;
   }
 }
-
-@media(max-width: 900px) {
-  .Contact .row {
-    flex-wrap: wrap;
-  }
-
-  .row section.left,
-  .row section.right {
-    flex-basis: 100%;
-    margin: 0px;
-  }
-}
-
 @media (max-width: 600px) {
+  .recipes {
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-left: 70px !important;
+  }
 
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 1050px;
+  }
+
+  .image-container .box {
+    width: 48%;
+    margin-bottom: 10px;
+  }
+
+  .image-container .box .img {
+    width: 100%;
+    display: block;
+  }
+
+  .image-container .box:nth-child(1),
+  .image-container .box:nth-child(2) {
+    order: 1;
+  }
+
+  .image-container .box:nth-child(3),
+  .image-container .box:nth-child(4) {
+    order: 2;
+  } 
+  .image-container .box:nth-child(5),
+  .image-container .box:nth-child(6) {
+    order: 3;
+  }
+
+  #meals {
+    font-size: 30px;
+    cursor: pointer;
+    margin-bottom: 258px;
+    margin-left: 80px;
+    transition: background 0.7s ease;
+  }
+
+  #meals:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .top .meal-btn {
+    font-size: 80px;
+  }
+  .recipes .top .meal-btn .text {
+    font-size: 27px;
+  }
+  .recipes .top .meal-btn .arrow {
+    font-size: 37px;
+  }
+}
+@media(max-width:600px){
+  .card3 .card-subtitle,
+  .card4 .card-subtitle {
+    font-size: 90px;
+  }
+
+  .card-content .card-subtitle,
+  .card-content .card-title {
+    font-size: 40px;
+  }
+
+  .card-content button {
+    font-size: 30px;
+  }
+}
+@media (max-width: 600px) {
   .Contact .contactTitle h2,
   .Contact h2 {
     font-size: 40px !important;
@@ -1162,7 +1198,7 @@ textarea::-webkit-scrollbar-thumb {
   .Contact .col.right .inputGroup input,
   .Contact .col.right .inputGroup textarea,
   .Contact .col.right .inputGroup label {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .Contact .col.right .inputGroup button {
@@ -1173,19 +1209,30 @@ textarea::-webkit-scrollbar-thumb {
 @media (max-width: 599px) {
   .image-container {
     display: flex;
-    align-items: center; 
-    margin-left: 55vw;
+    align-items: center;
+    margin-left: 5vw;
+    max-width: 1400px;
     padding: 0;
   }
-.top h1{
-  margin-left: 50vw;
-  font-size: 35px;
-}
-.top .meal-btn{
-  margin-right: 40vw;
-}
-  .image-container .box:nth-child(3) {
-    height: 56.5vh;
+  .top h1 {
+    font-size: 40px;
   }
+  .top .meal-btn {
+    font-size: 40px;
+  }
+  .image-container .box:nth-child(3) {
+    height: 80.7vh;
+  }
+}
+@media(max-width:598) {
+  #meals{
+    margin-bottom: 400px;
+  }
+}
+@media(max-width:500px){
 
+  #meals{
+    margin-bottom: 380px;
+    margin-left: 140px;
+  }
 }

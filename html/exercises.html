@@ -4,44 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
     <title>Exercises</title>
-    <link rel="stylesheet" href="workouts.css">
-    <link rel="stylesheet" href="../general.css">
-    <title>Workouts</title>
+    <link rel="stylesheet" href="../css/workouts.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <script src="../java/js/jquery-3.7.1.min.js" defer></script>
+    <script src="../java/js/exercises.js"defer></script>
+    <script src="../java/general.js" defer></script>
+    <script src="../java/workouts.js" defer></script>
     <link rel="icon" href="workout-icon.jpg" type="../image/png">
 </head>
 
 <body class="Exercises-body">
     <header id="header">
         <div class="logo">
-            <a href="../home/home.html">NUTRIVOLVE</a>
+          <a href="../html/home.html">NUTRIVOLVE</a>
         </div>
         <div class="menu-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <nav class="nav-links">
-            <a href="../home/home.html">Home</a>
-            <a href="#">Recipes</a>
-            <a href="../workouts/workouts.html">Workouts</a>
-            <a href="#">Articles</a>
-            <a href="../about us/aboutus.html">About Us</a>
-            <div class="dropdown">
-                <a href="#">
-                    <img id="account" src="../images/account.png" alt="Button Image">
-                </a>
-                <div class="dropdown-content-wrapper">
-                    <div class="dropdown-content">
-                        <a href="../account/account.html#sign-in">Sign in</a>
-                        <a href="../account/account.html#sign-up">Sign up</a>
-                    </div>
-                </div>
+          <a href="../html/home.html">Home</a>
+          <a href="#">Recipes</a>
+          <a href="../html/workouts.html">Workouts</a>
+          <a href="../html/article.html">Articles</a>
+          <a href="../html/aboutus.html">About Us</a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-button">
+              <i class="fa-regular fa-user" style="color: #000000;"></i>
+            </a>
+            <div class="dropdown-content-wrapper">
+              <div class="dropdown-content">
+                <a href="../account/account.html#sign-in-form">Sign in</a>
+                <a href="../account/account.html#sign-up-form">Sign up</a>
+              </div>
             </div>
-
+          </div>
         </nav>
-
-    </header>
+      </header>
     <main class="Exercises">
         <div class="exercises-header">
             <div class="header">
@@ -50,13 +58,13 @@
                     <div class="content-header">
                         <div class="Line"></div>
                         <h1>Exercises</h1>
-                        <button class="btn">Let's Discover</button>
+                        <button type="submit" class="btn">Let's Discover</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="Exercises-slider">
-            <div class="exercise" id="dumbbells-press">
+            <div class="exercise" id="Dumbbell-shoulder-press">
                 <h2>Dumbbell Shoulder Press</h2>
                 <div class="upper-part">
                     <div class="content-part1">
@@ -94,7 +102,7 @@
             </div>
         </div>
         <div class="Exercises-slider">
-            <div class="exercise" id="barbell-lunge">
+            <div class="exercise" id="Barbell-Lunge">
                 <h2> Barbell Lunge</h2>
                 <div class="upper-part">
                     <div class="content-part1">
@@ -327,7 +335,7 @@
                         </ul>
                     </div>
                     <div class="p1-image">
-                        <img id="slidder" src="../images/kettlebells2.jpg" alt="image slider">
+                        <img src="../images/kettlebells2.jpg" alt="image slider">
                     </div>
                 </div>
                 <div class="lower-part">
@@ -501,8 +509,7 @@
         </div>
         <hr />
     </footer>
-    <script src="../js/jquery-3.7.1.min.js"></script>
-    <script src="../js/exercises.js"></script>
+
 </body>
 
 </html>

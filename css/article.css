@@ -331,24 +331,32 @@ section {
     width: 300vw;
   }
   .btn2, .artc{
-    font-size: 20px;
+    font-size: 30px;
   }
   .home-subtitle{
-    font-size: 20px;
+    font-size: 40px;
   }
   .about {
     gap: 40px;
   }
+  .titleText{
+    font-size: 40px;
+  }
+  .title-text{
+    font-size: 30px;
+  }
   .post {
     grid-template-columns: repeat(2, 1fr) !important;
   }
-  .filter-item,
+  .filter-item{
+    font-size: 30px;
+  }
   .post-title,
   .category,
   .post-date,
   .profile-name,
   .post-description {
-    font-size: 21px;
+    font-size: 25px;
   }
   footer {
     width: 300vw !important;

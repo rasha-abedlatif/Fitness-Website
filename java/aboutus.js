@@ -1,12 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-window.addEventListener("scroll",function(){
-    let navbar=document.querySelector('header');
-    if(this.window.scrollY>50){
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-});
+
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const slideInterval = 3000; // 3 seconds
@@ -65,4 +57,3 @@ buttons.forEach((button) => {
   });
 });
 
-})

@@ -1,10 +1,10 @@
 // Change background-color of nav on scroll
 window.addEventListener("scroll", function() {
   let navbar = document.querySelector('header');
-  if (window.scrollY > 50) { // Changed this.window to just window
-    navbar.classList.add("scrolled"); // Fixed 'header' to 'navbar'
+  if (window.scrollY > 50) { 
+    navbar.classList.add("scrolled"); 
   } else {
-    navbar.classList.remove("scrolled"); // Fixed 'header' to 'navbar'
+    navbar.classList.remove("scrolled"); 
   }
 });
 function toggleMenu() {
@@ -18,8 +18,8 @@ function toggleMenu() {
   }
 }
 document.addEventListener("DOMContentLoaded", () => {
-  const dropdownButton = document.querySelector(".dropdown-button");
-  const dropdownWrapper = document.querySelector(".dropdown-content-wrapper");
+  let dropdownButton = document.querySelector(".dropdown-button");
+  let dropdownWrapper = document.querySelector(".dropdown-content-wrapper");
   if (dropdownButton && dropdownWrapper) {
     dropdownButton.addEventListener("click", (e) => {
       e.stopPropagation(); 
@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
     } else {
       navLinks.innerHTML = `
-        <a href="../account/account.html#sign-in-form">Sign in</a>
-        <a href="../account/account.html#sign-up-form">Sign up</a>
+        <a href="../html/account.html#sign-in-form">Sign in</a>
+        <a href="../html/account.html#sign-up-form">Sign up</a>
       `;
     }
   }

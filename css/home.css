@@ -37,7 +37,7 @@ nav > a:hover:not(:nth-child(1))::after {
   width: 100%;
   height: 100vh;
   flex-grow: 1;
-  background: url(images/image4.jpg);
+  background: url(../images/image4.jpg);
   background-size: cover;
   background-position: center;
   transform: scale(1);
@@ -638,7 +638,7 @@ nav > a:hover:not(:nth-child(1))::after {
 }
 
 .askedQs h1 {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: bold;
   font-family: "Merriweather", serif;
   margin-bottom: 20px;
@@ -654,21 +654,21 @@ nav > a:hover:not(:nth-child(1))::after {
 }
 
 .ques {
-  background-color: #694f3d;
+  background-color: #6b5c48;
   padding: 15px 20px;
   font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  color: #d2cbc1;
+  color: #efe9db;
   font-family: "Roboto", sans-serif;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .ques:hover {
-  background-color: #858666;
+  background-color: #bdac96;
 }
 
 .ans {
@@ -692,7 +692,7 @@ nav > a:hover:not(:nth-child(1))::after {
 }
 
 .ans p {
-  background-color: #eae1d2;
+  background-color: #f4ede2;
   padding: 15px 20px;
   font-size: 16px;
   border-top: 1px solid #4d5038;
@@ -813,15 +813,17 @@ section.left .contactInfo {
 .iconGroup .details span {
   display: block;
   display: flex;
-  color: #5f563d;
-  font-size: 18px;
+  /* font-size: 0.9rem; */
 }
 
 .iconGroup .details span:nth-child(1) {
   text-transform: uppercase;
-  color: #998f71;
+  color: #6c594c;
 }
-
+.iconGroup .details span:nth-child(2) {
+  text-transform: uppercase;
+  color: #a6948a;
+}
 section.left .socialMedia {
   display: flex;
   justify-content: flex-start;
@@ -855,7 +857,7 @@ section.left .socialMedia {
   width: 100%;
   font-size: 30px;
   padding: 6px 9px;
-  background-color: #998f71;
+  background-color: #6b5c48;
   color: #e8d4b9;
   border: none;
   border-bottom: 2px solid #998f71;
@@ -888,7 +890,7 @@ textarea::-webkit-scrollbar-thumb {
   left: 0;
   bottom: 13px;
   margin-left: 13px;
-  color: #5f563d;
+  color: #c0b699;
   font-size: 18px;
   transition: 0.4s;
   pointer-events: none;

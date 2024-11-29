@@ -19,18 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
-  const signInForm = document.getElementById("sign-in-form");
-  const signUpForm = document.getElementById("sign-up-form");
+  let signInForm = document.getElementById("sign-in-form");
+  let signUpForm = document.getElementById("sign-up-form");
 
   // Handle Sign In
   signInForm.addEventListener("submit", function (event) {
     event.preventDefault();
-    const email = document.getElementById("login-email").value;
-    const password = document.getElementById("login-password").value;
+    let email = document.getElementById("login-email").value;
+    let password = document.getElementById("login-password").value;
 
     // Check localStorage for existing accounts
-    const accounts = JSON.parse(localStorage.getItem("accounts")) || [];
-    const userAccount = accounts.find(
+    let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+    let userAccount = accounts.find(
       (account) => account.email === email && account.password === password
     );
 
@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
   signUpForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const firstName = signUpForm.elements["U-Name"][0].value;
-    const lastName = signUpForm.elements["U-Name"][1].value;
-    const email = document.getElementById("email").value;
-    const createPassword = document.getElementById("create-password").value;
-    const confirmPassword = document.getElementById("confirm-password").value;
+    let firstName = signUpForm.elements["U-Name"][0].value;
+    let lastName = signUpForm.elements["U-Name"][1].value;
+    let email = document.getElementById("email").value;
+    let createPassword = document.getElementById("create-password").value;
+    let confirmPassword = document.getElementById("confirm-password").value;
 
     if (createPassword !== confirmPassword) {
       alert("Passwords do not match!");

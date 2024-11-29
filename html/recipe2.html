@@ -4,7 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Name</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <title>Nutrivolve</title>
   <script src="../java/general.js" defer></script>
     <script src="../java/js/jquery-3.7.1.min.js"></script>
     <script src="../java/js/recipe2.js" defer></script>
@@ -14,18 +21,35 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="logo">
-            <a href="../home/home.html">NUTRIVOLVE</a>
+          <a href="../index.html">NUTRIVOLVE</a>
         </div>
-        <nav>
-            <a href="../home/home.html">Home</a>
-            <a href="#">Recipes</a>
-            <a href="../workouts/workouts.html">Workouts</a>
-            <a href="#">Articles</a>
-            <a href="#">About Us</a>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../html/recipes.html">Recipes</a>
+          <a href="../html/workouts.html">Workouts</a>
+          <a href="../html/article.html">Articles</a>
+          <a href="../html/aboutus.html">About Us</a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-button">
+              <i class="fa-regular fa-user" style="color: #000000;"></i>
+            </a>
+            <div class="dropdown-content-wrapper">
+              <div class="dropdown-content">
+                <a href="../html/account.html#sign-in-form">Sign in</a>
+                <a href="../html/account.html#sign-up-form">Sign up</a>
+              </div>
+            </div>
+          </div>
         </nav>
-    </header>
+      </header>
+
     <main class="main">
         <div class="slideshow-container">
 
@@ -179,44 +203,43 @@
             <div class="column Reach">
                 <h3>Reach Us Through:</h3>
                 <div class="contactInfo">
-                    <div class="iconGroup">
-                        <div class="icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="details">
-                            <span>Phone:</span>
-                            <span>+00 110 111 00</span>
-                        </div>
+                  <div class="iconGroup">
+                    <div class="icon">
+                      <i class="fa-solid fa-phone"></i>
                     </div>
-                    <div class="iconGroup">
-                        <div class="icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div class="details">
-                            <span>Email:</span>
-                            <span>nutrivolve-fitness@gmail.com</span>
-                        </div>
+                    <div class="details">
+                      <span>Phone:</span>
+                      <span>+40 20 7829 9821</span>
                     </div>
-                    <div class="iconGroup">
-                        <div class="icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div class="details">
-                            <span>Location:</span>
-                            <span>Saida Street, Chohada Road</span>
-                        </div>
+                  </div>
+                  <div class="iconGroup">
+                    <div class="icon">
+                      <i class="fa-solid fa-envelope"></i>
                     </div>
+                    <div class="details">
+                      <span>Email:</span>
+                      <span>nutrivolvefitness@gmail.com</span>
+                    </div>
+                  </div>
+                  <div class="iconGroup">
+                    <div class="icon">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="details">
+                      <span>Location:</span>
+                      <span>North West, London, Abbey Road</span>
+                    </div>
+                  </div>
                 </div>
-            </div>
-
+              </div>
             <div class="column QuickL">
                 <h3>Links:</h3>
                 <ul>
-                    <li><a href="../home/home.html">Home</a></li>
-                    <li><a href="">Recipes</a></li>
-                    <li><a href="../workouts/workouts.html">Workouts</a></li>
-                    <li><a href="">Articles</a></li>
-                    <li><a href="">Work With Us</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../html/recipes.html">Recipes</a></li>
+                    <li><a href="../html/workouts.html">Workouts</a></li>
+                    <li><a href="../html/article.html">Articles</a></li>
+                    <li><a href="../html/wwu.html">Work With Us</a></li>
                 </ul>
             </div>
         </div>

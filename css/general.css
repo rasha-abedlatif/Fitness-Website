@@ -333,9 +333,9 @@ footer {
 
 .logo-title h1 {
   font-size: 24px;
-  color: #ffd700;
-  /* margin: 0; */
-  /* margin-bottom: 40px; */
+  background: linear-gradient(#bdac96,#e0d5bf, #efe9db); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .logo-column form {
@@ -379,7 +379,7 @@ footer {
 }
 
 .input-group i {
-  color: #ffd700;
+  color:#ad9476;
   margin-right: 10px;
   font-size: 16px;
 }
@@ -420,7 +420,7 @@ footer {
   width: 35px;
   height: 35px;
   background: #333;
-  color: #ffd700;
+  color:  #e2cbc2; 
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -430,7 +430,7 @@ footer {
 }
 
 .social-icons a:hover {
-  background: #ffd700;
+  background: #a38f85;
   color: #1b1b1b;
 }
 
@@ -459,8 +459,8 @@ footer {
 }
 
 .icon {
-  color: #5f563d;
-  background-color: #282315;
+  color: #e2cbc2;
+  background-color:#333;
   padding: 10px;
   border-radius: 50%;
   margin-right: 15px;
@@ -472,7 +472,8 @@ footer {
 }
 
 .icon:hover {
-  background-color: #998f71;
+  background-color: #a38f85;
+  color: #1b1b1b;
   transform: scale(1.1);
 }
 .icon:focus {
@@ -484,12 +485,12 @@ footer {
 
 .details span:first-child {
   font-weight: bold;
-  color: #998f71;
+  color: #6c594c;
   font-size: 0.9rem;
 }
 
 .details span:last-child {
-  color: #e8d4b9;
+  color: #a6948a;
   font-size: 1rem;
 }
 
@@ -504,7 +505,11 @@ footer {
 .QuickL {
   margin-top: 40px;
 }
-
+.logo-title h3, .Reach h3, .QuickL h3{
+  background: linear-gradient(#bdac96,#e0d5bf, #efe9db); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .column ul {
   list-style: none;
   padding: 0;
@@ -525,22 +530,8 @@ footer {
 }
 
 .column ul li a:hover {
-  color: #ffd700;
+  color:#a38f85;;
 }
-
-/* @media(max-width:768px) {
-  footer {
-    width: 300vw !important;
-  }
-  footer .logo-column .logo-title {
-    display: flex;
-    justify-content: center !important;
-    align-items: center !important;
-    margin-right: 530px;
-  }
-  .QuickL ul li a {
-    white-space: nowrap;
-  }}  */
 
 @media (max-width: 600px) {
   footer .footer-container {
@@ -599,15 +590,6 @@ footer {
     position: relative;
     font-size: 30px;
   }
-
-  /* footer .Reach::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #fff;
-    margin: 40px 30px;
-  } */
 
   footer .contactInfo .details span {
     font-size: 30px;

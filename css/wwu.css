@@ -4,30 +4,6 @@
     margin: 0;
     padding: 0;
 }
-/* --- Nav Styling ---*/ 
-nav a:nth-child(2)::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #dbd5c7; 
-    bottom: 0;
-    left: 0;
-  }
-nav a:not(:nth-child(2))::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #dbd5c7; 
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease;
-  }
-nav a:hover:not(:nth-child(2))::after {
-    width: 100%;
-}
-
 /* --- body styling ---*/ 
 body{
     background-color: #e5e0d6;
@@ -44,10 +20,8 @@ main{
 }
 
 .heading-div{
-  margin-top: 45px;
-  margin-bottom: 100px;
-   width: 100%;
-   height: 300px;
+  width: 100%;
+  min-height: 450px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -57,7 +31,7 @@ main{
   font-size: 50px;
   text-align: center;
   font-weight: bold;
-  color: #dbd5c7;
+  color: #c1b6a4;
 
 }
 

@@ -4,28 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Recipes</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <title>Nutrivolve</title>
     <script src="../java/general.js" defer></script>
-    <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/recipes.css">
+    <link rel="stylesheet" href="../css/general.css">
     <script src="../java/recipes.js" defer></script>
 </head>
 
 <body>
-    <!-- header section -->
     <header id="header">
         <div class="logo">
-            <span>NUTRIVOLVE</span>
+          <a href="../index.html">NUTRIVOLVE</a>
         </div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Recipes</a>
-            <a href="#">Workouts</a>
-            <a href="#">Articles</a>
-            <a href="#">About Us</a>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../html/recipes.html">Recipes</a>
+          <a href="../html/workouts.html">Workouts</a>
+          <a href="../html/article.html">Articles</a>
+          <a href="../html/aboutus.html">About Us</a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-button">
+              <i class="fa-regular fa-user" style="color: #000000;"></i>
+            </a>
+            <div class="dropdown-content-wrapper">
+              <div class="dropdown-content">
+                <a href="../html/account.html#sign-in-form">Sign in</a>
+                <a href="../html/account.html#sign-up-form">Sign up</a>
+              </div>
+            </div>
+          </div>
         </nav>
-
-    </header>
+      </header>
 
 <!-- Opening Section -->
     <div class="opening-sen">
@@ -123,18 +144,18 @@
 
                 <!-- Breakfast Section 1 of the recipes -->
                 <section class="recipe-sec1">
-                    <div class="recipe">
-                        <div class="imgs" id="img1">
-                            <div class="cover">
-                                <p class="foodname">Healthy Blueberry Muffins</p>
-                            </div>
-                      
+                   <a href="../html/recipe2.html"> <div  class="recipe">
+                    <div class="imgs" id="img1">
+                        <div class="cover">
+                            <p class="foodname">Healthy Blueberry Muffins</p>
+                        </div>
+                  
 
-                        </div>
-                        <div class="names-div">
-                            <h2 class="names">Healthy Blueberry Muffins</h2>
-                        </div>
                     </div>
+                    <div class="names-div">
+                        <h2 class="names">Healthy Blueberry Muffins</h2>
+                    </div>
+                </div></a>
                     <div class="recipe">
                         <div class="imgs" id="img2">
                             <div class="cover">
@@ -661,36 +682,35 @@
             <div class="column Reach">
                 <h3>Reach Us Through:</h3>
                 <div class="contactInfo">
-                    <div class="iconGroup">
-                        <div class="icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="details">
-                            <span>Phone:</span>
-                            <span>+00 110 111 00</span>
-                        </div>
+                  <div class="iconGroup">
+                    <div class="icon">
+                      <i class="fa-solid fa-phone"></i>
                     </div>
-                    <div class="iconGroup">
-                        <div class="icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div class="details">
-                            <span>Email:</span>
-                            <span>nutrivolve-fitness@gmail.com</span>
-                        </div>
+                    <div class="details">
+                      <span>Phone:</span>
+                      <span>+40 20 7829 9821</span>
                     </div>
-                    <div class="iconGroup">
-                        <div class="icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div class="details">
-                            <span>Location:</span>
-                            <span>Saida Street, Chohada Road</span>
-                        </div>
+                  </div>
+                  <div class="iconGroup">
+                    <div class="icon">
+                      <i class="fa-solid fa-envelope"></i>
                     </div>
+                    <div class="details">
+                      <span>Email:</span>
+                      <span>nutrivolvefitness@gmail.com</span>
+                    </div>
+                  </div>
+                  <div class="iconGroup">
+                    <div class="icon">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="details">
+                      <span>Location:</span>
+                      <span>North West, London, Abbey Road</span>
+                    </div>
+                  </div>
                 </div>
-            </div>
-
+              </div>
             <div class="column QuickL">
                 <h3>Links:</h3>
                 <ul>

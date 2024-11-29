@@ -9,7 +9,7 @@ document.querySelectorAll('.container').forEach(container => {
 
 //effect on recipes section 
 document.addEventListener("DOMContentLoaded", () => {
-    const elementsToAnimate = document.querySelectorAll(".box #meals");
+    let elementsToAnimate = document.querySelectorAll(".box #meals");
     
     function animateOnScroll() {
         elementsToAnimate.forEach(element => {

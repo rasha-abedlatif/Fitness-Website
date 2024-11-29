@@ -49,14 +49,10 @@ section {
   width: 100%;
 }
 .home {
-  background-color: #e1daca;
-  /* object-fit: cover; */
-  /* background-repeat: no-repeat; */
-  /* background-position: center; */
+  background-color: #625140;
   background-size: cover;
   width: 100%;
   min-height: 450px;
-  /* background-image: url("../images/idk.jpeg"); */
   display: grid;
   justify-content: content;
   align-items: center;
@@ -90,13 +86,13 @@ section {
   font-family: "Poppins", sans-serif;
   font-size: 36px;
   font-weight: 700;
-  color: #000;
+  color: #dbd5c7;
   margin: 10px 0;
 }
 .home-subtitle {
   font-family: "Lora", serif;
   font-size: 16px;
-  color: #555;
+  color: #dbd5c7;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;

@@ -20,7 +20,7 @@ buttons.forEach((button) => {
     buttons.forEach((btn) => btn.classList.remove('active'));
     contentItems.forEach((item) => item.classList.remove('active'));
     button.classList.add('active');
-    const targetId = button.getAttribute('data-target');
+    let targetId = button.getAttribute('data-target');
     document.getElementById(targetId).classList.add('active');
   });
 });

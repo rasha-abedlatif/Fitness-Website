@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=GFS+Didot&family=Jura:wght@300..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Khitan+Small+Script&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic&display=swap');
+
+body{
+    background-color: #e5e0d6;
+    font-family: "GFS Didot", serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+/*--- Styling the SlideShow Part---*/ 
+
+.main{
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  
+}
+.slideshow-container{
+width: 100%;
+height: 500px;
+position: relative;
+margin-bottom: 20px;
+overflow: hidden;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.button{
+  background-color: rgb(0, 0, 0, 0.5);
+  color: white;
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: black;
+}
+
+
+.slides{
+  
+  width: 100%;
+  height: 500px;
+  transition: opacity 1s ease-in-out;
+}
+
+.name-div{
+width: 100%;
+height: 200px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 100px;
+margin-bottom: 100px;
+padding: 20px;
+}
+ .par{
+  font-size: x-large;
+  max-width: 1100px;
+  padding: 20px;
+  overflow-wrap: break-word;  
+ }
+.span{
+  font-weight: bold;
+}
+.name{
+  color: #b2998a;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 100;
+  margin-bottom: 50px;
+}
+
+
+
+.instruction-table{
+width: 70%;
+height: auto;
+background-color: #e5e0d6;
+border: solid 6px #b2998a;
+box-sizing: border-box;
+border-top: none;
+margin-bottom: 100px;
+}
+
+.headtable{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.div{
+  width: 40%;
+  height: 100%;
+  background-color: #b2998a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.p2{
+  font-weight: bold;
+}
+
+.borderline{
+height: 100px;
+width: 3px;
+color: #e5e0d6;
+}
+
+.ingredients{
+  border-bottom: 6px #b2998a solid;
+  width: 100%;
+  padding: 30px;
+}
+h2{
+  color: #695242;
+  margin: 20px ;
+}
+.listitem{
+  margin: 0;
+	padding: 20px 0 20px 60px ;
+	list-style: none;
+	background-image: url(../images/listimage.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 40px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.instructions{
+  margin: 30px;
+  padding: 30px;
+}
+
+ol li{
+  padding: 20px 0 20px 20px ;
+  margin: 10px;
+  font-weight: 500;
+  font-size: 25px;
+}

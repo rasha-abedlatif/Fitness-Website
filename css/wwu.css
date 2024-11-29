@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=GFS+Didot&family=Jura:wght@300..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Khitan+Small+Script&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* --- body styling ---*/ 
+body{
+    background-color: #e5e0d6;
+      display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "GFS Didot", serif;
+
+  
+}
+
+
+main{
+  flex-grow: 1;
+}
+
+.heading-div{
+  width: 100%;
+  min-height: 450px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #625140;
+}
+.heading{
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: #dbd5c7;
+
+}
+
+.p-div{
+     font-size: 20px;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+     margin-top: 50px;
+     margin-bottom: 110px;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+    }
+
+.par{
+  width: 70%;
+  line-height: 30px;
+
+  
+}
+
+a{
+    text-decoration: none;
+    color: #7d6150;
+}
+
+a:hover{
+    
+    color: #b2998A;
+}
+
+.second-div{
+  position: relative;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#firstimg{
+  background-image: url(../images/img1wwu.jpeg);
+  position: absolute;
+  top: 0; 
+  left: 10%; 
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 2s ease, transform 2s ease;
+
+}
+
+#secondimg{
+  background-image: url(../images/img2wwu.jpeg);
+  position: absolute;
+  top: 860px;
+  left: 10%;
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 2s ease, transform 2s ease;
+
+}
+
+#firstimg.visible {
+  opacity: 0.9;
+  transform: translateX(0); 
+}
+
+
+#secondimg.visible {
+  opacity: 0.9;
+  transform: translateX(0); 
+}
+.imgs{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 50%;
+}
+
+
+.division{
+  position: absolute;
+  border-radius: 10px;
+}
+
+.inputs-div{ 
+  position: absolute;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 50px;
+border: #695242 solid 10px;
+ padding: 10px;
+ height: 600px;
+ width: 50%;
+top: 400px;
+right: 100px;
+z-index: 2;
+background-color: #e5e0d6;
+ 
+}
+.inputs-div input,.inputs-div select,.inputs-div textarea{
+    width: 100%;
+    border-width: 0 0 3px 0;
+    background-color: #e5e0d6;
+    box-shadow: none;
+    box-sizing: border-box;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    border-bottom: #695242 solid;
+}
+
+.inputs-div input.focused, .inputs-div select.focused, .inputs-div textarea.focused {
+  border: 3px solid #695242; /* Border color when the element is focused */
+}
+
+.inputs-div input:hover{
+    border: #695242 solid 3px;
+}
+.inputs-div select:hover{
+    border: #695242 solid 3px;
+}
+.inputs-div textarea:hover{
+    border: #695242 solid 3px;
+}
+
+.name-div{
+    display:flex;
+    flex-direction:row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  
+}
+
+.name{
+    width: 50%;  
+}
+
+.btn-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #695242;
+  margin-bottom: 10px;
+  width: 150px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.3s ease;
+}
+.btn-div:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+#textbtn{
+  color: white;
+  font-weight: bold;
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  padding-top: 7px;
+  border: none;
+
+}
+#iconbtn{
+  height: 100%;
+  width: 20%;
+  padding-top: 5px;
+ 
+}
+
+#iconbtn img{
+height: 20px;
+width: 20px;
+
+}
+
+/*---Footer Styling---*/
+
+footer {
+    margin-top: 1700px;
+    width: 100%;
+    background: linear-gradient(135deg, #0a0a0a, #1b1b1b);
+    color: #eaeaea;
+    padding: 60px 0;
+    font-family: Arial, sans-serif;
+  }
+ 

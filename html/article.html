@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutrivolve</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/article.css" />
+    <script src="../java/article.js" defer></script>
+    <link rel="stylesheet" href="../css/general.css" />
+    <script src="../java/general.js" defer></script>
+
+  </head>
+  <body>
+
+    <header id="header">
+      <div class="logo">
+        <a href="../index.html">NUTRIVOLVE</a>
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../html/recipes.html">Recipes</a>
+        <a href="../html/workouts.html">Workouts</a>
+        <a href="../html/article.html">Articles</a>
+        <a href="../html/aboutus.html">About Us</a>
+        <div class="dropdown">
+          <a href="#" class="dropdown-button">
+            <i class="fa-regular fa-user" style="color: #000000;"></i>
+          </a>
+          <div class="dropdown-content-wrapper">
+            <div class="dropdown-content">
+              <a href="../html/account.html#sign-in-form">Sign in</a>
+              <a href="../html/account.html#sign-up-form">Sign up</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-text container">
+        <h1 class="artc">ARTICLES</h1>
+        <h1 class="home-title">Latest News</h1>
+        <span class="home-subtitle"
+          >Explore top tips in nutrition and fitness with our
+          engaging and informative articles.</span
+        >
+      </div>
+    </section>
+
+    <section class="about container" id="about">
+      <div class="contentBx">
+        <div class="titleText">South Bay Functional Health Testing</div>
+        <p class="title-text">
+          There are a lot of people these days who are having health issues that
+          sit in the grey area within our healthcare system. Meaning, they
+          cannot find root cause diagnoses by our traditional medical system,
+          and they are sometimes suffering with symptoms, unanswered questions
+          and little to no relief.
+        </p>
+        <a href="https://www.jessicamanning.com/blog/sb-functional-health-testing" class="btn2">Read more</a>
+      </div>
+      <div class="imgBx">
+        <img src="../images/article1.jpg" alt="" />
+      </div>
+    </section>
+
+    <div class="post-filter container">
+      <span class="filter-item active-filter" data-filter="all">All</span>
+      <span class="filter-item" data-filter="nutrition">Nutrition</span>
+      <span class="filter-item" data-filter="fitness">Workouts</span>
+    </div>
+
+    <div class="post container">
+      <!-- POST 1 -->
+      <div class="post-box nutrition">
+        <img src="../images/article2.webp" alt="" class="post-img" />
+        <h2 class="category">Nutrition</h2>
+        <a href="https://www.ten.co.uk/nutrient-boosting" class="post-title">NUTRIENT BOOSTING</a>
+        <span class="post-date">MAY 20 2015</span>
+        <p class="post-description">
+          Increasing the nutritional value of your diet doesn’t have to be
+          difficult or time consuming. But it does help to think, and shop
+          smart. The key is to get into the habit of buying some “staples” in
+          your shopping list and then knowing how best to use them at key meals
+          throughout the day to add that extra “punch” to your diet.
+        </p>
+        <div class="profile">
+          <img src="../images/person1.webp" alt="" class="profile-img" />
+          <span class="profile-name">Justin Rogers</span>
+        </div>
+      </div>
+
+      <!-- POST 2 -->
+      <div class="post-box fitness">
+        <img src="../images/article3.webp" alt="" class="post-img" />
+        <h2 class="category">Workouts</h2>
+        <a
+          href="https://www.acefitness.org/resources/pros/expert-articles/8756/quick-hit-workout-body-weight-training/"
+          class="post-title"
+          >Quick-hit Workout: Body-weight Training</a
+        >
+        <span class="post-date">October 25 2024</span>
+        <p class="post-description">
+            Quick-hit workouts and travel workouts are great options when traveling or missing time from the gym. Use this body-weight training circuit to stay on track when lack of time becomes an obstacle.
+        </p>
+        <div class="profile">
+          <img src="../images/person2.webp" alt="" class="profile-img" />
+          <span class="profile-name"> American Council on Exercise</span>
+        </div>
+      </div>
+
+      <!-- POST 3 -->
+      <div class="post-box fitness">
+        <img src="../images/article4.jpg" alt="" class="post-img" />
+        <h2 class="category">Workouts</h2>
+        <a
+          href="https://www.health.harvard.edu/exercise-and-fitness/calisthenics-an-effective-low-frills-way-to-stay-fit"
+          class="post-title"
+          >Calisthenics: An effective, low-frills way to stay fit</a
+        >
+        <span class="post-date">October 3, 2024</span>
+        <p class="post-description">
+            You might not hear the term calisthenics used often by the fitness crowd these days, but this form of classic bodyweight exercise is timeless. Calisthenics can provide an excellent, well-rounded workout — with no equipment required. Learn about the many benefits of calisthenics and how to get started with a sample workout.
+        </p>
+        <div class="profile">
+          <img src="../images/person3.jpg" alt="" class="profile-img" />
+          <span class="profile-name">Jenette Restivo</span>
+        </div>
+      </div>
+
+      <!-- POST 4 -->
+      <div class="post-box nutrition">
+        <img src="../images/article5.webp" alt="" class="post-img" />
+        <h2 class="category">Nutrition</h2>
+        <a href="https://www.ten.co.uk/mood-boosting-food" class="post-title">Mood-boosting food</a>
+        <span class="post-date">February 18 2015</span>
+        <p class="post-description">
+            We all need a little help to lift our moods sometimes. But as winter beckons, instead of reaching for the usual
+        </p>
+        <div class="profile">
+          <img src="../images/person4.svg" alt="" class="profile-img" />
+          <span class="profile-name">Ten Health & Fitness</span>
+        </div>
+      </div>
+
+      <!-- POST 5 -->
+      <div class="post-box nutrition">
+        <img src="../images/article6.webp" alt="" class="post-img" />
+        <h2 class="category">Nutrition</h2>
+        <a href="https://www.ten.co.uk/smoothie-operator" class="post-title">Smooth(ie) operator</a>
+        <span class="post-date">February 10 2015</span>
+        <p class="post-description">
+            These days, smoothies are a permanent fixture from supermarket shelves to food blogs. But what are their real benefits?
+            When we feel hungry, we generally assume it’s the body telling us it wants food, when what it actually needs is nutrition – which isn’t always the same thing. 
+        </p>
+        <div class="profile">
+          <img src="../images/person5.webp" alt="" class="profile-img" />
+          <span class="profile-name">Vinny Lewis-Jamerson</span>
+        </div>
+      </div>
+
+      <!-- POST 6 -->
+      <div class="post-box fitness">
+        <img src="../images/article7.jpg" alt="" class="post-img" />
+        <h2 class="category">Workouts</h2>
+        <a href="https://www.health.harvard.edu/heart-health/get-moving-to-slow-cardiovascular-aging" class="post-title">Get moving to slow cardiovascular aging</a>
+        <span class="post-date">April 19 2021</span>
+        <p class="post-description">
+            Your heart, like any other muscle, can weaken over time, especially if you are sedentary. As you age and become less active, the muscle in your heart's left ventricle — the chamber that pumps oxygen-rich blood back out to the body — becomes stiffer.
+        </p>
+        <div class="profile">
+          <img src="../images/person6.png" alt="" class="profile-img" />
+          <span class="profile-name">HARVARD Health Publishing</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="column logo-column">
+          <div class="logo-title">
+            <img src="../images/logo.png" alt="Logo" class="LOGO" />
+            <h1>NUTRIVOLVE</h1>
+          </div>
+          <p>
+            Stay updated with expert fitness tips, healthy recipes, and
+            exclusive workout plans!
+          </p>
+          <h3>Subscribe Now!</h3>
+          <form>
+            <div class="input-group">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+          <div class="social-icons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            <a href=""><i class="fa-brands fa-pinterest"></i></a>
+          </div>
+        </div>
+
+        <div class="column Reach">
+          <h3>Reach Us Through:</h3>
+          <div class="contactInfo">
+            <div class="iconGroup">
+              <div class="icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="details">
+                <span>Phone:</span>
+                <span>+40 20 7829 9821</span>
+              </div>
+            </div>
+            <div class="iconGroup">
+              <div class="icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="details">
+                <span>Email:</span>
+                <span>nutrivolvefitness@gmail.com</span>
+              </div>
+            </div>
+            <div class="iconGroup">
+              <div class="icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="details">
+                <span>Location:</span>
+                <span>North West, London, Abbey Road</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column QuickL">
+          <h3>Links:</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/recipes.html">Recipes</a></li>
+            <li><a href="../html/workouts.html">Workouts</a></li>
+            <li><a href="../html/article.html">Articles</a></li>
+            <li><a href="../html/wwu.html">Work With Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr/>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

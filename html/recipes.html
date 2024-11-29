@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <title>Nutrivolve</title>
+    <script src="../java/general.js" defer></script>
+    <link rel="stylesheet" href="../css/recipes.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <script src="../java/recipes.js" defer></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo">
+          <a href="../index.html">NUTRIVOLVE</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../html/recipes.html">Recipes</a>
+          <a href="../html/workouts.html">Workouts</a>
+          <a href="../html/article.html">Articles</a>
+          <a href="../html/aboutus.html">About Us</a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-button">
+              <i class="fa-regular fa-user" style="color: #000000;"></i>
+            </a>
+            <div class="dropdown-content-wrapper">
+              <div class="dropdown-content">
+                <a href="../html/account.html#sign-in-form">Sign in</a>
+                <a href="../html/account.html#sign-up-form">Sign up</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+<!-- Opening Section -->
+    <div class="opening-sen">
+        <div class="line"></div>
+        <h1 class="h1">Welcome to Healthy Eating! </h1>
+    </div>
+
+    <!-- Recipes Menu Section -->
+    <div class="recipes">
+
+        <div class="image-container">
+
+          <div class="firstsec">
+
+            <div class="box">
+                <a href="#breakfast">
+                    <div class="menu-img" id="menu1">
+                        <button id="meals">BREAKFAST</button>
+
+                    </div>
+                    
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="#mainmeal">
+                    <div class="menu-img" id="menu2">
+                        <button id="meals">MAIN MEALS</button>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="#dessert" >
+                    <div class="menu-img" id="menu3" >
+                        <button id="meals">DESSERTS</button>
+                    </div>
+                    
+                </a>
+
+            </div>
+
+          </div>  
+
+            <div class="secondsec">
+                <div class="box">
+                    <a href="#dishes">
+                        <div class="menu-img"  id="menu4">
+                            <button id="meals">SIDE DISHES</button>
+                        </div>
+                        
+                    </a>
+                </div>
+    
+                <div class="box">
+                    <a href="#drinks">
+                        <div class="menu-img"  id="menu5" >
+                            <button id="meals">DRINKS</button>
+                        </div>
+                       
+                    </a>
+                </div>
+    
+                <div class="box">
+                    <a href="#snacks">
+                        <div class="menu-img" id="menu6">
+                            <button id="meals">SNACKS</button>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="menu">
+        <div class="line"></div>
+        <h1>To eat is a necessity, but to eat intelligently is an art.</h1>
+    </div>
+
+    <div class="meal-types">
+        <!-- Breakfast Section -->
+        <div class="eachsection" id="breakfast">
+            <div class="text-div">
+                <div class="text"><span class="lines"></span>
+                    <h1 class="headings">Breakfast</h1>
+                </div>
+                <button class="show" id="show1">Show More ↓</button>
+            </div>
+
+            <div class="meal-divs">
+
+                <!-- Breakfast Section 1 of the recipes -->
+                <section class="recipe-sec1">
+                   <a href="../html/recipe2.html"> <div  class="recipe">
+                    <div class="imgs" id="img1">
+                        <div class="cover">
+                            <p class="foodname">Healthy Blueberry Muffins</p>
+                        </div>
+                  
+
+                    </div>
+                    <div class="names-div">
+                        <h2 class="names">Healthy Blueberry Muffins</h2>
+                    </div>
+                </div></a>
+                    <div class="recipe">
+                        <div class="imgs" id="img2">
+                            <div class="cover">
+                                <p class="foodname">Tahini Chocolate Balls</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Tahini Chocolate Balls</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img3">
+                            <div class="cover">
+                                <p class="foodname">Healthy Flapjack Recipe</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Healthy Flapjack Recipe</h2>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Breakfast Section 2 of the recipes -->
+                <section class="recipe-sec2" id="breakfast-sec2">
+                    <div class="recipe">
+                        <div class="imgs" id="img4">
+                            <div class="cover">
+                                <p class="foodname">Scrambled Oats Recipe</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Scrambled Oats Recipe</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img5">
+                            <div class="cover">
+                                <p class="foodname">Healthy Blueberry Breakfast Cake</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Healthy Blueberry Breakfast Cake</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img6">
+                            <div class="cover">
+                                <p class="foodname">Cottage Cheese Pudding (High Protein)</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Cottage Cheese Pudding (High Protein)</h2>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+        <!-- Main Meals Section -->
+        <div class="eachsection" id="mainmeal">
+            <div class="text-div">
+                <div class="text">
+                    <span class="lines"></span>
+                    <h1 class="headings">Main Meal</h1>
+                </div>
+                <button class="show" id="show2">Show More ↓</button>
+            </div>
+
+            <div class="meal-divs">
+
+                <!-- Main Meal Section 1 of the recipes -->
+                <section class="recipe-sec1">
+                    <div class="recipe">
+                        <div class="imgs" id="img7">
+                            <div class="cover">
+                                <p class="foodname">Crispy Rice Salad</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Crispy Rice Salad</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img8">
+                            <div class="cover">
+                                <p class="foodname">Tabbouleh Salad Recipe (Tabouli)</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Tabbouleh Salad Recipe (Tabouli)</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img9">
+                            <div class="cover">
+                                <p class="foodname">Healthy Baked Tortilla Samosas</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Healthy Baked Tortilla Samosas</h2>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Main Meal Section 2 of the recipes -->
+                <section class="recipe-sec2" id="mainmeal-sec2">
+                    <div class="recipe">
+                        <div class="imgs" id="img10">
+                            <div class="cover">
+                                <p class="foodname">Easy Authentic Middle Eastern Falafel</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Easy Authentic Middle Eastern Falafel</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img11">
+                            <div class="cover">
+                                <p class="foodname">Moroccan Zaalouk Recipe (Aubergine Salad)</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Moroccan Zaalouk Recipe (Aubergine Salad)</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img12">
+                            <div class="cover">
+                                <p class="foodname">Greek Tomato Fritters (Tomatokeftedes)</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Greek Tomato Fritters (Tomatokeftedes)</h2>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+        <!-- Dessert Section -->
+        <div class="eachsection" id="dessert">
+            <div class="text-div">
+                <div class="text">
+                    <span class="lines"></span>
+                    <h1 class="headings">Desserts</h1>
+                </div>
+                <button class="show" id="show3">Show More ↓</button>
+            </div>
+
+            <div class="meal-divs">
+
+                <!-- Dessert Section 1 of the recipes -->
+                <section class="recipe-sec1">
+                    <div class="recipe">
+                        <div class="imgs" id="img13">
+                            <div class="cover">
+                                <p class="foodname">Chocolate Sticky Toffee Puddings</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Chocolate Sticky Toffee Puddings</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img14">
+                            <div class="cover">
+                                <p class="foodname">Cottage Cheese Cheesecake</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Cottage Cheese Cheesecake</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img15">
+                            <div class="cover">
+                                <p class="foodname">Tahini Chocolate Balls</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Tahini Chocolate Balls</h2>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dessert Section 2 of the recipes -->
+                <section class="recipe-sec2" id="desserts-sec2">
+                    <div class="recipe">
+                        <div class="imgs" id="img16">
+                            <div class="cover">
+                                <p class="foodname">Date Caramels Recipe</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Date Caramels Recipe</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img17">
+                            <div class="cover">
+                                <p class="foodname">Chocolate Quinoa Bites</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Chocolate Quinoa Bites</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img18">
+                            <div class="cover">
+                                <p class="foodname">Healthy Blueberry Muffins</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Healthy Blueberry Muffins</h2>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+        <!-- Side Dishes Section -->
+        <div class="eachsection" id="dishes">
+            <div class="text-div">
+                <div class="text">
+                    <span class="lines"></span>
+                    <h1 class="headings">Side Dishes</h1>
+                </div>
+                <button class="show" id="show4">Show More ↓</button>
+            </div>
+
+            <div class="meal-divs">
+
+                <!-- Side Dishes Section 1 of the recipes -->
+                <section class="recipe-sec1">
+                    <div class="recipe">
+                        <div class="imgs" id="img19">
+                            <div class="cover">
+                                <p class="foodname">Tabbouleh Salad Recipe (Tabouli)</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Tabbouleh Salad Recipe (Tabouli)</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img20">
+                            <div class="cover">
+                                <p class="foodname">Iraqi Lentil Soup (Vegan)</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Iraqi Lentil Soup (Vegan)</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img21">
+                            <div class="cover">
+                                <p class="foodname">TikTok Cucumber Salad</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">TikTok Cucumber Salad</h2>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Side Dishes Section 2 of the recipes -->
+                <section class="recipe-sec2" id="sidedishes-sec2">
+                    <div class="recipe">
+                        <div class="imgs" id="img22">
+                            <div class="cover">
+                                <p class="foodname">Pomegranate Molasses Roasted Brussels Sprouts</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Pomegranate Molasses Roasted Brussels Sprouts</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img23">
+                            <div class="cover">
+                             <p class="foodname">Cauliflower & Chestnut Soup (Vegan & Gluten-free)</p> 
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Cauliflower & Chestnut Soup (Vegan & Gluten-free)</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img24">
+                            <div class="cover">
+                                <p class="foodname">Healthy Baked Tortilla Samosas</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Healthy Baked Tortilla Samosas</h2>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+        <!-- Drinks Section -->
+        <div class="eachsection" id="drinks">
+            <div class="text-div">
+                <div class="text">
+                    <span class="lines"></span>
+                    <h1 class="headings">Drinks</h1>
+                </div>
+                <button class="show" id="show5">Show More ↓</button>
+            </div>
+
+            <div class="meal-divs">
+
+                <!-- Drinks  Section 1 of the recipes -->
+                <section class="recipe-sec1">
+                    <div class="recipe">
+                        <div class="imgs" id="img25">
+                            <div class="cover">
+                                <p class="foodname">Vegan Protein Gingerbread Hot Chocolate</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Vegan Protein Gingerbread Hot Chocolate</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img26">
+                            <div class="cover">
+                                <p class="foodname">Festive Pomegranate Kombucha Mocktail</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Festive Pomegranate Kombucha Mocktail</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img27">
+                            <div class="cover">
+                                <p class="foodname">Anti-inflammatory Golden Turmeric Milk</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Anti-inflammatory Golden Turmeric Milk</h2>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Drinks Section 2 of the recipes -->
+                <section class="recipe-sec2" id="drinks-sec2">
+                    <div class="recipe">
+                        <div class="imgs" id="img28">
+                            <div class="cover">
+                                <p class="foodname">Chai Hot Chocolate (Vegan & With No Added Sugar)</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Chai Hot Chocolate (Vegan & With No Added Sugar)</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img29">
+                            <div class="cover">
+                                <p class="foodname">Middle Eastern Inspired Almond Milks – Halva & Turkish Delight</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Middle Eastern Inspired Almond Milks – Halva & Turkish Delight</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img30">
+                            <div class="cover">
+                                <p class="foodname">Vegan Peppermint Hot Chocolate</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Vegan Peppermint Hot Chocolate</h2>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+        <!-- Snacks Section -->
+        <div class="eachsection" id="snacks">
+            <div class="text-div">
+                <div class="text">
+                    <span class="lines"></span>
+                    <h1 class="headings">Snacks</h1>
+                </div>
+                <button class="show" id="show6">Show More ↓</button>
+            </div>
+
+            <div class="meal-divs">
+
+                <!-- Snacks  Section 1 of the recipes -->
+                <section class="recipe-sec1">
+                    <div class="recipe">
+                        <div class="imgs" id="img31">
+                            <div class="cover">
+                                <p class="foodname">Chocolate Banana Nice Cream (Healthy/Plant-Based)</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Chocolate Banana Nice Cream (Healthy/Plant-Based)</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img32">
+                            <div class="cover">
+                                <p class="foodname">Healthy Frozen Yogurt (4-Ingredients!)</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Healthy Frozen Yogurt (4-Ingredients!)</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img33">
+                            <div class="cover">
+                                <p class="foodname">Berry Chocolate Bliss Balls</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Berry Chocolate Bliss Balls</h2>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Snacks Section 2 of the recipes -->
+                <section class="recipe-sec2" id="snacks-sec2">
+                    <div class="recipe">
+                        <div class="imgs" id="img34">
+                            <div class="cover">
+                                <p class="foodname">TikTok Cucumber Salad</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">TikTok Cucumber Salad</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img35">
+                            <div class="cover">
+                                <p class="foodname">Tahini Chocolate Balls</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Tahini Chocolate Balls</h2>
+                        </div>
+                    </div>
+                    <div class="recipe">
+                        <div class="imgs" id="img36">
+                            <div class="cover">
+                                <p class="foodname">Date Caramels Recipe</p>
+                            </div>
+                        </div>
+                        <div class="names-div">
+                            <h2 class="names">Date Caramels Recipe</h2>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!--Tips Section -->
+     <div class="tips">
+        <h4> Tips for Healthy Eating: </h4>
+        <div class="quotes-div">
+            <div class="q-div ">
+                <p class="quote">1. Plan Your Meals.</p>
+            </div>
+            <div class="q-div">
+                <p class="quote">2. Get Creative and have Fun with Your Food. </p>
+            </div>
+            <div class="q-div">
+                <p class="quote">3. Balance Out Meals and Snacks. </p>
+            </div>
+            <div class="q-div">
+                <p class="quote">4. Avoid Eating While Destracted. </p>
+            </div>
+            <div class="q-div">
+                <p class="quote">5. Eat Regularly Throughout the Day. </p>
+            </div>
+        </div>
+     </div>
+    
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="column logo-column">
+                <div class="logo-title">
+                    <img src="../images/logo.png" alt="Logo" class="LOGO">
+                    <h1>NUTRIVOLVE</h1>
+                </div>
+                <p>Stay updated with expert fitness tips, healthy recipes, and exclusive workout plans!</p>
+                <h3>Subscribe Now!</h3>
+                <form>
+                    <div class="input-group">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="column Reach">
+                <h3>Reach Us Through:</h3>
+                <div class="contactInfo">
+                  <div class="iconGroup">
+                    <div class="icon">
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="details">
+                      <span>Phone:</span>
+                      <span>+40 20 7829 9821</span>
+                    </div>
+                  </div>
+                  <div class="iconGroup">
+                    <div class="icon">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="details">
+                      <span>Email:</span>
+                      <span>nutrivolvefitness@gmail.com</span>
+                    </div>
+                  </div>
+                  <div class="iconGroup">
+                    <div class="icon">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="details">
+                      <span>Location:</span>
+                      <span>North West, London, Abbey Road</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="column QuickL">
+                <h3>Links:</h3>
+                <ul>
+                    <li><a href="../home/home.html">Home</a></li>
+                    <li><a href="">Recipes</a></li>
+                    <li><a href="../workouts/workouts.html">Workouts</a></li>
+                    <li><a href="">Articles</a></li>
+                    <li><a href="">Work With Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </footer>
+</body>
+
+</html>

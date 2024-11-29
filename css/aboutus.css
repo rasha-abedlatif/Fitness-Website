@@ -1,0 +1,468 @@
+nav>a:nth-child(5)::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #dbd5c7;
+    bottom: 0;
+    left: 0;
+  }
+  
+  nav>a:not(:nth-child(5))::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #dbd5c7;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  nav > a:hover:not(:nth-child(5))::after {
+    width: 100%;
+  }
+
+/* General styling for the body */
+body {
+    margin: 0;
+    max-width: 1000vw;
+}
+
+/* Flexbox layout for the slider */
+.header-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+
+.background-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 5s ease-in-out;
+    animation: zoomIn 15s infinite alternate;
+}
+
+.header-content {
+    position: absolute;
+    bottom: 50%;
+    left: 8%;
+    text-align: left;
+    color: #fff;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 1s ease, transform 0.8s ease;
+}
+
+.header-content.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.background-content.active .header-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header-content h1 {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 8px;
+
+    color: #fff;
+    animation: slideIn 1s forwards ease-in-out;
+    animation-delay: 0.5s;
+    max-width: 650px;
+}
+
+.line {
+    width: 200px;
+    height: 1px;
+    background-color: whitesmoke;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    transform-origin: center;
+}
+
+/* Keyframe animations */
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #dbd5c7;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+    padding-top: 50px;
+
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.card {
+    transform: translateX(-100%);
+    animation: slideInLeft 1s ease-out forwards;
+    padding-bottom: 30px;
+    position: relative;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    pointer-events: none;
+    overflow: hidden;
+    font-size: 20px;
+    height: 78.3%;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: width 0.5s ease-in-out;
+}
+.img2+.overlay{
+    height: 81.9%;
+}
+
+.card img:hover +.overlay{
+    width: 100%;
+    
+}
+
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0);
+    }
+}
+
+.card img {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+.card .img2 {
+    width: 400px;
+    height: 500px;
+}
+
+.card h3 {
+    font-size: 20px;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+    color: #232d3f;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.icons1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.icons1 img {
+    width: 30px;
+    height: 30px;
+    box-shadow: none;
+}
+.section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 20px; */
+    /* padding-bottom: 50px; */
+    background-color: #e5e0d6;
+    flex-direction: column;
+}
+
+.icons2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding-bottom: 30px;
+
+}
+
+.icon2 img {
+    height: 150px;
+    width: 150px;
+}
+
+.icon2 {
+    padding-top: 40px;
+}
+
+.icon1 img {
+    height: 200px;
+    width: 200px;
+}
+
+.mission, .vision {
+    flex: 1; 
+    padding: 10px; 
+    box-sizing: border-box; 
+  }
+  
+  .mission img, .vision img {
+    max-width: 100%; 
+    height: auto;
+  }
+
+.content-s2 h4 {
+    font-size: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #232d3f;
+    padding-bottom: 23px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.content-s2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.content-s2 p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #232d3f;
+    max-width: 800px;
+    width: 60%;
+    margin-left: 130px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #dbd5c7;
+    color: #232d3f;
+    padding: 80px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 50px;
+    gap: 80px;
+    flex-wrap: wrap;
+
+}
+
+.service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.service img {
+    width: 100%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    filter: grayscale(1) brightness(0.9);
+}
+
+.service .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+
+}
+
+.service p {
+    text-align: center;
+    max-width: 300px;
+    padding-top: 20px;
+    line-height: 1.5;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.service h3 {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.section4 {
+    text-align: center;
+    padding: 80px;
+    color: #232d3f;
+    background-color: #e5e0d6;
+}
+
+.beliefs-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.belief-button {
+    color: #232d3f;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    background-color: #cdc3bd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.belief-button.active {
+    background-color: #b2998a;
+
+    font-weight: bold;
+}
+
+.belief-button:hover {
+    background-color: #b2998a;
+
+    font-weight: bold;
+}
+
+.belief-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.belief-item {
+    display: none;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.belief-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.belief-item.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media(max-width:660px){
+
+    main, .section1, .section2, .section3{
+     width: 1200px;
+    }
+    footer{
+     width: 1200px !important;
+    }
+    footer .logo-column .logo-title{
+     display: flex;
+     justify-content: center !important;
+     align-items: center !important;
+     margin-right:530px;
+ }
+ .slider{
+    width: 1200px;
+ }
+ 
+.service p, .content-s2 p,.service h3, .belief-content, .belief-button {
+    font-size: 25px;
+}
+
+ }

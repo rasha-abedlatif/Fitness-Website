@@ -103,7 +103,7 @@ a:hover{
 }
 
 #firstimg{
-  background-image: url(wwu-imgs/img1.jpeg);
+  background-image: url(../images/img1wwu.jpeg);
   position: absolute;
   top: 0; 
   left: 10%; 
@@ -115,7 +115,7 @@ a:hover{
 }
 
 #secondimg{
-  background-image: url(wwu-imgs/img2.jpeg);
+  background-image: url(../images/img2wwu.jpeg);
   position: absolute;
   top: 860px;
   left: 10%;

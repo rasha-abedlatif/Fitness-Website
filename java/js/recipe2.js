@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let listimg = ['images2/img1.jpg', 'images2/img2.jpg', 'images2/img3.webp', 'images2/img4.jpg', ];
+    let listimg = ['../images/img1.jpg', '../images/img2.jpg', '../images/img3.webp', '../images/img4.jpg', ];
     let index = 0;
     let $image = $('.slides');
     let intervalTime = 3000; // Time in milliseconds for auto-slide

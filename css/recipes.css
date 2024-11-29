@@ -98,27 +98,27 @@ nav a:hover:not(:nth-child(2))::after {
 
 
 #menu1{
-background-image:url(images-recipes/breakfast.jpeg) ;
+background-image:url(../images/breakfast.jpeg) ;
 }
 
 #menu2{
-  background-image: url(images-recipes/mainmeal.jpeg);
+  background-image: url(../images/mainmeal.jpeg);
 }
 
 #menu3{
-  background-image: url(images-recipes/dessert.jpeg);
+  background-image: url(../images/dessert.jpeg);
 }
 
 #menu4{
-  background-image: url(images-recipes/sidedishes.jpeg);
+  background-image: url(../images/sidedishes.jpeg);
 }
 
 #menu5{
-  background-image: url(images-recipes/drinks.jpeg) ;
+  background-image: url(../images/drinks.jpeg) ;
 }
 
 #menu6{
-  background-image: url(images-recipes/snacks.jpeg);
+  background-image: url(../images/snacks.jpeg)
 }
 #meals {
    
@@ -269,13 +269,13 @@ background-image:url(images-recipes/breakfast.jpeg) ;
 }
 
 #img1{
-background-image: url(images-recipes/Breakfast1.jpeg);
+background-image: url(../images/Breakfast1.jpeg);
 }
 #img2{
-  background-image: url(images-recipes/Breakfast2.jpeg);
+  background-image: url(../images/Breakfast2.jpeg);
 }
 #img3{
-  background-image: url(images-recipes/Breakfast3.jpeg);
+  background-image: url(../images/Breakfast3.jpeg);
 }
 
 .imgs{
@@ -312,15 +312,15 @@ padding-bottom: 10px;
 }
 
 #img4{
-  background-image: url(images-recipes/Breakfast4.jpeg);
+  background-image: url(../images/Breakfast4.jpeg);
 }
 
 #img5{
-  background-image: url(images-recipes/Breakfast5.jpeg);
+  background-image: url(../images/Breakfast5.jpeg);
 }
 
 #img6{
-  background-image: url(images-recipes/Breakfast6.jpeg);
+  background-image: url(../images/Breakfast6.jpeg);
 }
 
 .recipe-sec2{
@@ -333,44 +333,44 @@ padding-bottom: 10px;
 
 /*-- Images of the Main Meal--*/ 
 #img7{
-  background-image: url(images-recipes/MainMeal1.jpeg);
+  background-image: url(../images/MainMeal1.jpeg);
 }
 #img8{
-  background-image: url(images-recipes/MainMeal2.jpeg);
+  background-image: url(../images/MainMeal2.jpeg);
 }
 #img9{
-  background-image: url(images-recipes/MainMeal3.jpeg);
+  background-image: url(../images/MainMeal3.jpeg);
 }
 #img10{
-  background-image: url(images-recipes/MainMeal4.jpeg);
+  background-image: url(../images/MainMeal4.jpeg);
 }
 #img11{
-  background-image: url(images-recipes/MainMeal5.jpeg);
+  background-image: url(../images/MainMeal5.jpeg);
 }
 #img12{
-  background-image: url(images-recipes/MainMeal6.jpeg);
+  background-image: url(../images/MainMeal6.jpeg);
 }
 /*-- Images of the Desserts--*/ 
 
 #img13{
-  background-image: url(images-recipes/Dessert4.jpeg);
+  background-image: url(../images/Dessert4.jpeg);
 }
 
 #img14{
-  background-image: url(images-recipes/Dessert6.jpeg);
+  background-image: url(../images/Dessert6.jpeg);
 }
 #img15{
-  background-image: url(images-recipes/Dessert1.jpeg);
+  background-image: url(../images/Dessert1.jpeg);
 }
 #img16{
-  background-image: url(images-recipes/Dessert3.jpeg);
+  background-image: url(../images/Dessert3.jpeg);
 }
 #img17{
-  background-image: url(images-recipes/Dessert5.jpeg);
+  background-image: url(../images/Dessert5.jpeg);
 }
 
 #img18{
-  background-image: url(images-recipes/Dessert2.jpeg);
+  background-image: url(../images/Dessert2.jpeg);
 }
 
 
@@ -378,69 +378,69 @@ padding-bottom: 10px;
 
 
 #img19{
-  background-image: url(images-recipes/Side\ Dishes1.jpeg);
+  background-image: url(../images/Side\ Dishes1.jpeg);
 }
 
 #img20{
-  background-image: url(images-recipes/Side\ Dishes2.jpeg);
+  background-image: url(../images/Side\ Dishes2.jpeg);
 }
 #img21{
-  background-image: url(images-recipes/Side\ Dishes3.jpeg);
+  background-image: url(../images/Side\ Dishes3.jpeg);
 }
 #img22{
-  background-image: url(images-recipes/Side\ Dishes4.jpeg);
+  background-image: url(../images/Side\ Dishes4.jpeg);
 }
 #img23{
-  background-image: url(images-recipes/Side\ Dishes5.jpeg);
+  background-image: url(../images/Side\ Dishes5.jpeg);
 }
 #img24{
-  background-image: url(images-recipes/Side\ Dishes6.jpeg);
+  background-image: url(../images/Side\ Dishes6.jpeg);
 }
 
 /*-- Images of the Drinks --*/ 
 
 
 #img25{
-  background-image: url(images-recipes/Drinks1.jpeg);
+  background-image: url(../images/Drinks1.jpeg);
 }
 
 #img26{
-  background-image: url(images-recipes/Drinks2.jpeg);
+  background-image: url(../images/Drinks2.jpeg);
 }
 #img27{
-  background-image: url(images-recipes/Drinks3.jpeg);
+  background-image: url(../images/Drinks3.jpeg);
 }
 #img28{
-  background-image: url(images-recipes/Drinks4.jpeg);
+  background-image: url(../images/Drinks4.jpeg);
 }
 #img29{
-  background-image: url(images-recipes/Drinks5.jpeg);
+  background-image: url(../images/Drinks5.jpeg);
 }
 #img30{
-  background-image: url(images-recipes/Drinks6.jpeg);
+  background-image: url(../images/Drinks6.jpeg);
 }
 
 /*-- Images of the Snacks --*/ 
 
 
 #img31{
-  background-image: url(images-recipes/Snacks1.jpeg);
+  background-image: url(../images/Snacks1.jpeg);
 }
 
 #img32{
-  background-image: url(images-recipes/Snacks2.jpeg);
+  background-image: url(../images/Snacks2.jpeg);
 }
 #img33{
-  background-image: url(images-recipes/Snacks3.jpeg);
+  background-image: url(../images/Snacks3.jpeg);
 }
 #img34{
-  background-image: url(images-recipes/Snacks4.jpeg);
+  background-image: url(../images/Snacks4.jpeg);
 }
 #img35{
-  background-image: url(images-recipes/Snacks5.jpeg);
+  background-image: url(../images/Snacks5.jpeg);
 }
 #img36{
-  background-image: url(images-recipes/Snacks6.jpeg);
+  background-image: url(../images/Snacks6.jpeg);
 }
 
 .cover{

@@ -162,7 +162,7 @@ nav a:hover {
   width: 40px; 
 }
 
-@media (max-width: 701px) {
+@media (max-width: 784px) {
   .menu-icon {
     display: flex;
     position: absolute;

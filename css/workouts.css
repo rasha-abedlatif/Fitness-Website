@@ -20,8 +20,8 @@ nav>a:nth-child(3)::after {
   }
   
   nav>a:hover:not(:nth-child(3))::after {
-    width:100%;
-  }
+   width:100%;
+  } 
   html {
     scroll-behavior: smooth;
 }

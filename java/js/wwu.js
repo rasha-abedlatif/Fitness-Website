@@ -10,11 +10,11 @@ $(document).ready(function() {
 
     function checkScroll() {
        
-        var scrollPosition = $(window).scrollTop();
-        var windowHeight = $(window).height();
+        let scrollPosition = $(window).scrollTop();
+        let windowHeight = $(window).height();
 
-        var firstImagePosition = $('#firstimg').offset().top;
-        var secondImagePosition = $('#secondimg').offset().top;
+        let firstImagePosition = $('#firstimg').offset().top;
+        let secondImagePosition = $('#secondimg').offset().top;
 
         if (scrollPosition + windowHeight > firstImagePosition) {
             $('#firstimg').addClass('visible'); 
@@ -45,8 +45,5 @@ $(document).ready(function() {
         
         $(this).addClass("focused");
     });
-
-  
-
 
   });

@@ -19,8 +19,8 @@ nav>a:nth-child(5)::after {
     transition: width 0.3s ease;
   }
   
-  nav>a:hover:not(:nth-child(5))::after {
-    width:100%;
+  nav > a:hover:not(:nth-child(5))::after {
+    width: 100%;
   }
 
 /* General styling for the body */
@@ -231,13 +231,12 @@ h2 {
     height: 30px;
     box-shadow: none;
 }
-
 .section2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 50px;
+    /* padding-top: 20px; */
+    /* padding-bottom: 50px; */
     background-color: #e5e0d6;
     flex-direction: column;
 }
@@ -246,7 +245,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 600px;
+    gap: 100px;
     padding-bottom: 30px;
 
 }
@@ -265,14 +264,16 @@ h2 {
     width: 200px;
 }
 
-.mission,
-.vision {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 50px;
-}
+.mission, .vision {
+    flex: 1; 
+    padding: 10px; 
+    box-sizing: border-box; 
+  }
+  
+  .mission img, .vision img {
+    max-width: 100%; 
+    height: auto;
+  }
 
 .content-s2 h4 {
     font-size: 30px;
@@ -299,10 +300,10 @@ h2 {
     color: #232d3f;
     max-width: 800px;
     width: 60%;
+    margin-left: 130px;
     text-align: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .section3 {
     display: flex;
     justify-content: center;

@@ -444,7 +444,9 @@ h2 {
     }
 }
 @media(max-width:660px){
-
+    .header-background{
+        width:1200px;
+    }
     main, .section1, .section2, .section3{
      width: 1200px;
     }

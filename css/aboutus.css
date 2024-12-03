@@ -443,28 +443,3 @@ h2 {
         transform: translateY(0);
     }
 }
-@media(max-width:660px){
-    .header-background{
-        width:1200px;
-    }
-    main, .section1, .section2, .section3{
-     width: 1200px;
-    }
-    footer{
-     width: 1200px !important;
-    }
-    footer .logo-column .logo-title{
-     display: flex;
-     justify-content: center !important;
-     align-items: center !important;
-     margin-right:530px;
- }
- .slider{
-    width: 1200px;
- }
- 
-.service p, .content-s2 p,.service h3, .belief-content, .belief-button {
-    font-size: 25px;
-}
-
- }

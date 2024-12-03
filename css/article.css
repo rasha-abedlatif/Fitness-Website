@@ -354,18 +354,6 @@ section {
   .post-description {
     font-size: 25px;
   }
-  footer {
-    width: 300vw !important;
-  }
-  footer .logo-column .logo-title {
-    display: flex;
-    justify-content: center !important;
-    align-items: center !important;
-    margin-right: 530px;
-  }
-  .QuickL ul li a {
-    white-space: nowrap;
-  }
 }
 
 @media (max-width: 400px) {

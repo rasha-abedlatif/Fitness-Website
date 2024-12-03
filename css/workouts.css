@@ -639,81 +639,9 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transform: scale(1.1);
 }
 
-@media(max-width:830px) {
 
-    main,
-    .section1,
-    .section2,
-    .section3 {
-        width: 1200px;
-    }
 
-    footer {
-        width: 1200px !important;
-    }
 
-    footer .logo-column .logo-title {
-        display: flex;
-        justify-content: center !important;
-        align-items: center !important;
-        margin-right: 530px;
-    }
-
-    .header {
-        width: 1200px;
-    }
-}
-
-@media(max-width:600px) {
-
-    main,
-    .section1,
-    .section2,
-    .section3 {
-        width: 1000px;
-    }
-
-    footer {
-        width: 1000px !important;
-    }
-
-    footer .logo-column .logo-title {
-        display: flex;
-        justify-content: center !important;
-        align-items: center !important;
-        margin-right: 530px;
-    }
-
-    .header {
-        width: 1000px;
-    }
-    
-    .container  {
-       height: 100%;
-       width: 350px;
-    }
-    .container img{
-        width: 100%;
-    }
-    .carousel-track-container {
-        max-width: 700px;
-    }
-    .container .content{
-        font-size: 20px
-    }
-    .randomly, .carousel-item p, .app h3, .star  {
-        font-size: 25px
-    }
-    .carousel-item img {
-
-        width: 200px;
-        height: 200px;
-    }
-    h2{
-        font-size: 35px;
-    }
-    
-}
 
 @media screen and (max-width:970px) {
 

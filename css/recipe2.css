@@ -15,12 +15,10 @@ body{
 .main{
   width: 100%;
   flex-grow: 1;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
   
 }
 .slideshow-container{
@@ -165,3 +163,7 @@ ol li{
   font-weight: 500;
   font-size: 25px;
 }
+
+/* footer {
+  margin-top: 100px;
+} */

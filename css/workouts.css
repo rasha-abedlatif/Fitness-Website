@@ -639,10 +639,6 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transform: scale(1.1);
 }
 
-
-
-
-
 @media screen and (max-width:970px) {
 
     .upper-part,
@@ -705,4 +701,54 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     50% {
         transform: translateY(-20px);
     }
+}
+
+@media(max-width:660px) {
+
+    main,
+    .section1,
+    .section2,
+    .section3 {
+        width: 1000px;
+    }
+
+    footer {
+        width: 1000px !important;
+    }
+
+    footer .logo-column .logo-title {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-right: 530px;
+    }
+
+    .header {
+        width: 1000px;
+    }
+    
+    .container  {
+       height: auto;
+       width: 350px;
+    }
+    .container img{
+        width: 100%;
+    }
+    .carousel-track-container {
+        max-width: 700px;
+    }
+    .container .content{
+        font-size: 20px
+    }
+    .randomly, .carousel-item p, .app h3, .star  {
+        font-size: 25px
+    }
+    .carousel-item img {
+
+        width: 200px;
+        height: 200px;
+    }
+    h2{
+        font-size: 35px;
+    } 
 }

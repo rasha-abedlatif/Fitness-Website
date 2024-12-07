@@ -3,7 +3,9 @@
 body {
   overflow: visible;
 }
-
+a{
+  text-decoration: none;
+}
 nav > a:nth-child(1)::after {
   content: "";
   position: absolute;

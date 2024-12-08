@@ -310,14 +310,10 @@ section {
     margin-bottom: 30px;
   }
 }
-
 @media(max-width:751px){
   .post {
     grid-template-columns: repeat(2, 1fr) !important;
   }
-}
-@media(max-width:685px){
-  
 }
 @media (max-width: 650px) {
   .home,

@@ -82,7 +82,7 @@ a {
 }
 .box {
   overflow: hidden;
-  border-radius: 10px;
+  border-top-left-radius: 15px;
 }
 .box a {
   text-decoration: none;
@@ -130,6 +130,7 @@ a {
   width: 60%;
   font-size: 16px;
   font-weight: bold;
+  border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -591,19 +592,6 @@ h4 {
   } 
  
 @media(max-width:830px) {
-
-
-
-  footer {
-      width: 1200px !important;
-  }
-
-  footer .logo-column .logo-title {
-      display: flex;
-      justify-content: center !important;
-      align-items: center !important;
-      margin-right: 530px;
-  }
 
   .opening-sen {
     width: 1200px;

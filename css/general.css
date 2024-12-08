@@ -46,7 +46,7 @@ header.scrolled {
 .nav-links {
   display: flex !important;
   align-items: center;
-  gap: 26px; /* Ensures spacing between items */
+  gap: 26px; 
 }
 .nav-links.active {
   display: flex !important;
@@ -219,7 +219,7 @@ nav a:hover {
     background-color: whitesmoke;
     opacity: 0.4;
     margin-left: 300px;
-    width: 50vw;
+    width: 43vw;
   }
 
   .dropdown-content a {

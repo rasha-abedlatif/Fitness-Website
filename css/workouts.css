@@ -477,8 +477,8 @@ animation: bounce 4s infinite;
 
 .content-header h1 {
     font-family: 'Roboto', sans-serif;
-    font-size: 70px;
-    letter-spacing: 8px;
+    font-size: 55px;
+    letter-spacing: 5px;
     color: #fff;
     opacity: 0;
     animation: slideIn 1s forwards ease-in-out;

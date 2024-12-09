@@ -59,7 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
     randomButton.addEventListener('click', () => {
         exercises.forEach(exercise => exercise.classList.remove('highlight'));
         let randomIndex = Math.floor(Math.random() * exercises.length);
-        exercises[randomIndex].classList.add('highlight');
+        let selectedExercise = exercises[randomIndex];
+        selectedExercise.classList.add('highlight');
+        selectedExercise.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 
     // Carousel Functionality

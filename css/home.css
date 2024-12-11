@@ -69,7 +69,8 @@ nav > a:hover:not(:nth-child(1))::after {
   width: 100px;
   height: 1px;
   background-color: #c7c7ba;
-  margin-top: 350px;
+  margin-top: 330px;
+  margin-bottom: 15px;
   margin-left: 390px;
   animation: expand 2s ease forwards;
   transform-origin: center;
@@ -189,7 +190,30 @@ nav > a:hover:not(:nth-child(1))::after {
 }
 
 /* ----main section---- */
+.to-top {
+  background: #a1957f; 
+  position: fixed;
+  bottom: 16px;
+  right:32px;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:32px;
+  color:#dad1c2;
+  text-decoration: none;
+  opacity:0;
+  pointer-events: none;
+  transition: all .4s;
+}
 
+.to-top.active {
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
+}
 /* ----recipes section---- */
 .recipes {
   height: 120vh;

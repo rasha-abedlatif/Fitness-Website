@@ -1,4 +1,14 @@
 
+let toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+})
+
 //effect on meals button 
 let button = document.querySelector('.meal-btn');
 button.addEventListener('click', function () {

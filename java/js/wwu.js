@@ -51,3 +51,37 @@ $(document).ready(function () {
     }
   );
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.querySelector(".btn-div");
+  
+  button.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent form submission
+    
+    const requiredFields = [
+      { selector: "input[type='email']", name: "Email" },
+      { selector: "input[placeholder='Subject..*']", name: "Subject" },
+      { selector: "textarea[name='Message']", name: "Message" }
+    ];
+    
+    const missingFields = [];
+    
+    requiredFields.forEach((field) => {
+      const element = document.querySelector(field.selector);
+      if (!element || element.value.trim() === "") {
+        missingFields.push(field.name);
+      }
+    });
+    
+    if (missingFields.length > 0) {
+      if (missingFields.length === 1) {
+        alert(`Please fill out the ${missingFields[0]} field.`);
+      } else {
+        alert(`Your information is incomplete. Missing: ${missingFields.join(", ")}.`);
+      }
+    } else {
+      alert("Form submitted successfully!"); // Placeholder for successful submission
+    }
+  });
+});
+
